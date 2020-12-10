@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>MadReflection.Minecraft.Construction</AssemblyName>
+    <RootNamespace>Minecraft.Construction</RootNamespace>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MadReflection.Minecraft.Model\MadReflection.Minecraft.Model.csproj" />
+  </ItemGroup>
+
+</Project>

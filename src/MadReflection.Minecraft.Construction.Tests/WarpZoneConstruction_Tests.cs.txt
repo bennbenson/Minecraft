@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Minecraft.Model;
+using NUnit.Framework;
+
+namespace Minecraft.Construction.Tests
+{
+	[TestFixture]
+	public class MyTestClass_Tests
+	{
+		[TestCase]
+		public void Simple_Radius_10()
+		{
+			// Arrange
+			var block = new Block("stonebrick");
+
+			// Act
+			var commands = WarpZoneConstruction.GenerateWarpZone(new Coord2(0, 0), 2, 10, 2, block);
+			string[] commandTexts = commands.Select(c => c.CommandText).ToArray();
+
+			// Assert
+			Assert.That(commandTexts.Count, Is.EqualTo(11));
+			Assert.That(commandTexts[0], Is.EqualTo("/fill -10 2 -10 10 4 10 stonebrick 0 hollow"));
+			Assert.That(commandTexts[1], Is.EqualTo("/fill -10 5 -10 10 8 10 stonebrick"));
+			Assert.That(commandTexts[2], Is.EqualTo("/fill -7 5 -7 7 8 7 air"));
+			Assert.That(commandTexts[3], Is.EqualTo("/fill -9 6 -7 9 6 7 air"));
+			Assert.That(commandTexts[4], Is.EqualTo("/fill -7 6 -9 7 6 9 air"));
+			Assert.That(commandTexts[5], Is.EqualTo("/fill -10 9 -10 10 11 10 stonebrick 0 hollow"));
+			Assert.That(commandTexts[6], Is.EqualTo("/fill -10 12 -10 10 15 10 stonebrick"));
+			Assert.That(commandTexts[7], Is.EqualTo("/fill -7 12 -7 7 15 7 air"));
+			Assert.That(commandTexts[8], Is.EqualTo("/fill -9 13 -7 9 13 7 air"));
+			Assert.That(commandTexts[9], Is.EqualTo("/fill -7 13 -9 7 13 9 air"));
+			Assert.That(commandTexts[10], Is.EqualTo("/fill -10 16 -10 10 18 10 stonebrick 0 hollow"));
+		}
+
+		[TestCase]
+		public void Simple_Radius_10_with_3_Levels_Pair()
+		{
+			var stoneBrick = new Block("stonebrick");
+			var blackStoneBrick = new Block("polished_blackstone_bricks");
+
+			var normalCommands = WarpZoneConstruction.GenerateWarpZone(new Coord2(0, 0), 1, 12, 4, stoneBrick);
+			var netherCommands = WarpZoneConstruction.GenerateWarpZone(new Coord2(0, 0), 1, 12, 4, blackStoneBrick);
+
+			string output = string.Join(Environment.NewLine, normalCommands.Select(c => c.CommandText).Concat(new[] { "" }).Concat(netherCommands.Select(c => c.CommandText)));
+
+		}
+	}
+}
