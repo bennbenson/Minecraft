@@ -1,4 +1,6 @@
-﻿namespace Minecraft.Model
+﻿using System;
+
+namespace Minecraft.Model
 {
 	public class SetBlockCommand : Command
 	{
@@ -14,13 +16,25 @@
 
 		public Block Block { get; }
 
-		public override string CommandText
+		protected override Type EqualityContract => typeof(SetBlockCommand);
+
+
+		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
-			get
+			if (edition == MinecraftEdition.Java)
 			{
-				string result = $"/setblock {Point.ArgumentText} {Block.ID}";
-				if (Block.Data > 0)
-					result += $" {Block.Data}";
+				IJEBlock block = Block;
+
+				string result = $"/setblock ";
+				return result;
+			}
+			else
+			{
+				IBEBlock block = Block;
+
+				string result = $"/setblock {Point.ArgumentText} {block.ID}";
+				if (block.DV > 0)
+					result += $" {block.DV}";
 				return result;
 			}
 		}

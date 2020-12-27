@@ -1,63 +1,64 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Minecraft.Model
 {
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class TeleportCommand : Command
 	{
-		private readonly string _whom;
-
-
-		public TeleportCommand(TeleportTarget target)
-			: this("@s", target, null)
+		public TeleportCommand(TargetEntity target)
+			: this(VictimEntity.Self, target, null)
 		{
 		}
 
-		public TeleportCommand(TeleportTarget target, Coord3 facing)
-			: this("@s", target, facing)
+		public TeleportCommand(TargetEntity target, TargetEntity? facing)
+			: this(VictimEntity.Self, target, facing)
 		{
 		}
 
-		public TeleportCommand(string whom, TeleportTarget target)
-			: this(whom, target, null)
+		public TeleportCommand(VictimEntity victim, TargetEntity target)
+			: this(victim, target, null)
 		{
 		}
 
-		public TeleportCommand(string whom, TeleportTarget target, Coord3? facing)
+		public TeleportCommand(VictimEntity victim, TargetEntity target, TargetEntity? facing)
 			: base("tp")
 		{
-			if (whom is null)
-				throw new ArgumentNullException(nameof(whom));
+			if (victim is null)
+				throw new ArgumentNullException(nameof(victim));
 			if (target is null)
 				throw new ArgumentNullException(nameof(target));
 
-			_whom = whom;
+			Victim = victim;
 			Target = target;
 			Facing = facing;
 		}
 
 
-		public string Whom => _whom;
+		public VictimEntity Victim { get; }
 
-		public TeleportTarget Target { get; }
+		public TargetEntity Target { get; }
 
-		public Coord3? Facing { get; }
+		public TargetEntity? Facing { get; }
 
-		public override string CommandText
+		protected override Type EqualityContract => typeof(TeleportCommand);
+
+		private string DebuggerDisplay => ToString();
+
+
+		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
-			get
-			{
-				string result = $"/{Name} ";
+			string result = $"/{Name} ";
 
-				if (_whom is not null)
-					result += " " + _whom;
+			if (Victim is not null)
+				result += " " + Victim.ToString();
 
-				result += " " + Target.ArgumentText;
+			result += " " + Target.ToString();
 
-				if (Facing is Coord3 facing)
-					result += " " + facing.ArgumentText;
+			if (Facing is TargetEntity facing)
+				result += " " + facing.ToString();
 
-				return result;
-			}
+			return result;
 		}
 	}
 }

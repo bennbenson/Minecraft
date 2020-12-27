@@ -1,4 +1,6 @@
-﻿namespace Minecraft.Model
+﻿using System;
+
+namespace Minecraft.Model
 {
 	public class SayCommand : Command
 	{
@@ -11,6 +13,12 @@
 
 		public string Message { get; }
 
-		public override string CommandText => $"/{Name} {Message}";
+		protected override Type EqualityContract => typeof(SayCommand);
+
+
+		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

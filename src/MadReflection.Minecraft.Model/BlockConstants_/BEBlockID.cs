@@ -1,6 +1,6 @@
 ﻿namespace Minecraft.Model
 {
-	public static class BlockID
+	public static class BEBlockID
 	{
 		public const string StoneBrick = "stonebrick";
 

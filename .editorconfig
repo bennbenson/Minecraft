@@ -142,6 +142,12 @@ csharp_space_between_square_brackets = false
 csharp_preserve_single_line_statements = false
 csharp_preserve_single_line_blocks = true
 
+# CA1806: Do not ignore method results
+dotnet_diagnostic.CA1806.severity = none
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = none
+
+
 [*.vb]
 charset = utf-8-bom
 indent_style = space

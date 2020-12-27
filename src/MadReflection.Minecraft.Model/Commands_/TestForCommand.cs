@@ -11,12 +11,13 @@ namespace Minecraft.Model
 		{
 		}
 
-		public override string CommandText
+
+		protected override Type EqualityContract => typeof(TestForCommand);
+
+
+		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
-			get
-			{
-				throw new NotImplementedException();
-			}
+			throw new NotImplementedException();
 		}
 	}
 }

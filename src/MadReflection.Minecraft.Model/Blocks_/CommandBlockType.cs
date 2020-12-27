@@ -3,7 +3,7 @@
 	public enum CommandBlockType
 	{
 		Impulse = 0,
-		Repeat = 1,
+		Repeating = 1,
 		Chain = 2
 	}
 }

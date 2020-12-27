@@ -7,6 +7,6 @@
 		}
 
 
-		public override string ArgumentText => "outline";
+		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "outline";
 	}
 }

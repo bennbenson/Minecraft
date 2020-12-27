@@ -4,7 +4,18 @@
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>MadReflection.Minecraft.Model</AssemblyName>
     <RootNamespace>Minecraft.Model</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Blocks_\blocks.json" />
+    <EmbeddedResource Include="Data\blocks.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
 
 </Project>

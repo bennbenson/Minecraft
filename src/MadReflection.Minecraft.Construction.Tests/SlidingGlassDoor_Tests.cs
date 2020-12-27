@@ -46,7 +46,7 @@ namespace Minecract.Construction.Tests
 			var result = SlidingGlassDoor.Calculate4Wide3High(left, right, y).ToList();
 
 			// Assert
-			List<string> commands = result.Select(r => r.Command.CommandText).ToList();
+			List<string> commands = result.Select(r => r.Command.GetCommandText(MinecraftEdition.Bedrock)).ToList();
 
 			Assert.That(commands.Count, Is.EqualTo(4));
 			Assert.That(commands[0], Is.EqualTo("/fill 603 68 125 602 70 125 air"));
@@ -67,7 +67,7 @@ namespace Minecract.Construction.Tests
 			var result = SlidingGlassDoor.Calculate4Wide3High(left, right, y).ToList();
 
 			// Assert
-			List<string> commands = result.Select(r => r.Command.CommandText).ToList();
+			List<string> commands = result.Select(r => r.Command.GetCommandText(MinecraftEdition.Bedrock)).ToList();
 
 			Assert.That(commands.Count, Is.EqualTo(4));
 			Assert.That(commands[0], Is.EqualTo("/fill 603 68 125 602 70 125 air"));
@@ -88,7 +88,7 @@ namespace Minecract.Construction.Tests
 			var result = SlidingGlassDoor.Calculate4Wide3High(left, right, y).ToList();
 
 			// Assert
-			List<string> commands = result.Select(r => r.Command.CommandText).ToList();
+			List<string> commands = result.Select(r => r.Command.GetCommandText(MinecraftEdition.Bedrock)).ToList();
 
 			Assert.That(commands.Count, Is.EqualTo(4));
 			Assert.That(commands[0], Is.EqualTo("/fill 599 68 116 599 70 117 air"));
@@ -109,7 +109,7 @@ namespace Minecract.Construction.Tests
 			var result = SlidingGlassDoor.Calculate4Wide3High(left, right, y).ToList();
 
 			// Assert
-			List<string> commands = result.Select(r => r.Command.CommandText).ToList();
+			List<string> commands = result.Select(r => r.Command.GetCommandText(MinecraftEdition.Bedrock)).ToList();
 
 			Assert.That(commands.Count, Is.EqualTo(4));
 			Assert.That(commands[0], Is.EqualTo("/fill 599 68 117 599 70 116 air"));

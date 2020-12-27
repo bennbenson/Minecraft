@@ -7,6 +7,6 @@
 		}
 
 
-		public override string ArgumentText => "keep";
+		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "keep";
 	}
 }

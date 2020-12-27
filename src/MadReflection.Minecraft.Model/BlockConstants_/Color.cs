@@ -1,9 +1,7 @@
 ﻿namespace Minecraft.Model
 {
-	public static class StainedGlassPane
+	public static class Color
 	{
-		// TODO: Verify that these are correct.
-
 		public const int White = 0;
 		public const int Orange = 1;
 		public const int Magenta = 2;

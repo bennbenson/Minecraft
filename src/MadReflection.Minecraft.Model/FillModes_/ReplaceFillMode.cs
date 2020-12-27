@@ -6,7 +6,7 @@ namespace Minecraft.Model
 	{
 		internal ReplaceFillMode()
 		{
-			Block = Block.Default;
+			Block = Block.Unspecified;
 		}
 
 		internal ReplaceFillMode(Block block)
@@ -18,30 +18,41 @@ namespace Minecraft.Model
 		}
 
 
-		public override string ArgumentText
-		{
-			get
-			{
-				string result = "replace";
-
-				if (!Block.IsUnspecified)
-				{
-					result += " " + Block.ID;
-					if (Block.Data > 0)
-						result += $" {Block.Data}";
-				}
-
-				return result;
-			}
-		}
-
 		public Block Block { get; }
 
 
-		// Suppressing CA1822 because the compiler does not understand the intended usage.
-#pragma warning disable CA1822 // Mark members as static
+		protected override string GetArgumentTextImpl(MinecraftEdition edition)
+		{
+			if (Block.IsUnspecified)
+				return "";
+
+			string result = "replace";
+
+			if (edition == MinecraftEdition.Java)
+			{
+				IJEBlock block = Block;
+
+				if (!Block.IsUnspecified)
+				{
+					result += " " + block.ID;
+				}
+			}
+			else
+			{
+				IBEBlock block = Block;
+
+				if (!Block.IsUnspecified)
+				{
+					result += " " + block.ID;
+					if (block.DV > 0)
+						result += $" {block.DV}";
+				}
+			}
+
+			return result;
+		}
+
 		public ReplaceFillMode With(Block block)
-#pragma warning restore CA1822 // Mark members as static
 		{
 			if (block is null)
 				throw new ArgumentNullException(nameof(block));

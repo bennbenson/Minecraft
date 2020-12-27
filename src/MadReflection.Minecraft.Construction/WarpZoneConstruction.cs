@@ -59,7 +59,10 @@ namespace Minecraft.Construction
 			if (parameters.TeleportIn)
 			{
 				int tpY = parameters.YBase + (interstitialHeight == 0 ? 0 : interstitialHeight + 1);
-				yield return new TeleportCommand(new TeleportTarget(center.AtY(tpY)), center.AddX(1).AtY(tpY));
+				//yield return new TeleportCommand(new TargetSelector(center.AtY(tpY)), center.AddX(1).AtY(tpY));
+				yield return new TeleportCommand(new TargetLocation(
+					center.AtY(tpY)
+					));
 			}
 		}
 

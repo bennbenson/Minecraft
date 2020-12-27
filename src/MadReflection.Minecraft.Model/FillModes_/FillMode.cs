@@ -1,4 +1,6 @@
-﻿namespace Minecraft.Model
+﻿using System;
+
+namespace Minecraft.Model
 {
 	public abstract class FillMode
 	{
@@ -14,6 +16,14 @@
 		}
 
 
-		public abstract string ArgumentText { get; }
+		public string GetArgumentText(MinecraftEdition edition)
+		{
+			if (edition < MinecraftEdition.Java || edition > MinecraftEdition.Bedrock)
+				throw new ArgumentOutOfRangeException(nameof(edition), "");
+
+			return GetArgumentTextImpl(edition);
+		}
+
+		protected abstract string GetArgumentTextImpl(MinecraftEdition edition);
 	}
 }

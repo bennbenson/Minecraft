@@ -1,0 +1,56 @@
+[
+  {
+    "je": {"nsid": "minecraft:air"},
+    "be": {"nid": 0,"id": "air","dv": 0},
+    "displayName": "Air",
+  },
+
+  {
+    "je": {"id": 228,"nsid": "stone_bricks"},
+    "be": {"nid": 98,"id": "","dv": 0},
+    "displayName": "Stone Bricks"
+  },
+  {
+    "je": {"id": 229,"nsid": "mossy_stone_bricks" },
+    "be": {"nid": 98,"id": "","dv": 0},
+    "displayName": "Mossy Stone Bricks"
+  },
+  {
+    "je": {"id": 230,"nsid": "cracked_stone_bricks"},
+    "be": {"nid": 98,"id": "","dv": 0},
+    "displayName": "Cracked Stone Bricks"
+  },
+  {
+    "je": {"id": 231,"nsid": "chiseled_stone_bricks"},
+    "be": {"nid": 98,"id": "","dv": 0},
+    "displayName": "Chiseled Stone Bricks"
+  },
+
+
+
+  {
+    "je": {"id": 748,"nsid": "polished_blackstone_bricks"},
+    "be": {"id": "","dv": 0},
+    "displayName": "Polished Blackstone Bricks"
+  },
+  {
+    "je": {"id": 749,"nsid": ""},
+    "be": {"id": "","dv": -1},
+    "displayName": "Cracked Polished Blackstone Bricks"
+  },
+  {
+    "je": {"id": ,"nsid": ""},
+    "be": {"id": "","dv": -2},
+    "displayName": "Chiseled Polished Blackstone"
+  },
+  {
+    "je": {"id": ,"nsid": ""},
+    "be": {"id": "","dv": -3},
+    "displayName": ""
+  },
+
+
+
+
+  {}
+]

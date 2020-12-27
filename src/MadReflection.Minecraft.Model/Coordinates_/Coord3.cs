@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace Minecraft.Model
 {
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public readonly struct Coord3 : IEquatable<Coord3>
+	public readonly struct Coord3 : IEquatable<Coord3>, IArgumentText
 	{
 		public Coord3(int x, int y, int z)
 		{
@@ -24,7 +24,7 @@ namespace Minecraft.Model
 
 		public int Z { get; }
 
-		public string ArgumentText => $"{X} {Y} {Z}";
+		private string DebuggerDisplay => ToString();
 
 
 		public Coord3 WithX(int x) => new Coord3(x, Y, Z);
@@ -35,17 +35,15 @@ namespace Minecraft.Model
 
 		public Coord3 AddX(int dx) => new Coord3(X + dx, Y, Z);
 
-		public Coord3 AddY(int dy) => new Coord3(X, Y + dy, Z);
+		public Coord3 AddY(int dy) => new Coord3(X, CheckYOverflow(Y + dy), Z);
 
 		public Coord3 AddZ(int dz) => new Coord3(X, Y, Z + dz);
 
-		private string DebuggerDisplay => ToString();
-
-		public static Coord3 Parse(string s) => InternalTryParse(s, out Coord3 result, out Exception exception, true) ? result : throw exception;
+		public static Coord3 Parse(string s) => InternalTryParse(s, out Coord3 result, out Exception? exception, true) ? result : throw exception!;
 
 		public static bool TryParse(string s, out Coord3 result) => InternalTryParse(s, out result, out _, false);
 
-		private static bool InternalTryParse(string s, out Coord3 result, out Exception exception, bool needException)
+		private static bool InternalTryParse(string s, out Coord3 result, out Exception? exception, bool needException)
 		{
 			if (s is null)
 			{
@@ -72,21 +70,24 @@ namespace Minecraft.Model
 
 		public static Coord3 At(int x, int y, int z) => new Coord3(x, y, z);
 
+		private static int CheckYOverflow(int y) => y is >= 0 and <= 255 ? y : throw new OverflowException("Y coordinate range overflow.");
+
 
 		public static bool operator ==(Coord3 a, Coord3 b) => a.Equals(b);
 
 		public static bool operator !=(Coord3 a, Coord3 b) => !a.Equals(b);
 
-		public static Coord3 operator +(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X + delta.x, coord.Y + delta.y, coord.Z + delta.z);
+		public static Coord3 operator +(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X + delta.x, CheckYOverflow(coord.Y + delta.y), coord.Z + delta.z);
 
-		public static Coord3 operator -(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X - delta.x, coord.Y - delta.y, coord.Z - delta.z);
+		public static Coord3 operator -(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X - delta.x, CheckYOverflow(coord.Y - delta.y), coord.Z - delta.z);
 
+		public static explicit operator Coord2(Coord3 coord) => new Coord2(coord.X, coord.Z);
 
 
 		#region Object members
 		public override int GetHashCode() => X ^ (Y << 8) ^ (Z << 16);
 
-		public override bool Equals(object obj) => obj is Coord3 other && Equals(other);
+		public override bool Equals(object? obj) => obj is Coord3 other && Equals(other);
 
 		public override string ToString() => $"({X},{Y},{Z})";
 		#endregion
@@ -94,6 +95,11 @@ namespace Minecraft.Model
 
 		#region IEquatable<Coordinate> members
 		public bool Equals(Coord3 other) => X == other.X && Y == other.Y && Z == other.Z;
+		#endregion
+
+
+		#region IArgumentText members
+		public string ArgumentText => $"{X} {Y} {Z}";
 		#endregion
 	}
 }

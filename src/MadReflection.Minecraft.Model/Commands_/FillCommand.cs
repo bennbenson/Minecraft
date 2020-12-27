@@ -1,22 +1,25 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 
 namespace Minecraft.Model
 {
-	public class FillCommand : Command
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
+	public class FillCommand : Command, IEquatable<FillCommand>
 	{
-		public FillCommand(Coord3 coord1, Coord3 coord2, Block block)
+		public FillCommand(Position from, Position to, Block block)
 			: base("fill")
 		{
 			if (block is null)
 				throw new ArgumentNullException(nameof(block));
 
-			Coord1 = coord1;
-			Coord2 = coord2;
+			From = from;
+			To = to;
 			Block = block;
 			FillMode = FillMode.Replace;
 		}
 
-		public FillCommand(Coord3 coord1, Coord3 coord2, Block block, FillMode fillMode)
+		public FillCommand(Position from, Position to, Block block, FillMode fillMode)
 			: base("fill")
 		{
 			if (block is null)
@@ -24,51 +27,66 @@ namespace Minecraft.Model
 			if (fillMode is null)
 				throw new ArgumentNullException(nameof(fillMode));
 
-			Coord1 = coord1;
-			Coord2 = coord2;
+			From = from;
+			To = to;
 			Block = block;
 			FillMode = fillMode;
 		}
 
 
-		public Coord3 Coord1 { get; }
+		public Position From { get; }
 
-		public Coord3 Coord2 { get; }
+		public Position To { get; }
 
 		public Block Block { get; }
 
 		public FillMode FillMode { get; init; }
 
-		public override string CommandText
+		protected override Type EqualityContract => typeof(FillCommand);
+
+		private string DebuggerDisplay => ToString();
+
+
+		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
-			get
+			StringBuilder result = new StringBuilder();
+			result.Insert(0, FillMode.GetArgumentText(edition));
+
+			bool hasFillMode = result.Length > 0;
+
+			if (hasFillMode)
+				result.Insert(0, " ");
+
+			if (edition == MinecraftEdition.Java)
 			{
-				string result = $"/{Name} {Coord1.ArgumentText} {Coord2.ArgumentText} {Block.ID}";
-
-				if (Block.Data > 0 || FillMode is not ReplaceFillMode rfm || !rfm.Block.IsUnspecified)
-				{
-					result += $" {Block.Data}";
-
-					if (FillMode is ReplaceFillMode replaceFillMode)
-					{
-						if (!replaceFillMode.Block.IsUnspecified)
-							result += " " + replaceFillMode.ArgumentText;
-					}
-					else
-					{
-						result += " " + FillMode.ArgumentText;
-					}
-				}
-
-				return result;
+				IJEBlock fillBlock = Block;
+				result.Insert(0, fillBlock.ID);
 			}
+			else
+			{
+				IBEBlock fillBlock = Block;
+
+				if (hasFillMode || fillBlock.DV > 0)
+					result.Insert(0, $" {fillBlock.DV}");
+				result.Insert(0, fillBlock.ID);
+			}
+
+			result.Insert(0, $"/fill {From.ArgumentText} {To.ArgumentText} ");
+			return result.ToString();
 		}
 
 
-		public override string ToString()
-		{
-			// This should be revisited.
-			return "/fill";
-		}
+		#region Object members
+		public override int GetHashCode() => HashCode.Combine(From, To, Block, FillMode);
+
+		public override bool Equals(object? obj) => obj is FillCommand other && Equals(other);
+
+		public override string ToString() => GetCommandTextImpl(MinecraftEdition.Java);
+		#endregion
+
+
+		#region IEquatable<FillCommand> members
+		public bool Equals(FillCommand? other) => other is not null && EqualityContract == other.EqualityContract && From == other.From && To == other.To && Block == other.Block && FillMode == other.FillMode;
+		#endregion
 	}
 }

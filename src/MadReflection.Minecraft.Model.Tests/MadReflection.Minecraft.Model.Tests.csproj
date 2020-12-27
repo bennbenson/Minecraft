@@ -5,6 +5,7 @@
     <AssemblyName>MadReflection.Minecraft.Model.Tests</AssemblyName>
     <RootNamespace>Minecraft.Model.Tests</RootNamespace>
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

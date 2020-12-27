@@ -7,6 +7,6 @@
 		}
 
 
-		public override string ArgumentText => "hollow";
+		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "hollow";
 	}
 }
