@@ -24,8 +24,10 @@ namespace Minecraft.Model.Tests.Data
 			// Arrange
 
 			// Act
+			BlockData? bd = BlockData.Find(null, ("fence", 0));
 
 			// Assert
+			Assert.That(bd, Is.Not.Null);
 		}
 	}
 }

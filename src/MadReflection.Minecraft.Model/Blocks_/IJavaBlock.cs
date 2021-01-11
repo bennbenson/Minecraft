@@ -2,14 +2,14 @@
 
 namespace Minecraft.Model
 {
-	public interface IJEBlock
+	public interface IJavaBlock
 	{
 		string ID { get; }
 	}
 
 	public static class JEBlockExtensions
 	{
-		public static TResult GetJavaProperty<TResult>(this IJEBlock block, Func<IJEBlock, TResult> func)
+		public static TResult GetJavaProperty<TResult>(this IJavaBlock block, Func<IJavaBlock, TResult> func)
 		{
 			if (func is null)
 				throw new ArgumentNullException(nameof(func));

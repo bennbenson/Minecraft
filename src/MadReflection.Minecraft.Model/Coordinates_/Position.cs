@@ -85,36 +85,45 @@ namespace Minecraft.Model
 				return false;
 			}
 
-			Match match = Regex.Match(s, @"^(?<tx>~|\^)?(?<x>-?\d+) (?<tz>~|\^)?(?<z>-?\d+) (?<tz>~|\^)?(?<z>-?\d+)");
+			Match match = Regex.Match(s, @"^(?<x>(?<xp>\^|\~)|(?<xv>0)|(?<xp>[~^])?(?<xv>[-+]?[1-9][0-9]*)), ?(?<y>(?<yp>\^|\~)|(?<yv>0)|(?<yp>[~^])?(?<yv>[-+]?[1-9][0-9]*)), ?(?<z>(?<zp>\^|\~)|(?<zv>0)|(?<zp>[~^])?(?<zv>[-+]?[1-9][0-9]*))$");
 			if (match.Success)
 			{
-				var xValue = GetPositionValue(match.Groups["tx"], match.Groups["x"]);
-				var yValue = GetPositionValue(match.Groups["ty"], match.Groups["y"]);
-				var zValue = GetPositionValue(match.Groups["tz"], match.Groups["z"]);
-				result = new Position(xValue, yValue, zValue);
+				PositionValue x = PositionValue.Parse(match.Groups["x"].Value);
+				PositionValue y = PositionValue.Parse(match.Groups["y"].Value);
+				PositionValue z = PositionValue.Parse(match.Groups["z"].Value);
+
+				result = new Position(x, y, z);
 				exception = null;
 				return true;
 			}
 
+			//Match match = Regex.Match(s, @"^((?<xp>\^|\~)|(?<xv>0)|(?<xp>[~^])?(?<xv>[-+]?[1-9][0-9]*)), ?((?<yp>\^|\~)|(?<yv>0)|(?<yp>[~^])?(?<yv>[-+]?[1-9][0-9]*)), ?((?<zp>\^|\~)|(?<zv>0)|(?<zp>[~^])?(?<zv>[-+]?[1-9][0-9]*))$");
+			//if (match.Success)
+			//{
+			//	PositionValue xValue = GetPositionValue(match.Groups["xp"], match.Groups["xv"]);
+			//	PositionValue yValue = GetPositionValue(match.Groups["yp"], match.Groups["yv"]);
+			//	PositionValue zValue = GetPositionValue(match.Groups["zp"], match.Groups["zv"]);
+			//	result = new Position(xValue, yValue, zValue);
+			//	exception = null;
+			//	return true;
+			//}
+
 			result = default;
 			exception = needException ? new FormatException() : null;
 			return false;
-		}
 
-		private static PositionValue GetPositionValue(Group prefixGroup, Group valueGroup)
-		{
-			int v = int.Parse(valueGroup.Value);
+			//static PositionValue GetPositionValue(Group prefixGroup, Group valueGroup)
+			//{
+			//	int value = valueGroup.Success ? int.Parse(valueGroup.Value) : 0;
+			//	char prefix = prefixGroup.Success ? prefixGroup.Value[0] : default;
 
-			char prefix = default;
-			if (prefixGroup.Success)
-				prefix = valueGroup.Value[0];
-
-			return prefix switch
-			{
-				'~' => PositionValue.Relative(v),
-				'^' => PositionValue.Local(v),
-				_ => PositionValue.Absolute(v)
-			};
+			//	return prefix switch
+			//	{
+			//		'~' => PositionValue.Relative(value),
+			//		'^' => PositionValue.Local(value),
+			//		_ => PositionValue.Absolute(value)
+			//	};
+			//}
 		}
 
 		public static bool operator ==(Position left, Position right) => left.Equals(right);
@@ -153,7 +162,7 @@ namespace Minecraft.Model
 
 		public override bool Equals(object? obj) => obj is Position other && Equals(other);
 
-		public override string ToString() => $"{X} {Y} {Z}";
+		public override string ToString() => $"{X}, {Y}, {Z}";
 		#endregion
 
 

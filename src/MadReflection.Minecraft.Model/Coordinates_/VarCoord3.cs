@@ -9,6 +9,9 @@ namespace Minecraft.Model
 	{
 		public VarCoord3(int? x, int? y, int? z)
 		{
+			if (y < 0 || y > 255)
+				throw new ArgumentOutOfRangeException(nameof(y), "Y cannot be negative or greater than 255.");
+
 			X = x;
 			Y = y;
 			Z = z;
@@ -21,14 +24,14 @@ namespace Minecraft.Model
 
 		public int? Z { get; }
 
+		private string DebuggerDisplay => ToString();
+
 
 		public VarCoord3 WithX(int? x) => new VarCoord3(x, Y, Z);
 
 		public VarCoord3 WithY(int? y) => new VarCoord3(X, y, Z);
 
 		public VarCoord3 WithZ(int? z) => new VarCoord3(X, Y, z);
-
-		private string DebuggerDisplay => ToString();
 
 
 		public static VarCoord3 Parse(string s) => InternalTryParse(s, out VarCoord3 result, out Exception? exception, true) ? result : throw exception!;
@@ -37,17 +40,24 @@ namespace Minecraft.Model
 
 		public static bool InternalTryParse(string s, out VarCoord3 result, out Exception? exception, bool needException)
 		{
-			Match match = Regex.Match(s, @"^\((?<x>-?[0-9]+|\*),(?<y>-?[0-9]+|\*),(?<z>-?[0-9]+|\*)\)$");
+			if (s is null)
+			{
+				result = default;
+				exception = needException ? new ArgumentNullException(nameof(s)) : null;
+				return false;
+			}
+
+			Match match = Regex.Match(s, @"^\((?<x>-?[1-9][0-9]*|\*|x\?), ?(?<y>-?[1-9][0-9]*|\*|y\?), ?(?<z>-?[1-9][0-9]*|\*|z\?)\)$");
 			if (match.Success)
 			{
 				string? xValue = match.Groups["x"].Value;
-				int? x = xValue == "*" ? null : int.Parse(xValue);
+				int? x = xValue is "*" or "x?" ? null : int.Parse(xValue);
 
 				string? yValue = match.Groups["y"].Value;
-				int? y = yValue == "*" ? null : int.Parse(yValue);
+				int? y = yValue is "*" or "y?" ? null : int.Parse(yValue);
 
 				string? zValue = match.Groups["z"].Value;
-				int? z = zValue == "*" ? null : int.Parse(zValue);
+				int? z = zValue is "*" or "z?" ? null : int.Parse(zValue);
 
 				result = new VarCoord3(x, y, z);
 				exception = null;
@@ -59,6 +69,8 @@ namespace Minecraft.Model
 			return false;
 		}
 
+		public static VarCoord3 At(int? x, int? y, int? z) => new VarCoord3(x, y, z);
+
 		public string ToStringQ() => $"({X?.ToString() ?? "x?"},{Y?.ToString() ?? "y?"},{Z?.ToString() ?? "z?"})";
 
 
@@ -67,6 +79,7 @@ namespace Minecraft.Model
 		public static bool operator !=(VarCoord3 left, VarCoord3 right) => !left.Equals(right);
 
 		public static implicit operator VarCoord3(Coord3 coord) => new VarCoord3(coord.X, coord.Y, coord.Z);
+
 		public static explicit operator Coord3(VarCoord3 coord)
 		{
 			if (coord.X is not int x || coord.Y is not int y || coord.Z is not int z)
@@ -74,6 +87,10 @@ namespace Minecraft.Model
 
 			return new Coord3(x, y, z);
 		}
+
+		public static implicit operator VarCoord3(Coord2 coord) => new VarCoord3(coord.X, null, coord.Z);
+
+		public static explicit operator Coord2(VarCoord3 coord) => coord.X is not int x || coord.Z is not int z ? throw new InvalidCastException("Cannot cast VarCoord3 with unknown X or Z to Coord2.") : new Coord2(x, z);
 
 
 		#region Object members

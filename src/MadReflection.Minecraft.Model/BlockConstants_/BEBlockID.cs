@@ -19,8 +19,11 @@
 			public const string WarpedPlanks = "warped_planks";
 
 			public const string Leaves = "leaves";
+			public const string Leaves2 = "leaves2";
 		}
 
+		public const string Fence = "fence";
+		public const string FenceGate = "fence_gate";
 
 		public const string Glass = "glass";
 		public const string StainedGlass = "stained_glass";

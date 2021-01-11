@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace Minecraft.Model
 {
@@ -20,8 +21,45 @@ namespace Minecraft.Model
 
 		public int Value { get; }
 
-
 		private string DebuggerDisplay => ToString();
+
+
+		public static PositionValue Parse(string s) => InternalTryParse(s, out PositionValue result, out Exception? exception, true) ? result : throw exception!;
+
+		public static bool TryParse(string s, out PositionValue result) => InternalTryParse(s, out result, out _, false);
+
+		private static bool InternalTryParse(string s, out PositionValue result, out Exception? exception, bool needException)
+		{
+			if (s is null)
+			{
+				result = default;
+				exception = needException ? new ArgumentNullException(nameof(s)) : null;
+				return false;
+			}
+
+			Match match = Regex.Match(s, @"^((?<p>\^|\~)|(?<v>0)|(?<p>[~^])?(?<v>[-+]?[1-9][0-9]*))$");
+			if (match.Success)
+			{
+				Group valueGroup = match.Groups["v"];
+				int value = valueGroup.Success ? int.Parse(valueGroup.Value) : 0;
+
+				Group prefixGroup = match.Groups["p"];
+				PositionType type = !prefixGroup.Success ? PositionType.Absolute : prefixGroup.Value[0] switch
+				{
+					'^' => PositionType.Local,
+					'~' => PositionType.Relative,
+					_ => PositionType.Absolute
+				};
+
+				exception = null;
+				result = new PositionValue(type, value);
+				return true;
+			}
+
+			result = default;
+			exception = needException ? new FormatException() : null;
+			return false;
+		}
 
 		public static PositionValue Absolute(int value) => new PositionValue(PositionType.Absolute, value);
 
@@ -35,6 +73,7 @@ namespace Minecraft.Model
 		public static bool operator !=(PositionValue left, PositionValue right) => !left.Equals(right);
 
 		public static implicit operator PositionValue(int value) => new PositionValue(PositionType.Absolute, value);
+
 
 
 		#region Object members

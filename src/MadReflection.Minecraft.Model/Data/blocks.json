@@ -1495,7 +1495,7 @@
   },
   {
     "je-id": "nether_bricks",
-    "be-id": "nether_bricks",
+    "be-id": "nether_brick",
     "be-dv": 0,
     "dn": "Nether Bricks"
   },
@@ -2797,7 +2797,7 @@
   },
   {
     "je-id": "red_nether_bricks",
-    "be-id": "red_nether_bricks",
+    "be-id": "red_nether_brick",
     "be-dv": 0,
     "dn": "Red Nether Bricks"
   },
@@ -2812,11 +2812,6 @@
     "be-id": "observer",
     "be-dv": 0,
     "dn": "Observer"
-  },
-  {
-    "je-id": "shulker_box",
-    "be-id": "undyed_shulker_box",
-    "dn": "Shulker Box"
   },
   {
     "je-id": "white_shulker_box",
@@ -3777,11 +3772,6 @@
     "be-id": "grindstone",
     "be-dv": 0,
     "dn": "Grindstone"
-  },
-  {
-    "je-id": "lectern",
-    "be-id": "lectern",
-    "dn": "Lectern"
   },
   {
     "je-id": "smithing_table",

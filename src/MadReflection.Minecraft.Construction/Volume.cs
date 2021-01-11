@@ -22,10 +22,11 @@ namespace Minecraft.Construction
 		/// <param name="from">The first corner of the volume.</param>
 		/// <param name="to">The opposite corner of the volume.</param>
 		/// <returns><c>true</c> if the volume contains 32768 blocks of fewer; <c>false</c> otherwise.</returns>
-		public static bool CanFill(Coord3 from, Coord3 to)
-		{
-			const int maxVolume = short.MaxValue + 1;
-			return CountBlocks(from, to) > maxVolume;
-		}
+		public static bool CanFill(Coord3 from, Coord3 to) => CanFill(CountBlocks(from, to));
+
+		/// <summary>Determines if the "fill" command can fill a volume of the specified number of blocks.</summary>
+		/// <param name="count">The number of blocks.</param>
+		/// <returns></returns>
+		public static bool CanFill(int count) => count is > 0 and <= short.MaxValue + 1;
 	}
 }

@@ -7,15 +7,15 @@ using Minecraft.Model.Data;
 namespace Minecraft.Model
 {
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public class Block : IEquatable<Block>, IJEBlock, IBEBlock
+	public class Block : IEquatable<Block>, IJavaBlock, IBedrockBlock
 	{
 		public static readonly Block Unspecified = new Block("", "", 0, false);
-		public static readonly Block Default = new Block("air", "air", 0);
+		public static readonly Block Default = new Block("air", "air", 0, false);
 		public static readonly Block Air = Default;
 
 		private readonly string? _jeID;
 		private readonly Lazy<Dictionary<string, string>> _states = new Lazy<Dictionary<string, string>>(() => new Dictionary<string, string>());
-		private readonly Lazy<Dictionary<string, string>> _tags = new Lazy<Dictionary<string, string>>(() => new Dictionary<string, string>());
+		//private readonly Lazy<Dictionary<string, string>> _tags = new Lazy<Dictionary<string, string>>(() => new Dictionary<string, string>());
 
 		private readonly string? _beID;
 		private readonly int _beDV;
@@ -58,7 +58,7 @@ namespace Minecraft.Model
 		{
 			if (id is null)
 				throw new ArgumentNullException(nameof(id));
-			if (id is "")
+			if (string.IsNullOrWhiteSpace(id))
 				throw new ArgumentException("Block ID cannot be empty.", nameof(id));
 
 			if (id.EndsWith("command_block"))
@@ -66,7 +66,7 @@ namespace Minecraft.Model
 
 			BlockData? blockData = BlockData.Find(id, null);
 			if (blockData is not null)
-				return new Block(blockData.JE_ID, blockData.BE_ID, blockData.BE_DV);
+				return new Block(blockData.JavaID, blockData.BedrockID, blockData.BedrockDataValue);
 
 
 			throw new ArgumentException("Unknown block ID.", nameof(id));
@@ -76,7 +76,7 @@ namespace Minecraft.Model
 		{
 			if (id is null)
 				throw new ArgumentNullException(nameof(id));
-			if (id is "")
+			if (string.IsNullOrWhiteSpace(id))
 				throw new ArgumentException("Block ID cannot be empty.", nameof(id));
 			if (dataValue < 0)
 				throw new ArgumentOutOfRangeException(nameof(dataValue), "Data value cannot be negative.");
@@ -86,7 +86,7 @@ namespace Minecraft.Model
 
 			BlockData? blockData = BlockData.Find(null, (id, dataValue));
 			if (blockData is not null)
-				return new Block(blockData.JE_ID, blockData.BE_ID, blockData.BE_DV);
+				return new Block(blockData.JavaID, blockData.BedrockID, blockData.BedrockDataValue);
 
 			throw new ArgumentException("Unknown block ID.", nameof(id));
 		}
@@ -102,43 +102,37 @@ namespace Minecraft.Model
 			};
 		}
 
-		private protected static bool DictionariesAreEqual(Lazy<Dictionary<string, string>> first, Lazy<Dictionary<string, string>> second)
+		protected internal static bool DictionariesAreEqual(Lazy<Dictionary<string, string>> first, Lazy<Dictionary<string, string>> second)
 		{
 			if (!first.IsValueCreated)
-				return !second.IsValueCreated;
+				return !second.IsValueCreated || second.Value.Count == 0;
 
-			Dictionary<string, string> left = first.Value;
-			Dictionary<string, string> right = second.Value;
-
-			if (left.Count != right.Count)
-				return false;
-
-			(string x, string y)[] joined = (
-				from x in left
-				join y in right on x.Key equals y.Key
-				select (x.Value, y.Value)
-				).ToArray();
-
-			if (joined.Length != left.Count)
-				return false;
-
-			if (joined.Any(p => p.x != p.y))
-				return false;
-
-			return true;
+			return DictionariesAreEqual(first.Value, second.Value);
 		}
 
+		protected internal static bool DictionariesAreEqual(Dictionary<string, string> first, Dictionary<string, string> second)
+		{
+			if (first.Count != second.Count)
+				return false;
 
-		#region IJEBlock members
-		string IJEBlock.ID => _jeID ?? "air";
-		#endregion
+			IEnumerable<(string, string)> joined =
+				from x in first
+				join y in second on x.Key equals y.Key
+				select (x.Value, y.Value);
 
+			int count = 0;
+			using (var enumerator = joined.GetEnumerator())
+			{
+				for (; enumerator.MoveNext(); ++count)
+				{
+					var (x, y) = enumerator.Current;
+					if (x != y)
+						return false;
+				}
+			}
 
-		#region IBEBlock members
-		string IBEBlock.ID => _beID ?? "air";
-
-		int IBEBlock.DV => _beDV;
-		#endregion
+			return count == first.Count;
+		}
 
 
 		#region Object members
@@ -156,8 +150,20 @@ namespace Minecraft.Model
 			if (other is null)
 				return false;
 
-			return _jeID == other._jeID && DictionariesAreEqual(_states, other._states) && DictionariesAreEqual(_tags, other._tags);
+			return _jeID == other._jeID && DictionariesAreEqual(_states, other._states) /*&& DictionariesAreEqual(_tags, other._tags)*/;
 		}
+		#endregion
+
+
+		#region IJavaBlock members
+		string IJavaBlock.ID => _jeID ?? "air";
+		#endregion
+
+
+		#region IBedrockBlock members
+		string IBedrockBlock.ID => _beID ?? "air";
+
+		int IBedrockBlock.DataValue => _beDV;
 		#endregion
 	}
 }

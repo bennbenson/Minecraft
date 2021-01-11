@@ -30,7 +30,7 @@ namespace Minecraft.Model
 
 			if (edition == MinecraftEdition.Java)
 			{
-				IJEBlock block = Block;
+				IJavaBlock block = Block;
 
 				if (!Block.IsUnspecified)
 				{
@@ -39,13 +39,13 @@ namespace Minecraft.Model
 			}
 			else
 			{
-				IBEBlock block = Block;
+				IBedrockBlock block = Block;
 
 				if (!Block.IsUnspecified)
 				{
 					result += " " + block.ID;
-					if (block.DV > 0)
-						result += $" {block.DV}";
+					if (block.DataValue > 0)
+						result += $" {block.DataValue}";
 				}
 			}
 

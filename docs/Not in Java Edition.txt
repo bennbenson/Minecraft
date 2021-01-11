@@ -1,0 +1,23 @@
+not in Java
+
+lit_furnace
+smooth_stonebrick (stonebrick:4) (not real)
+
+189 chain_command_block
+188 repeating_command_block
+178 daylight_detector_inverted
+124 lit_redstone_lamp
+454 lit_smoker
+469 lit_blast_furnace
+
+157 double_wooden_slab
+43 double_stone_slab
+181 double_stone_slab2
+422 double_stone_slab3
+423 double_stone_slab4
+521 crimson_double_slab
+522 warped_double_slab
+538 blackstone_double_slab
+549 polished_blackstone_double_slab
+540 polished_blackstone_brick_double_slab
+(upper slabs)

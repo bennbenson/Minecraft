@@ -6,26 +6,26 @@ using NUnit.Framework;
 namespace Minecraft.Construction.Tests
 {
 	[TestFixture]
-	public class MyTestClass_Tests
+	public class WarpZone_Tests
 	{
 		[TestCase]
 		public void Simple_Radius_10_with_1_Level()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new()
 			{
 				Center = new Coord2(0, 0),
 				YBase = 2,
 				Levels = 1,
 				Radius = 10,
-				LevelHeight = 4,
+				InteriorHeight = 4,
 				InterstitialHeight = 1,
 				CutSides = false
 			};
-			var block = Block.GetByBedrockID("stonebrick");
+			Block block = Block.GetByBedrockID("stonebrick");
 
 			// Act
-			var commands = WarpZoneConstruction.GenerateWarpZone(parameters, block).ToArray();
+			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
 			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 
 			// Assert
@@ -40,20 +40,20 @@ namespace Minecraft.Construction.Tests
 		public void Simple_Radius_10_with_2_Levels()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new()
 			{
 				Center = new Coord2(0, 0),
 				YBase = 2,
 				Levels = 2,
 				Radius = 10,
-				LevelHeight = 4,
+				InteriorHeight = 4,
 				InterstitialHeight = 1,
 				CutSides = false
 			};
-			var block = Block.GetByBedrockID("stonebrick");
+			Block block = Block.GetByBedrockID("stonebrick");
 
 			// Act
-			var commands = WarpZoneConstruction.GenerateWarpZone(parameters, block);
+			System.Collections.Generic.IEnumerable<Command> commands = WarpZone.Generate(parameters, block);
 			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 
 			// Assert
@@ -70,20 +70,20 @@ namespace Minecraft.Construction.Tests
 		public void Simple_Radius_10_with_2_Levels_0_Interstitial()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new()
 			{
 				Center = new Coord2(0, 0),
 				YBase = 2,
 				Levels = 2,
 				Radius = 10,
-				LevelHeight = 4,
+				InteriorHeight = 4,
 				InterstitialHeight = 0,
 				CutSides = false
 			};
-			var block = Block.GetByBedrockID("stonebrick");
+			Block block = Block.GetByBedrockID("stonebrick");
 
 			// Act
-			var commands = WarpZoneConstruction.GenerateWarpZone(parameters, block);
+			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
 			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 
 			// Assert
@@ -97,20 +97,20 @@ namespace Minecraft.Construction.Tests
 		public void Simple_Radius_10_with_2_Levels_2_Interstitial()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new()
 			{
 				Center = new Coord2(0, 0),
 				YBase = 2,
 				Levels = 2,
 				Radius = 10,
-				LevelHeight = 4,
+				InteriorHeight = 4,
 				InterstitialHeight = 2,
 				CutSides = false
 			};
-			var block = Block.GetByBedrockID("stonebrick");
+			Block block = Block.GetByBedrockID("stonebrick");
 
 			// Act
-			var commands = WarpZoneConstruction.GenerateWarpZone(parameters, block);
+			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
 			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 
 			// Assert
@@ -128,22 +128,22 @@ namespace Minecraft.Construction.Tests
 		public void Simple_Radius_10_with_3_Levels_Pair_and_CutSides()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new()
 			{
 				Center = Coord2.At(0, 0),
 				YBase = 1,
 				Levels = 3,
 				Radius = 12,
-				LevelHeight = 4,
+				InteriorHeight = 4,
 				InterstitialHeight = 1,
 				CutSides = true
 			};
-			var stoneBrick = Block.GetByBedrockID("stonebrick");
-			var blackStoneBrick = Block.GetByBedrockID("polished_blackstone_bricks");
+			Block stoneBrick = Block.GetByBedrockID("stonebrick");
+			Block blackStoneBrick = Block.GetByBedrockID("polished_blackstone_bricks");
 
 			// Act
-			var normalCommands = WarpZoneConstruction.GenerateWarpZone(parameters, stoneBrick).ToArray();
-			var netherCommands = WarpZoneConstruction.GenerateWarpZone(parameters, blackStoneBrick).ToArray();
+			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
+			Command[] netherCommands = WarpZone.Generate(parameters, blackStoneBrick).ToArray();
 
 			string[] normalCommandTexts = normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 			string[] netherCommandTexts = netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
@@ -186,76 +186,30 @@ namespace Minecraft.Construction.Tests
 		}
 
 		[TestCase]
-		public void Ravine_Extreme_Warp_Zone()
+		public void Multiple_Initial_Fill_Commands()
 		{
 			// Arrange
-			var parameters = new WarpZoneParameters()
+			WarpZoneParameters parameters = new WarpZoneParameters()
 			{
-				Center = Coord2.At(0, 0),
-				YBase = 1,
-				Levels = 4,
-				Radius = 9,
-				LevelHeight = 4,
-				InterstitialHeight = 1,
-				CutSides = false
+				Center = new Coord2(0, 0),
+				Levels = 5,
+				Radius = 31,
+				YBase = 10
 			};
-			var stoneBrick = Block.GetByBedrockID("stonebrick");
-			var blackStoneBrick = Block.GetByBedrockID("polished_blackstone_bricks");
+			Block block = Block.GetByBedrockID("stonebrick");
 
 			// Act
-			var normalCommands = WarpZoneConstruction.GenerateWarpZone(parameters, stoneBrick).ToArray();
-			var netherCommands = WarpZoneConstruction.GenerateWarpZone(parameters, blackStoneBrick).ToArray();
-
-			string normalScript = string.Join("", normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
-			string netherScript = string.Join("", netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
-
-			// Assert - Nothing
-		}
-
-		[TestCase]
-		public void BaseHouse_Sandbox_Warp_Zone()
-		{
-			// Arrange
-			var parameters = new WarpZoneParameters()
-			{
-				YBase = 6,
-				Levels = 2,
-				Radius = 13,
-			};
-			var stoneBrick = Block.GetByBedrockID("stonebrick");
-			var blackStoneBrick = Block.GetByBedrockID("polished_blackstone_bricks");
-
-			// Act
-			var normalCommands = WarpZoneConstruction.GenerateWarpZone(parameters, stoneBrick).ToArray();
-			var netherCommands = WarpZoneConstruction.GenerateWarpZone(parameters, blackStoneBrick).ToArray();
-
-			string normalScript = string.Join("", normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
-			string netherScript = string.Join("", netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
-
-			// Assert - Nothing
-		}
-
-		[TestCase]
-		public void Tokes_Warp_Zone()
-		{
-			// Arrange
-			var parameters = new WarpZoneParameters()
-			{
-				YBase = 7,
-				Levels = 2,
-				Radius = 13,
-			};
-			var stoneBrick = Block.GetByBedrockID("stonebrick");
-			var blackStoneBrick = Block.GetByBedrockID("polished_blackstone_bricks");
-
-			// Act
-			var normalCommands = WarpZoneConstruction.GenerateWarpZone(parameters, stoneBrick).ToArray();
-			var netherCommands = WarpZoneConstruction.GenerateWarpZone(parameters, blackStoneBrick).ToArray();
-
-			string normalScript = string.Join("", normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
-			string netherScript = string.Join("", netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock) + Environment.NewLine));
+			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
 
 			// Assert
+			Assert.That(commandTexts.Length, Is.EqualTo(16));
+			Assert.That(commandTexts[0], Is.EqualTo("/fill -31 10 -31 31 17 31 stonebrick"));
+			Assert.That(commandTexts[1], Is.EqualTo("/fill -31 18 -31 31 25 31 stonebrick"));
+			Assert.That(commandTexts[2], Is.EqualTo("/fill -31 26 -31 31 33 31 stonebrick"));
+			Assert.That(commandTexts[3], Is.EqualTo("/fill -31 34 -31 31 41 31 stonebrick"));
+			Assert.That(commandTexts[4], Is.EqualTo("/fill -31 42 -31 31 47 31 stonebrick"));
+			// No need to check the rest.
 		}
 	}
 }

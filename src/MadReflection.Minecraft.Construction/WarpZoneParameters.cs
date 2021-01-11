@@ -30,7 +30,7 @@ namespace Minecraft.Construction
 			set
 			{
 				if (_yBase < 0)
-					throw new ArgumentOutOfRangeException(nameof(value), "YBase cannot be less than 1.");
+					throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(YBase)} cannot be less than 1.");
 
 				_yBase = value;
 			}
@@ -43,7 +43,7 @@ namespace Minecraft.Construction
 			set
 			{
 				if (value < 1)
-					throw new ArgumentOutOfRangeException(nameof(value), "Levels cannot be less than 1.");
+					throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(Levels)} cannot be less than 1.");
 
 				_levels = value;
 			}
@@ -55,21 +55,28 @@ namespace Minecraft.Construction
 			get => _radius;
 			set
 			{
-				if (value < 5)
-					throw new ArgumentOutOfRangeException(nameof(value), "Radius cannot be less than 5.");
+				// With a radius of 90, each layer must be filled individually because each
+				// layer would be just shy of the limit at 32761 blocks.
+				// At 45, it has a chance of being able to execute the interstitial and
+				// interior fill commands, which have at least 3 layers each.
+				// This is an arbitrary but considerably reasonable limit.  One should go
+				// vertical for more room rather than use such a large radius.
+
+				if (value < 5 || value > 45)
+					throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(Radius)} cannot be less than 5 or greater than 45.");
 
 				_radius = value;
 			}
 		}
 
 		[DefaultValue(4)]
-		public int LevelHeight
+		public int InteriorHeight
 		{
 			get => _levelHeight;
 			set
 			{
 				if (value is < 2 or > 10)
-					throw new ArgumentOutOfRangeException(nameof(value), "LevelHeight cannot be less than 2 or greater than 10.");
+					throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(InteriorHeight)} cannot be less than 2 or greater than 10.");
 
 				_levelHeight = value;
 			}
@@ -82,7 +89,7 @@ namespace Minecraft.Construction
 			set
 			{
 				if (value is < 0 or > 10)
-					throw new ArgumentOutOfRangeException(nameof(value), "InterstitialHeight cannot be less than 0 or greater than 10.");
+					throw new ArgumentOutOfRangeException(nameof(value), $"{nameof(InterstitialHeight)} cannot be less than 0 or greater than 10.");
 
 				_interstitialHeight = value;
 			}

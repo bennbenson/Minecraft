@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Minecraft.Model;
-using Minecraft.Construction;
 using NUnit.Framework;
 
 /*
@@ -29,7 +27,7 @@ Inputs: (X:599, Z:115), (X:599, Z:118), 68...
 
 */
 
-namespace Minecract.Construction.Tests
+namespace Minecraft.Construction.Tests
 {
 	[TestFixture]
 	public class SlidingGlassDoor_Tests

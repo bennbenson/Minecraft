@@ -13,13 +13,13 @@ namespace Minecraft.Model.Data
 		private static readonly Lazy<List<BlockData>> _data = new Lazy<List<BlockData>>(LoadBlockData);
 
 		[JsonPropertyName("je-id")]
-		public string JE_ID { get; init; } = null!;
+		public string JavaID { get; init; } = default!;
 		[JsonPropertyName("be-id")]
-		public string BE_ID { get; init; } = null!;
+		public string BedrockID { get; init; } = null!;
 		[JsonPropertyName("be-dv")]
-		public int BE_DV { get; init; } = 0;
+		public int BedrockDataValue { get; init; } = 0;
 		[JsonPropertyName("dn")]
-		public string DN { get; init; } = null!;
+		public string DisplayName { get; init; } = null!;
 
 
 		private static List<BlockData> LoadBlockData()
@@ -46,10 +46,10 @@ namespace Minecraft.Model.Data
 			IEnumerable<BlockData> query = _data.Value;
 
 			if (jeID is not null)
-				query = query.Where(bd => bd.JE_ID == jeID);
+				query = query.Where(bd => bd.JavaID == jeID);
 
 			if (beIdentifier is BedrockIdentifier be)
-				query = query.Where(bd => bd.BE_ID == be.ID && bd.BE_DV == be.DV);
+				query = query.Where(bd => bd.BedrockID == be.ID && bd.BedrockDataValue == be.DV);
 
 			return query.SingleOrDefault();
 		}

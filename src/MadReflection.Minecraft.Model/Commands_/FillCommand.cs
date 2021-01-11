@@ -59,15 +59,15 @@ namespace Minecraft.Model
 
 			if (edition == MinecraftEdition.Java)
 			{
-				IJEBlock fillBlock = Block;
+				IJavaBlock fillBlock = Block;
 				result.Insert(0, fillBlock.ID);
 			}
 			else
 			{
-				IBEBlock fillBlock = Block;
+				IBedrockBlock fillBlock = Block;
 
-				if (hasFillMode || fillBlock.DV > 0)
-					result.Insert(0, $" {fillBlock.DV}");
+				if (hasFillMode || fillBlock.DataValue > 0)
+					result.Insert(0, $" {fillBlock.DataValue}");
 				result.Insert(0, fillBlock.ID);
 			}
 

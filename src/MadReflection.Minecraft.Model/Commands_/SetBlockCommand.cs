@@ -23,18 +23,18 @@ namespace Minecraft.Model
 		{
 			if (edition == MinecraftEdition.Java)
 			{
-				IJEBlock block = Block;
+				IJavaBlock block = Block;
 
 				string result = $"/setblock ";
 				return result;
 			}
 			else
 			{
-				IBEBlock block = Block;
+				IBedrockBlock block = Block;
 
 				string result = $"/setblock {Point.ArgumentText} {block.ID}";
-				if (block.DV > 0)
-					result += $" {block.DV}";
+				if (block.DataValue > 0)
+					result += $" {block.DataValue}";
 				return result;
 			}
 		}

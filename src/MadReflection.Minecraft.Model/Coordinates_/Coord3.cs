@@ -33,6 +33,8 @@ namespace Minecraft.Model
 
 		public Coord3 WithZ(int z) => new Coord3(X, Y, z);
 
+		public Coord3 Add(int dx, int dy, int dz) => new Coord3(X + dx, Y + dy, Z + dz);
+
 		public Coord3 AddX(int dx) => new Coord3(X + dx, Y, Z);
 
 		public Coord3 AddY(int dy) => new Coord3(X, CheckYOverflow(Y + dy), Z);
@@ -52,12 +54,13 @@ namespace Minecraft.Model
 				return false;
 			}
 
-			Match match = Regex.Match(s, @"^\((?<x>-?[0-9]+),(?<y>-?[0-9]+),(?<z>-?[0-9]+)\)$");
+			Match match = Regex.Match(s, @"^\((?<x>-?[0-9]+), ?(?<y>-?[0-9]+), ?(?<z>-?[0-9]+)\)$");
 			if (match.Success)
 			{
 				int x = int.Parse(match.Groups["x"].Value);
 				int y = int.Parse(match.Groups["y"].Value);
 				int z = int.Parse(match.Groups["z"].Value);
+
 				result = new Coord3(x, y, z);
 				exception = null;
 				return true;
@@ -80,8 +83,6 @@ namespace Minecraft.Model
 		public static Coord3 operator +(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X + delta.x, CheckYOverflow(coord.Y + delta.y), coord.Z + delta.z);
 
 		public static Coord3 operator -(Coord3 coord, (int x, int y, int z) delta) => new Coord3(coord.X - delta.x, CheckYOverflow(coord.Y - delta.y), coord.Z - delta.z);
-
-		public static explicit operator Coord2(Coord3 coord) => new Coord2(coord.X, coord.Z);
 
 
 		#region Object members

@@ -46,11 +46,12 @@ namespace Minecraft.Model
 				return false;
 			}
 
-			Match match = Regex.Match(s, @"^\((?<x>-?[0-9]+),\s?(?<z>-?[0-9]+)\)$");
+			Match match = Regex.Match(s, @"^\((?<x>-?[0-9]+), ?(?<z>-?[0-9]+)\)$");
 			if (match.Success)
 			{
 				int x = int.Parse(match.Groups["x"].Value);
 				int z = int.Parse(match.Groups["z"].Value);
+
 				result = new Coord2(x, z);
 				exception = null;
 				return true;
@@ -63,10 +64,6 @@ namespace Minecraft.Model
 
 		public static Coord2 At(int x, int z) => new Coord2(x, z);
 
-		public static (Coord2 start, Coord2 end) SpanX(int x, (int Start, int End) z) => (new Coord2(x, z.End), new Coord2(x, z.End));
-
-		public static (Coord2 start, Coord2 end) SpanZ((int Start, int End) x, int z) => (new Coord2(x.Start, z), new Coord2(x.End, z));
-
 
 		public static bool operator ==(Coord2 a, Coord2 b) => a.Equals(b);
 
@@ -76,6 +73,7 @@ namespace Minecraft.Model
 
 		public static Coord2 operator -(Coord2 coord, (int x, int z) delta) => new Coord2(coord.X - delta.x, coord.Z - delta.z);
 
+		public static explicit operator Coord2(Coord3 coord) => new Coord2(coord.X, coord.Z);  // Inverse of this is At(y).
 
 
 		#region Object members
