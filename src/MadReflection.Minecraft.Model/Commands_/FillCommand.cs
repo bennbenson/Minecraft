@@ -71,7 +71,7 @@ namespace Minecraft.Model
 				result.Insert(0, fillBlock.ID);
 			}
 
-			result.Insert(0, $"/fill {From.ArgumentText} {To.ArgumentText} ");
+			result.Insert(0, $"/fill {From.GetArgumentText(edition)} {To.GetArgumentText(edition)} ");
 			return result.ToString();
 		}
 

@@ -108,7 +108,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string ArgumentText => $"{X?.ToString() ?? "x?"} {Y?.ToString() ?? "y?"} {Z?.ToString() ?? "z?"}";
+		public string GetArgumentText(MinecraftEdition edition) => $"{X?.ToString() ?? "x?"} {Y?.ToString() ?? "y?"} {Z?.ToString() ?? "z?"}";
 		#endregion
 	}
 }

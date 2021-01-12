@@ -32,7 +32,7 @@ namespace Minecraft.Model
 			{
 				IBedrockBlock block = Block;
 
-				string result = $"/setblock {Point.ArgumentText} {block.ID}";
+				string result = $"/setblock {Point.GetArgumentText(edition)} {block.ID}";
 				if (block.DataValue > 0)
 					result += $" {block.DataValue}";
 				return result;

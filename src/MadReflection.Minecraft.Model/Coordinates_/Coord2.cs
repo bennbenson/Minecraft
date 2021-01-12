@@ -91,7 +91,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string ArgumentText => $"{X} ~ {Z}";  // Not sure this is correct.
+		public string GetArgumentText(MinecraftEdition edition) => $"{X} ~ {Z}";  // Not sure this is correct.
 		#endregion
 	}
 }

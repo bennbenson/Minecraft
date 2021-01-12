@@ -2,7 +2,7 @@
 
 namespace Minecraft.Model
 {
-	public abstract class Command : IEquatable<Command>
+	public abstract class Command : IEquatable<Command>, ICommandText
 	{
 		public static readonly Command Empty = new EmptyCommand();
 
@@ -15,6 +15,7 @@ namespace Minecraft.Model
 
 			Name = name;
 		}
+
 		private Command(string name, bool _)
 		{
 			if (name is null)
