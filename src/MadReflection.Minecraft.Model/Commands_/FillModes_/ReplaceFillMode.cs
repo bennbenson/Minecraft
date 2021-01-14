@@ -21,14 +21,14 @@ namespace Minecraft.Model
 		public Block Block { get; }
 
 
-		protected override string GetArgumentTextImpl(MinecraftEdition edition)
+		protected override string GetArgumentTextImpl(Edition edition)
 		{
 			if (Block.IsUnspecified)
 				return "";
 
 			string result = "replace";
 
-			if (edition == MinecraftEdition.Java)
+			if (edition == Edition.Java)
 			{
 				IJavaBlock block = Block;
 

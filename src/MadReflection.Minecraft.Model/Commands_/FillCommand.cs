@@ -47,7 +47,7 @@ namespace Minecraft.Model
 		private string DebuggerDisplay => ToString();
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			StringBuilder result = new();
 			result.Insert(0, FillMode.GetArgumentText(edition));
@@ -57,7 +57,7 @@ namespace Minecraft.Model
 			if (hasFillMode)
 				result.Insert(0, " ");
 
-			if (edition == MinecraftEdition.Java)
+			if (edition == Edition.Java)
 			{
 				IJavaBlock fillBlock = Block;
 				result.Insert(0, fillBlock.ID);
@@ -81,7 +81,7 @@ namespace Minecraft.Model
 
 		public override bool Equals(object? obj) => obj is FillCommand other && Equals(other);
 
-		public override string ToString() => GetCommandTextImpl(MinecraftEdition.Java);
+		public override string ToString() => GetCommandTextImpl(Edition.Java);
 		#endregion
 
 

@@ -35,10 +35,10 @@ namespace Minecraft.Model.Tests
 			Assert.That(result, Is.EqualTo(expected));
 		}
 
-		[TestCase(PositionType.Absolute, 0.0f, PositionType.Absolute, 0.0f, MinecraftEdition.Bedrock, "0 0")]
-		[TestCase(PositionType.Absolute, 1.2f, PositionType.Absolute, 7.1f, MinecraftEdition.Bedrock, "1.2 7.1")]
-		[TestCase(PositionType.Absolute, 1.2f, PositionType.Absolute, 7.1f, MinecraftEdition.Java, "1.2 7.1")]
-		public void GetArgumentText_Returns_Correct_Value(PositionType yType, float yValue, PositionType xType, float xValue, MinecraftEdition edition, string expected)
+		[TestCase(PositionType.Absolute, 0.0f, PositionType.Absolute, 0.0f, Edition.Bedrock, "0 0")]
+		[TestCase(PositionType.Absolute, 1.2f, PositionType.Absolute, 7.1f, Edition.Bedrock, "1.2 7.1")]
+		[TestCase(PositionType.Absolute, 1.2f, PositionType.Absolute, 7.1f, Edition.Java, "1.2 7.1")]
+		public void GetArgumentText_Returns_Correct_Value(PositionType yType, float yValue, PositionType xType, float xValue, Edition edition, string expected)
 		{
 			// Arrange
 			Rotation input = new Rotation(new RelativeFloat(yType, yValue), new RelativeFloat(xType, xValue));

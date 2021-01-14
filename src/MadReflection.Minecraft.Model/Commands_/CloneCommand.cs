@@ -9,7 +9,7 @@ namespace Minecraft.Model
 		{
 		}
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			throw new NotImplementedException();
 		}

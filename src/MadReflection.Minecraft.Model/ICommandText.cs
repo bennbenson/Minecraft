@@ -2,6 +2,6 @@
 {
 	public interface ICommandText
 	{
-		string GetCommandText(MinecraftEdition edition);
+		string GetCommandText(Edition edition);
 	}
 }

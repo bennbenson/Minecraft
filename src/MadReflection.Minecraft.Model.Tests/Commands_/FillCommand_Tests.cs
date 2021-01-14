@@ -17,11 +17,11 @@ namespace Minecraft.Model.Tests
 			throw new ArgumentException("Test provides neither Java nor Bedrock ID.");
 		}
 
-		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, MinecraftEdition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
-		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, MinecraftEdition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
-		[TestCase(0, 65, 10, "stone_bricks", null, 0, MinecraftEdition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
-		[TestCase(0, 65, 10, "stone_bricks", null, 0, MinecraftEdition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
-		public void CommandText_0_Data(int axis1, int ground, int axis2, string? jeID, string? beID, int beDataValue, MinecraftEdition edition, string expected)
+		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, Edition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
+		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, Edition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
+		[TestCase(0, 65, 10, "stone_bricks", null, 0, Edition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
+		[TestCase(0, 65, 10, "stone_bricks", null, 0, Edition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
+		public void CommandText_0_Data(int axis1, int ground, int axis2, string? jeID, string? beID, int beDataValue, Edition edition, string expected)
 		{
 			// Arrange
 			FillCommand command = new FillCommand(new Position(axis1, ground, axis2), new Position(axis2, ground, axis1), GetBlock(jeID, beID, beDataValue), FillMode.Replace);
@@ -33,12 +33,12 @@ namespace Minecraft.Model.Tests
 			Assert.That(result, Is.EqualTo(expected));
 		}
 
-		[TestCase(0, 65, 10, "stone_bricks", null, 0, FillModeType.Replace, MinecraftEdition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
-		[TestCase(0, 65, 10, "stone_bricks", null, 0, FillModeType.Replace, MinecraftEdition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
-		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, FillModeType.Replace, MinecraftEdition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
-		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, FillModeType.Hollow, MinecraftEdition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick 0 hollow")]
-		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Mossy, FillModeType.Hollow, MinecraftEdition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick 1 hollow")]
-		public void CommandText_Non_0_Data(int axis1, int ground, int axis2, string? jeID, string beID, int beDataValue, FillModeType fillModeType, MinecraftEdition edition, string expected)
+		[TestCase(0, 65, 10, "stone_bricks", null, 0, FillModeType.Replace, Edition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
+		[TestCase(0, 65, 10, "stone_bricks", null, 0, FillModeType.Replace, Edition.Java, "/fill 0 65 10 10 65 0 stone_bricks")]
+		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, FillModeType.Replace, Edition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick")]
+		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Normal, FillModeType.Hollow, Edition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick 0 hollow")]
+		[TestCase(0, 65, 10, null, "stonebrick", StoneBrick.Mossy, FillModeType.Hollow, Edition.Bedrock, "/fill 0 65 10 10 65 0 stonebrick 1 hollow")]
+		public void CommandText_Non_0_Data(int axis1, int ground, int axis2, string? jeID, string beID, int beDataValue, FillModeType fillModeType, Edition edition, string expected)
 		{
 			// Arrange
 			FillCommand command = new FillCommand(new Position(axis1, ground, axis2), new Position(axis2, ground, axis1), GetBlock(jeID, beID, beDataValue), fillModeType.Translate());
@@ -62,7 +62,7 @@ namespace Minecraft.Model.Tests
 				);
 
 			// Act
-			string result = command.GetCommandText(MinecraftEdition.Bedrock);
+			string result = command.GetCommandText(Edition.Bedrock);
 
 			// Assert
 			Assert.That(result, Is.EqualTo("/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick"));
@@ -80,7 +80,7 @@ namespace Minecraft.Model.Tests
 				);
 
 			// Act
-			string result = command.GetCommandText(MinecraftEdition.Bedrock);
+			string result = command.GetCommandText(Edition.Bedrock);
 
 			// Assert
 			Assert.That(result, Is.EqualTo("/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick 3"));
@@ -98,7 +98,7 @@ namespace Minecraft.Model.Tests
 				);
 
 			// Act
-			string result = command.GetCommandText(MinecraftEdition.Bedrock);
+			string result = command.GetCommandText(Edition.Bedrock);
 
 			// Assert
 			Assert.That(result, Is.EqualTo("/fill 0 65 10 10 65 0 stonebrick 0 hollow"));

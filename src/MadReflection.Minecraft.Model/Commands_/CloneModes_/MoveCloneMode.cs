@@ -2,6 +2,6 @@
 {
 	public class MoveCloneMode : CloneMode
 	{
-		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "move";
+		protected override string GetArgumentTextImpl(Edition edition) => "move";
 	}
 }

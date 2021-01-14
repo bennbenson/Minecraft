@@ -180,7 +180,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string GetArgumentText(MinecraftEdition edition) => $"{X.GetArgumentText(edition)} {Y.GetArgumentText(edition)} {Z.GetArgumentText(edition)}";
+		public string GetArgumentText(Edition edition) => $"{X.GetArgumentText(edition)} {Y.GetArgumentText(edition)} {Z.GetArgumentText(edition)}";
 		#endregion
 	}
 }

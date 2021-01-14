@@ -20,7 +20,7 @@ namespace Minecraft.Model
 		protected override Type EqualityContract => typeof(TestForCommand);
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			StringBuilder result = new StringBuilder();
 			result.Append("/testfor ");

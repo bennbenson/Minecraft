@@ -46,7 +46,7 @@ namespace Minecraft.Model
 		private string DebuggerDisplay => ToString();
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			string result = $"/{Name} ";
 

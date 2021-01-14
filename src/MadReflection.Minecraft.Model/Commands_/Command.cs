@@ -30,15 +30,15 @@ namespace Minecraft.Model
 		protected virtual Type EqualityContract => typeof(Command);
 
 
-		public string GetCommandText(MinecraftEdition edition)
+		public string GetCommandText(Edition edition)
 		{
-			if (edition < MinecraftEdition.Java || edition > MinecraftEdition.Bedrock)
+			if (edition < Edition.Java || edition > Edition.Bedrock)
 				throw new ArgumentOutOfRangeException(nameof(edition), "Invalid MinecraftEdition value.");
 
 			return GetCommandTextImpl(edition);
 		}
 
-		protected abstract string GetCommandTextImpl(MinecraftEdition edition);
+		protected abstract string GetCommandTextImpl(Edition edition);
 
 
 		#region Object members
@@ -65,7 +65,7 @@ namespace Minecraft.Model
 
 			protected override Type EqualityContract => typeof(EmptyCommand);
 
-			protected override string GetCommandTextImpl(MinecraftEdition edition) => "";
+			protected override string GetCommandTextImpl(Edition edition) => "";
 		}
 	}
 }

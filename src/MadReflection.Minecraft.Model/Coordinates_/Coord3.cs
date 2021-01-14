@@ -102,7 +102,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string GetArgumentText(MinecraftEdition edition) => $"{X} {Y} {Z}";
+		public string GetArgumentText(Edition edition) => $"{X} {Y} {Z}";
 		#endregion
 	}
 }

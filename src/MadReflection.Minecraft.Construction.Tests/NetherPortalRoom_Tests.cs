@@ -20,7 +20,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Length, Is.EqualTo(3));
@@ -44,7 +44,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Length, Is.EqualTo(3));
@@ -67,7 +67,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Length, Is.EqualTo(3));

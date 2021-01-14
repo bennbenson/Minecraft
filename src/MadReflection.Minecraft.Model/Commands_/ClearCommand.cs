@@ -36,7 +36,7 @@ namespace Minecraft.Model
 		public int? MaxCount { get; }
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			StringBuilder result = new StringBuilder();
 
@@ -45,7 +45,7 @@ namespace Minecraft.Model
 
 			if (Block != null)
 			{
-				if (edition == MinecraftEdition.Java)
+				if (edition == Edition.Java)
 				{
 					IJavaBlock block = (IJavaBlock)Block;
 					result.Append($" {block.ID}");

@@ -13,14 +13,14 @@ namespace Minecraft.Model
 		{
 		}
 
-		public string GetArgumentText(MinecraftEdition edition)
+		public string GetArgumentText(Edition edition)
 		{
-			if (edition < MinecraftEdition.Java || edition > MinecraftEdition.Bedrock)
+			if (edition < Edition.Java || edition > Edition.Bedrock)
 				throw new ArgumentOutOfRangeException(nameof(edition), "Invalid MinecraftEdition value.");
 
 			return GetArgumentTextImpl(edition);
 		}
 
-		protected abstract string GetArgumentTextImpl(MinecraftEdition edition);
+		protected abstract string GetArgumentTextImpl(Edition edition);
 	}
 }

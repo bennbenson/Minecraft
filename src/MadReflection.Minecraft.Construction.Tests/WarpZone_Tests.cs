@@ -26,7 +26,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Count, Is.EqualTo(4));
@@ -54,7 +54,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			System.Collections.Generic.IEnumerable<Command> commands = WarpZone.Generate(parameters, block);
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Count, Is.EqualTo(6));
@@ -84,7 +84,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Count, Is.EqualTo(3));
@@ -111,7 +111,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Count, Is.EqualTo(6));
@@ -145,8 +145,8 @@ namespace Minecraft.Construction.Tests
 			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
 			Command[] netherCommands = WarpZone.Generate(parameters, blackStoneBrick).ToArray();
 
-			string[] normalCommandTexts = normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
-			string[] netherCommandTexts = netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] normalCommandTexts = normalCommands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
+			string[] netherCommandTexts = netherCommands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(normalCommandTexts.Length, Is.EqualTo(14));
@@ -182,7 +182,7 @@ namespace Minecraft.Construction.Tests
 			Assert.That(netherCommandTexts[13], Is.EqualTo("/fill -12 22 -12 12 24 12 polished_blackstone_bricks 0 hollow"));
 
 			// Copy/Paste
-			string output = string.Join(Environment.NewLine, normalCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).Concat(new[] { "" }).Concat(netherCommands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock))));
+			string output = string.Join(Environment.NewLine, normalCommands.Select(c => c.GetCommandText(Edition.Bedrock)).Concat(new[] { "" }).Concat(netherCommands.Select(c => c.GetCommandText(Edition.Bedrock))));
 		}
 
 		[TestCase]
@@ -200,7 +200,7 @@ namespace Minecraft.Construction.Tests
 
 			// Act
 			Command[] commands = WarpZone.Generate(parameters, block).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText(MinecraftEdition.Bedrock)).ToArray();
+			string[] commandTexts = commands.Select(c => c.GetCommandText(Edition.Bedrock)).ToArray();
 
 			// Assert
 			Assert.That(commandTexts.Length, Is.EqualTo(16));

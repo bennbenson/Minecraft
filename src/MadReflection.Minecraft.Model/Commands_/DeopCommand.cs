@@ -10,7 +10,7 @@ namespace Minecraft.Model
 		}
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			StringBuilder result = new();
 

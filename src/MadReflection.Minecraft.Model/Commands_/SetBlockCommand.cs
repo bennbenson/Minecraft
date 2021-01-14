@@ -20,11 +20,11 @@ namespace Minecraft.Model
 		protected override Type EqualityContract => typeof(SetBlockCommand);
 
 
-		protected override string GetCommandTextImpl(MinecraftEdition edition)
+		protected override string GetCommandTextImpl(Edition edition)
 		{
 			StringBuilder result = new($"/setblock {Position.GetArgumentText(edition)}");
 
-			if (edition == MinecraftEdition.Java)
+			if (edition == Edition.Java)
 			{
 				IJavaBlock block = Block;
 

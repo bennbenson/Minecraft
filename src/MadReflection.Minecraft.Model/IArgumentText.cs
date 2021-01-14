@@ -2,6 +2,6 @@
 {
 	public interface IArgumentText
 	{
-		string GetArgumentText(MinecraftEdition edition);
+		string GetArgumentText(Edition edition);
 	}
 }

@@ -1,6 +1,6 @@
 ﻿namespace Minecraft.Model
 {
-	public enum MinecraftEdition
+	public enum Edition
 	{
 		Java,
 		Bedrock

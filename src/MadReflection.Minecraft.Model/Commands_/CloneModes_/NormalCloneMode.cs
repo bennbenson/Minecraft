@@ -2,6 +2,6 @@
 {
 	public class NormalCloneMode : CloneMode
 	{
-		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "normal";
+		protected override string GetArgumentTextImpl(Edition edition) => "normal";
 	}
 }

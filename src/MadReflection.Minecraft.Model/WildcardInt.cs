@@ -48,7 +48,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string GetArgumentText(MinecraftEdition edition) => _isWildcard ? "*" : _value.ToString();
+		public string GetArgumentText(Edition edition) => _isWildcard ? "*" : _value.ToString();
 		#endregion
 	}
 }

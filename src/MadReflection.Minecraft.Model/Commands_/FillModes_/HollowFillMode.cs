@@ -7,6 +7,6 @@
 		}
 
 
-		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "hollow";
+		protected override string GetArgumentTextImpl(Edition edition) => "hollow";
 	}
 }

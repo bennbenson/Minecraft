@@ -110,7 +110,7 @@ namespace Minecraft.Model
 
 
 		#region IArgumentText members
-		public string GetArgumentText(MinecraftEdition edition) => ToString();
+		public string GetArgumentText(Edition edition) => ToString();
 		#endregion
 	}
 }

@@ -18,7 +18,7 @@ namespace Minecraft.Model
 			_conditions = conditions;
 		}
 
-		protected override string GetArgumentTextImpl(MinecraftEdition edition) => $"filtered [{string.Join(",", _conditions.Select((k, v) => $"{k}={v}"))}]";
+		protected override string GetArgumentTextImpl(Edition edition) => $"filtered [{string.Join(",", _conditions.Select((k, v) => $"{k}={v}"))}]";
 
 		public FilteredMaskMode By(string name, string value)
 		{

@@ -7,6 +7,6 @@
 		}
 
 
-		protected override string GetArgumentTextImpl(MinecraftEdition edition) => "destroy";
+		protected override string GetArgumentTextImpl(Edition edition) => "destroy";
 	}
 }
