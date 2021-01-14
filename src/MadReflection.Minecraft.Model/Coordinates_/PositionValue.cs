@@ -5,8 +5,13 @@ using System.Text.RegularExpressions;
 namespace Minecraft.Model
 {
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public readonly struct PositionValue : IEquatable<PositionValue>
+	public readonly struct PositionValue : IEquatable<PositionValue>, IArgumentText
 	{
+		public PositionValue(int value)
+			: this(PositionType.Absolute, value)
+		{
+		}
+
 		public PositionValue(PositionType type, int value)
 		{
 			if (type < PositionType.Absolute || type > PositionType.Local)
@@ -74,6 +79,7 @@ namespace Minecraft.Model
 
 		public static implicit operator PositionValue(int value) => new PositionValue(PositionType.Absolute, value);
 
+		public static explicit operator int(PositionValue value) => value.Type == PositionType.Absolute ? value.Value : throw new InvalidCastException($"Cannot cast a relative or local {nameof(PositionValue)} instance to Int32.");
 
 
 		#region Object members
@@ -95,6 +101,11 @@ namespace Minecraft.Model
 
 		#region IEquatable<PositionValue> members
 		public bool Equals(PositionValue other) => Type == other.Type && Value == other.Value;
+		#endregion
+
+
+		#region IArgumentText members
+		public string GetArgumentText(MinecraftEdition edition) => ToString();
 		#endregion
 	}
 }

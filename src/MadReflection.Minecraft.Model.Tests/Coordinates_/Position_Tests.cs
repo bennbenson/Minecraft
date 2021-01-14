@@ -108,6 +108,10 @@ namespace Minecraft.Model.Tests
 			Assert.That(result.Z.Type, Is.EqualTo(PositionType.Absolute));
 		}
 
+		// WithX
+		// WithY
+		// WithZ
+
 		[TestCase(PositionType.Absolute, 0, PositionType.Relative, 0, PositionType.Absolute, 0)]
 		//[TestCase(PositionType.Absolute, 0, PositionType.Relative, 0, PositionType.Absolute, 0)]
 		//[TestCase(PositionType.Absolute, 0, PositionType.Absolute, 0, PositionType.Absolute, 0)]

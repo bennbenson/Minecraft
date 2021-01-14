@@ -43,10 +43,4 @@ namespace Minecraft.Model
 		public bool Equals(BrigadierBool other) => Value == other.Value;
 		#endregion
 	}
-
-	internal readonly struct BrigadierSingle { }
-	internal readonly struct BrigadierDouble { }
-	internal readonly struct BrigadierInteger { }
-	internal readonly struct BrigadierLong { }
-	internal readonly struct BrigadierString { }
 }

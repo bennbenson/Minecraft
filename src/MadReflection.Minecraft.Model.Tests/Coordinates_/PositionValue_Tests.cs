@@ -7,15 +7,16 @@ namespace Minecraft.Model.Tests
 	public class PositionValue_Tests
 	{
 		[TestCase]
-		public void Default_Is_Absolute()
+		public void Default_Is_Absolute_Zero()
 		{
 			// Arrange
 
 			// Act
-			PositionType result = new PositionValue().Type;
+			PositionValue result = new PositionValue();
 
 			// Assert
-			Assert.That(result, Is.EqualTo(PositionType.Absolute));
+			Assert.That(result.Type, Is.EqualTo(PositionType.Absolute));
+			Assert.That(result.Value, Is.EqualTo(0));
 		}
 
 		[TestCase(PositionType.Absolute, 0)]
@@ -62,6 +63,7 @@ namespace Minecraft.Model.Tests
 		[TestCase("0", PositionType.Absolute, 0)]
 		[TestCase("51", PositionType.Absolute, 51)]
 		[TestCase("-16", PositionType.Absolute, -16)]
+		[TestCase("+100", PositionType.Absolute, 100)]
 		[TestCase("~", PositionType.Relative, 0)]
 		[TestCase("^", PositionType.Local, 0)]
 		[TestCase("~1", PositionType.Relative, 1)]
@@ -75,7 +77,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			var result = PositionValue.Parse(input);
+			PositionValue result = PositionValue.Parse(input);
 
 			// Assert
 			Assert.That(result.Type, Is.EqualTo(type));
@@ -85,7 +87,6 @@ namespace Minecraft.Model.Tests
 		[TestCase(null, typeof(ArgumentNullException))]
 		[TestCase("", typeof(FormatException))]
 		[TestCase("x", typeof(FormatException))]
-		[TestCase("+1", typeof(FormatException))]
 		public void Parse_Throws_On_Invalid_Inputs(string input, Type expectedException)
 		{
 			// Arrange
@@ -97,21 +98,46 @@ namespace Minecraft.Model.Tests
 			Assert.That(test, Throws.TypeOf(expectedException));
 		}
 
-		//[TestCase("", true)]
-		public void TryParse________(string input, bool expected)
+		[TestCase("0", true, PositionType.Absolute, 0)]
+		[TestCase("51", true, PositionType.Absolute, 51)]
+		[TestCase("-16", true, PositionType.Absolute, -16)]
+		[TestCase("+100", true, PositionType.Absolute, 100)]
+		[TestCase("~", true, PositionType.Relative, 0)]
+		[TestCase("^", true, PositionType.Local, 0)]
+		[TestCase("~1", true, PositionType.Relative, 1)]
+		[TestCase("~-1", true, PositionType.Relative, -1)]
+		[TestCase("~+1", true, PositionType.Relative, 1)]
+		[TestCase("^1", true, PositionType.Local, 1)]
+		[TestCase("^-1", true, PositionType.Local, -1)]
+		[TestCase("^+1", true, PositionType.Local, 1)]
+		[TestCase(null, false, default(PositionType), default(int))]
+		[TestCase("", false, default(PositionType), default(int))]
+		[TestCase("x", false, default(PositionType), default(int))]
+		public void TryParse_Succeeds(string input, bool expected, PositionType expectedType, int expectedValue)
 		{
 			// Arrange
 
 			// Act
+			bool result = PositionValue.TryParse(input, out PositionValue output);
 
 			// Assert
+			if (expected)
+			{
+				Assert.That(result, Is.True);
+				Assert.That(output.Type, Is.EqualTo(expectedType));
+				Assert.That(output.Value, Is.EqualTo(expectedValue));
+			}
+			else
+			{
+				Assert.That(result, Is.False);
+			}
 		}
 
 		[TestCase]
 		public void Absolute_Creates_Absolute_Value()
 		{
 			// Arrange
-			PositionValue input = new PositionValue(PositionType.Absolute, 0);
+			PositionValue input = PositionValue.Absolute(0);
 
 			// Act
 			PositionType result = input.Type;
@@ -124,7 +150,7 @@ namespace Minecraft.Model.Tests
 		public void Relative_Creates_Relative_Value()
 		{
 			// Arrange
-			PositionValue input = new PositionValue(PositionType.Relative, 0);
+			PositionValue input = PositionValue.Relative(0);
 
 			// Act
 			PositionType result = input.Type;
@@ -137,7 +163,7 @@ namespace Minecraft.Model.Tests
 		public void Local_Creates_Local_Value()
 		{
 			// Arrange
-			PositionValue input = new PositionValue(PositionType.Local, 0);
+			PositionValue input = PositionValue.Local(0);
 
 			// Act
 			PositionType result = input.Type;
