@@ -19,7 +19,7 @@ namespace Minecraft.Model
 		public string GetArgumentText(MinecraftEdition edition)
 		{
 			if (edition < MinecraftEdition.Java || edition > MinecraftEdition.Bedrock)
-				throw new ArgumentOutOfRangeException(nameof(edition), "");
+				throw new ArgumentOutOfRangeException(nameof(edition), "Invalid MinecraftEdition value.");
 
 			return GetArgumentTextImpl(edition);
 		}
