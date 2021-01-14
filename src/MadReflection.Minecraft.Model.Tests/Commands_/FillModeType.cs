@@ -25,7 +25,7 @@ namespace Minecraft.Model.Tests
 				FillModeType.Keep => FillMode.Keep,
 				FillModeType.Outline => FillMode.Outline,
 				FillModeType.Replace => FillMode.Replace,
-				_ => throw new ArgumentException("Invalid FillModeType value.", nameof(type))
+				_ => throw new ArgumentOutOfRangeException(nameof(type), $"Invalid {nameof(FillModeType)} value.")
 			};
 		}
 	}

@@ -49,7 +49,7 @@ namespace Minecraft.Model
 
 		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
-			StringBuilder result = new StringBuilder();
+			StringBuilder result = new();
 			result.Insert(0, FillMode.GetArgumentText(edition));
 
 			bool hasFillMode = result.Length > 0;

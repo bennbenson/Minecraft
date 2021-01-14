@@ -3,7 +3,7 @@
 	public enum Dimension
 	{
 		Overworld,
-		Nether,
-		End
+		TheNether,
+		TheEnd
 	}
 }

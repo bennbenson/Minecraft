@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Minecraft.Model
 {
@@ -25,7 +22,7 @@ namespace Minecraft.Model
 	}
 
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public class TargetPlayer : TargetEntity, IEquatable<TargetPlayer>, IPlayer
+	public class TargetPlayer : TargetEntity, IEquatable<TargetPlayer>
 	{
 		public TargetPlayer(string name)
 		{
@@ -60,10 +57,13 @@ namespace Minecraft.Model
 	}
 
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public class TargetSelector : TargetEntity, IEquatable<TargetSelector>, ISelector
+	public class TargetSelector : TargetEntity, IEquatable<TargetSelector>
 	{
 		public TargetSelector(char t)
 		{
+			if (t is not 'a' and not 'e' and not 'p' and not 'r' and not 's')
+				throw new ArgumentOutOfRangeException(nameof(t), "Invalid selector character.");
+
 			T = t;
 		}
 
@@ -155,7 +155,7 @@ namespace Minecraft.Model
 	}
 
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public sealed class VictimPlayer : VictimEntity, IEquatable<VictimPlayer>, IPlayer
+	public sealed class VictimPlayer : VictimEntity, IEquatable<VictimPlayer>
 	{
 		public VictimPlayer(string name)
 		{
@@ -199,10 +199,13 @@ namespace Minecraft.Model
 	}
 
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
-	public sealed class VictimSelector : VictimEntity, IEquatable<VictimSelector>, ISelector
+	public sealed class VictimSelector : VictimEntity, IEquatable<VictimSelector>
 	{
 		public VictimSelector(char t)
 		{
+			if (t is not 'a' and not 'e' and not 'p' and not 'r' and not 's')
+				throw new ArgumentOutOfRangeException(nameof(t), "Invalid selector character.");
+
 			T = t;
 		}
 
@@ -229,24 +232,5 @@ namespace Minecraft.Model
 			throw new NotImplementedException();
 		}
 		#endregion
-	}
-
-
-
-	public interface ISelector
-	{
-		char T { get; }
-	}
-
-	public interface IPlayer
-	{
-		string Name { get; }
-	}
-
-	public interface ILocation
-	{
-		PositionValue X { get; }
-		PositionValue Y { get; }
-		PositionValue Z { get; }
 	}
 }

@@ -1,18 +1,19 @@
 ﻿using System;
+using System.Text;
 
 namespace Minecraft.Model
 {
 	public class SetBlockCommand : Command
 	{
-		public SetBlockCommand(Coord3 point, Block block)
+		public SetBlockCommand(Position position, Block block)
 			: base("setblock")
 		{
-			Point = point;
+			Position = position;
 			Block = block;
 		}
 
 
-		public Coord3 Point { get; }
+		public Position Position { get; }
 
 		public Block Block { get; }
 
@@ -21,22 +22,24 @@ namespace Minecraft.Model
 
 		protected override string GetCommandTextImpl(MinecraftEdition edition)
 		{
+			StringBuilder result = new($"/setblock {Position.GetArgumentText(edition)}");
+
 			if (edition == MinecraftEdition.Java)
 			{
 				IJavaBlock block = Block;
 
-				string result = $"/setblock ";
-				return result;
+				result.Append($" {block.ID}");
 			}
 			else
 			{
 				IBedrockBlock block = Block;
 
-				string result = $"/setblock {Point.GetArgumentText(edition)} {block.ID}";
+				result.Append($" {block.ID}");
 				if (block.DataValue > 0)
-					result += $" {block.DataValue}";
-				return result;
+					result.Append($" {block.DataValue}");
 			}
+
+			return result.ToString();
 		}
 	}
 }
