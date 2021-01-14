@@ -33,6 +33,7 @@ namespace Minecraft.Model
 
 		public VarCoord3 WithZ(int? z) => new VarCoord3(X, Y, z);
 
+		public void Deconstruct(out int? x, out int? y, out int? z) => (x, y, z) = (X, Y, Z);
 
 		public static VarCoord3 Parse(string s) => InternalTryParse(s, out VarCoord3 result, out Exception? exception, true) ? result : throw exception!;
 

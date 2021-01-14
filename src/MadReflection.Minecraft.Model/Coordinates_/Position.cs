@@ -64,6 +64,14 @@ namespace Minecraft.Model
 		public string DebuggerDisplay => ToString();
 
 
+		public Position WithX(PositionValue x) => new Position(x, Y, Z);
+
+		public Position WithY(PositionValue y) => new Position(X, y, Z);
+
+		public Position WithZ(PositionValue z) => new Position(X, Y, z);
+
+		public void Deconstruct(out PositionValue x, out PositionValue y, out PositionValue z) => (x, y, z) = (X, Y, Z);
+
 		public static Position Get(PositionValue x, PositionValue y, PositionValue z) => new Position(x, y, z);
 
 		public static Position Absolute(int x, int y, int z) => new Position(false, PositionValue.Absolute(x), PositionValue.Absolute(y), PositionValue.Absolute(z));

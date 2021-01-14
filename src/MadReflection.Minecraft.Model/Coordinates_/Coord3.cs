@@ -41,6 +41,8 @@ namespace Minecraft.Model
 
 		public Coord3 AddZ(int dz) => new Coord3(X, Y, Z + dz);
 
+		public void Deconstruct(out int x, out int y, out int z) => (x, y, z) = (X, Y, Z);
+
 		public static Coord3 Parse(string s) => InternalTryParse(s, out Coord3 result, out Exception? exception, true) ? result : throw exception!;
 
 		public static bool TryParse(string s, out Coord3 result) => InternalTryParse(s, out result, out _, false);

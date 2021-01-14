@@ -33,6 +33,8 @@ namespace Minecraft.Model
 
 		public Coord2 AddZ(int dz) => new Coord2(X, Z + dz);
 
+		public void Deconstruct(out int x, out int z) => (x, z) = (X, Z);
+
 		public static Coord2 Parse(string s) => InternalTryParse(s, out Coord2 result, out Exception? exception, true) ? result : throw exception!;
 
 		public static bool TryParse(string s, out Coord2 result) => InternalTryParse(s, out result, out _, false);
