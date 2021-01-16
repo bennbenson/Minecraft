@@ -140,6 +140,10 @@ namespace Minecraft.Model
 
 		public static implicit operator Position(Coord3 coord) => Absolute(coord.X, coord.Y, coord.Z);
 
+		public static implicit operator Position((int x, int y, int z) coord) => Absolute(coord.x, coord.y, coord.z);
+
+		public static implicit operator Position((PositionValue x, PositionValue y, PositionValue z) coord) => new Position(coord.x, coord.y, coord.z);
+
 		public static explicit operator Coord3(Position position)
 		{
 			if (position.X.Type != PositionType.Absolute || position.Y.Type != PositionType.Absolute || position.Z.Type != PositionType.Absolute)

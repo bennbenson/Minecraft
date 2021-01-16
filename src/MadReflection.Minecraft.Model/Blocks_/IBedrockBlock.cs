@@ -10,13 +10,7 @@ namespace Minecraft.Model
 
 	public static class BEBlockExtensions
 	{
-		public static TResult GetBedrockProperty<TResult>(this IBedrockBlock block, Func<IBedrockBlock, TResult> func)
-		{
-			if (func is null)
-				throw new ArgumentNullException(nameof(func));
-
-			return func(block);
-		}
+		public static IBedrockBlock AsBedrock(this IBedrockBlock block) => block;
 
 		public static Block WithBlockData(this IBedrockBlock block, int dataValue)
 		{

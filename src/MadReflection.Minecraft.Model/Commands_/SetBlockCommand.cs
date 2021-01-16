@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 
 namespace Minecraft.Model
 {
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class SetBlockCommand : Command
 	{
 		public SetBlockCommand(Position position, Block block)
@@ -18,6 +20,8 @@ namespace Minecraft.Model
 		public Block Block { get; }
 
 		protected override Type EqualityContract => typeof(SetBlockCommand);
+
+		private string DebuggerDisplay => ToString();
 
 
 		protected override string GetCommandTextImpl(Edition edition)

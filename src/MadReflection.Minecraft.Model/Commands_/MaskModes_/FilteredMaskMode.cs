@@ -1,39 +1,37 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Minecraft.Model
 {
 	public sealed class FilteredMaskMode : MaskMode
 	{
-		private readonly Dictionary<string, string> _conditions;
-
-
 		internal FilteredMaskMode()
 		{
-			_conditions = new();
+			Block = Block.Unspecified;
 		}
 
-		private FilteredMaskMode(Dictionary<string, string> conditions)
+		private FilteredMaskMode(Block block)
 		{
-			_conditions = conditions;
+			if (block is null)
+				throw new ArgumentNullException(nameof(block));
+
+			Block = block;
 		}
 
-		protected override string GetArgumentTextImpl(Edition edition) => $"filtered [{string.Join(",", _conditions.Select((k, v) => $"{k}={v}"))}]";
 
-		public FilteredMaskMode By(string name, string value)
+		public Block Block { get; }
+
+
+		protected override string GetArgumentTextImpl(Edition edition) => $"filtered";
+
+		//[Obsolete("This may need to take a Block-derived type that adds the filter/tag/whatever in [] and {}.")]
+		public FilteredMaskMode By(Block block)
 		{
+			if (block is null)
+				throw new ArgumentNullException(nameof(block));
 
-			return new FilteredMaskMode();
-		}
-
-		public FilteredMaskMode By(Dictionary<string, string> conditions)
-		{
-			Dictionary<string, string> newConditions = new();
-
-			foreach (string key in _conditions.Keys)
-				newConditions[key] = _conditions[key];
-
-			return new FilteredMaskMode(newConditions);
+			return new FilteredMaskMode(block);
 		}
 	}
 }

@@ -30,14 +30,6 @@ namespace Minecraft.Model
 		protected virtual Type EqualityContract => typeof(Command);
 
 
-		public string GetCommandText(Edition edition)
-		{
-			if (edition < Edition.Java || edition > Edition.Bedrock)
-				throw new ArgumentOutOfRangeException(nameof(edition), "Invalid MinecraftEdition value.");
-
-			return GetCommandTextImpl(edition);
-		}
-
 		protected abstract string GetCommandTextImpl(Edition edition);
 
 
@@ -52,6 +44,17 @@ namespace Minecraft.Model
 
 		#region IEquatable<Command> members
 		public bool Equals(Command? other) => other is not null && EqualityContract == other.EqualityContract;
+		#endregion
+
+
+		#region ICommandText members
+		public string GetCommandText(Edition edition)
+		{
+			if (edition < Edition.Java || edition > Edition.Bedrock)
+				throw new ArgumentOutOfRangeException(nameof(edition), "Invalid MinecraftEdition value.");
+
+			return GetCommandTextImpl(edition);
+		}
 		#endregion
 
 

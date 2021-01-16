@@ -9,12 +9,6 @@ namespace Minecraft.Model
 
 	public static class JEBlockExtensions
 	{
-		public static TResult GetJavaProperty<TResult>(this IJavaBlock block, Func<IJavaBlock, TResult> func)
-		{
-			if (func is null)
-				throw new ArgumentNullException(nameof(func));
-
-			return func(block);
-		}
+		public static IJavaBlock AsJava(this IJavaBlock block) => block;
 	}
 }

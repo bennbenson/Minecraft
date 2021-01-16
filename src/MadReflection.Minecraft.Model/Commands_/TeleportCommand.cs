@@ -6,40 +6,64 @@ namespace Minecraft.Model
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class TeleportCommand : Command
 	{
-		public TeleportCommand(TargetEntity target)
-			: this(VictimEntity.Self, target, null)
+		public TeleportCommand(Target destination)
+			: this(null, destination, null, null, null, default, false)
 		{
 		}
 
-		public TeleportCommand(TargetEntity target, TargetEntity? facing)
-			: this(VictimEntity.Self, target, facing)
+		public TeleportCommand(TargetPlayer? victim, Target destination)
+			: this(victim, destination, null, null, null, default, false)
+		{
+			Victim = victim;
+			Destination = destination;
+		}
+
+		public TeleportCommand(TargetPlayer? victim, Target destination, RelativeFloat? yRotation = null, RelativeFloat? xRotation = null)
+			: this(victim, destination, yRotation, xRotation, null, default, false)
 		{
 		}
 
-		public TeleportCommand(VictimEntity victim, TargetEntity target)
-			: this(victim, target, null)
+		public TeleportCommand(TargetPlayer? victim, Target destination, RelativeFloat? yRotation = null, RelativeFloat? xRotation = null, bool checkForBlocks = false)
+			: this(victim, destination, yRotation, xRotation, null, default, false)
 		{
 		}
 
-		public TeleportCommand(VictimEntity victim, TargetEntity target, TargetEntity? facing)
+		public TeleportCommand(TargetPlayer? victim, Target destination, Target? facing, bool checkForBlocks = false)
+			: this(victim, destination, null, null, facing, default, false)
+		{
+		}
+
+		public TeleportCommand(TargetPlayer? victim, Target destination, Target? facing, FacingAnchor anchor)
+			: this(victim, destination, null, null, facing, anchor, false)
+		{
+		}
+
+		private TeleportCommand(TargetPlayer? victim, Target destination, RelativeFloat? yRotation, RelativeFloat? xRotation, Target? facing, FacingAnchor anchor, bool checkForBlocks)
 			: base("tp")
 		{
-			if (victim is null)
-				throw new ArgumentNullException(nameof(victim));
-			if (target is null)
-				throw new ArgumentNullException(nameof(target));
-
 			Victim = victim;
-			Target = target;
+			Destination = destination;
 			Facing = facing;
+			YRotation = yRotation;
+			XRotation = xRotation;
+			Anchor = anchor;
+			CheckForBlocks = checkForBlocks;
 		}
 
 
-		public VictimEntity Victim { get; }
+		public TargetPlayer? Victim { get; }
 
-		public TargetEntity Target { get; }
+		public Target Destination { get; }
 
-		public TargetEntity? Facing { get; }
+		public Target? Facing { get; }
+
+		public RelativeFloat? YRotation { get; }
+
+		public RelativeFloat? XRotation { get; }
+
+		public FacingAnchor? Anchor { get; }
+
+		public bool CheckForBlocks { get; }
 
 		protected override Type EqualityContract => typeof(TeleportCommand);
 
@@ -48,15 +72,15 @@ namespace Minecraft.Model
 
 		protected override string GetCommandTextImpl(Edition edition)
 		{
-			string result = $"/{Name} ";
+			string result = $"/tp";
 
 			if (Victim is not null)
-				result += " " + Victim.ToString();
+				result += " " + Victim.GetArgumentText(edition);
 
-			result += " " + Target.ToString();
+			result += " " + Destination.GetArgumentText(edition);
 
-			if (Facing is TargetEntity facing)
-				result += " " + facing.ToString();
+			if (Facing is Target facing)
+				result += " facing " + facing.GetArgumentText(edition);
 
 			return result;
 		}

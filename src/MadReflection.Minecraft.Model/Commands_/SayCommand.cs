@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Minecraft.Model
 {
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class SayCommand : Command
 	{
 		public SayCommand(string message)
@@ -15,10 +17,12 @@ namespace Minecraft.Model
 
 		protected override Type EqualityContract => typeof(SayCommand);
 
+		private string DebuggerDisplay => ToString();
+
 
 		protected override string GetCommandTextImpl(Edition edition)
 		{
-			throw new NotImplementedException();
+			return $"/say {Message}";
 		}
 	}
 }

@@ -46,5 +46,16 @@ namespace Minecraft.Construction.Tests
 			// Assert
 			Assert.That(result, Is.False);
 		}
+
+		[TestCase]
+		public void MyTestMethod()
+		{
+			// Arrange
+
+			// Act
+			bool result = Volume.CanFill(new Coord3(-153, 63, 550), new Coord3(-85, 70, 492));
+
+			// Assert
+		}
 	}
 }
