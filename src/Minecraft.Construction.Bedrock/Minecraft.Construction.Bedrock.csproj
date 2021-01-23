@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Minecraft.Construction.Bedrock</AssemblyName>
+    <RootNamespace>Minecraft.Construction.Bedrock</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minecraft.Construction\Minecraft.Construction.csproj" />
+    <ProjectReference Include="..\Minecraft.Model.Bedrock\Minecraft.Model.Bedrock.csproj" />
+  </ItemGroup>
+
+</Project>

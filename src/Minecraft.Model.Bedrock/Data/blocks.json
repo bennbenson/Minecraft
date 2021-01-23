@@ -1,0 +1,4973 @@
+[
+  {
+    "id": "nether_gold_ore",
+    "dv": 0,
+    "name": "NETHER_GOLD_ORE",
+    "dn": "Nether Gold Ore"
+  },
+  {
+    "id": "composter",
+    "dv": 0,
+    "name": "COMPOSTER",
+    "dn": "Composter"
+  },
+  {
+    "id": "polished_blackstone",
+    "dv": 0,
+    "name": "POLISHED_BLACKSTONE",
+    "dn": "Polished Blackstone"
+  },
+  {
+    "id": "polished_blackstone_bricks",
+    "dv": 0,
+    "name": "POLISHED_BLACKSTONE_BRICKS",
+    "dn": "Polished Blackstone Bricks"
+  },
+  {
+    "id": "cracked_polished_blackstone_bricks",
+    "dv": 0,
+    "name": "CRACKED_POLISHED_BLACKSTONE_BRICKS",
+    "dn": "Cracked Polished Blackstone Bricks"
+  },
+  {
+    "id": "chiseled_polished_blackstone",
+    "dv": 0,
+    "name": "CHISELED_POLISHED_BLACKSTONE",
+    "dn": "Chiseled Polished Blackstone"
+  },
+  {
+    "id": "air",
+    "dv": 0,
+    "val": 0,
+    "name": "AIR",
+    "dn": "Air"
+  },
+  {
+    "id": "stone",
+    "dv": 0,
+    "val": 1,
+    "name": "STONE",
+    "dn": "Stone"
+  },
+  {
+    "id": "stone",
+    "dv": 1,
+    "val": 1,
+    "name": "GRANITE",
+    "dn": "Granite"
+  },
+  {
+    "id": "stone",
+    "dv": 2,
+    "val": 1,
+    "name": "POLISHED_GRANITE",
+    "dn": "Polished Granite"
+  },
+  {
+    "id": "stone",
+    "dv": 3,
+    "val": 1,
+    "name": "DIORITE",
+    "dn": "Diorite"
+  },
+  {
+    "id": "stone",
+    "dv": 4,
+    "val": 1,
+    "name": "POLISHED_DIORITE",
+    "dn": "Polished Diorite"
+  },
+  {
+    "id": "stone",
+    "dv": 5,
+    "val": 1,
+    "name": "ANDESITE",
+    "dn": "Andesite"
+  },
+  {
+    "id": "stone",
+    "dv": 6,
+    "val": 1,
+    "name": "POLISHED_ANDESITE",
+    "dn": "Polished Andesite"
+  },
+  {
+    "id": "grass",
+    "dv": 0,
+    "val": 2,
+    "name": "GRASS_BLOCK",
+    "dn": "Grass Block"
+  },
+  {
+    "id": "dirt",
+    "dv": 0,
+    "val": 3,
+    "name": "DIRT",
+    "dn": "Dirt"
+  },
+  {
+    "id": "dirt",
+    "dv": 1,
+    "val": 3,
+    "name": "COARSE_DIRT",
+    "dn": "Coarse Dirt"
+  },
+  {
+    "id": "dirt",
+    "dv": 2,
+    "val": 3,
+    "name": "PODZOL",
+    "dn": "Podzol"
+  },
+  {
+    "id": "cobblestone",
+    "dv": 0,
+    "val": 4,
+    "name": "COBBLESTONE",
+    "dn": "Cobblestone"
+  },
+  {
+    "id": "planks",
+    "dv": 0,
+    "val": 5,
+    "name": "OAK_PLANKS",
+    "dn": "Oak Planks"
+  },
+  {
+    "id": "planks",
+    "dv": 1,
+    "val": 5,
+    "name": "SPRUCE_PLANKS",
+    "dn": "Spruce Planks"
+  },
+  {
+    "id": "planks",
+    "dv": 2,
+    "val": 5,
+    "name": "BIRCH_PLANKS",
+    "dn": "Birch Planks"
+  },
+  {
+    "id": "planks",
+    "dv": 3,
+    "val": 5,
+    "name": "JUNGLE_PLANKS",
+    "dn": "Jungle Planks"
+  },
+  {
+    "id": "planks",
+    "dv": 4,
+    "val": 5,
+    "name": "ACACIA_PLANKS",
+    "dn": "Acacia Planks"
+  },
+  {
+    "id": "planks",
+    "dv": 5,
+    "val": 5,
+    "name": "DARK_OAK_PLANKS",
+    "dn": "Dark Oak Planks"
+  },
+  {
+    "id": "sapling",
+    "dv": 0,
+    "val": 6,
+    "name": "OAK_SAPLING",
+    "dn": "Oak Sapling"
+  },
+  {
+    "id": "sapling",
+    "dv": 1,
+    "val": 6,
+    "name": "SPRUCE_SAPLING",
+    "dn": "Spruce Sapling"
+  },
+  {
+    "id": "sapling",
+    "dv": 2,
+    "val": 6,
+    "name": "BIRCH_SAPLING",
+    "dn": "Birch Sapling"
+  },
+  {
+    "id": "sapling",
+    "dv": 3,
+    "val": 6,
+    "name": "JUNGLE_SAPLING",
+    "dn": "Jungle Sapling"
+  },
+  {
+    "id": "sapling",
+    "dv": 4,
+    "val": 6,
+    "name": "ACACIA_SAPLING",
+    "dn": "Acacia Sapling"
+  },
+  {
+    "id": "sapling",
+    "dv": 5,
+    "val": 6,
+    "name": "DARK_OAK_SAPLING",
+    "dn": "Dark Oak Sapling"
+  },
+  {
+    "id": "bedrock",
+    "dv": 0,
+    "val": 7,
+    "name": "BEDROCK",
+    "dn": "Bedrock"
+  },
+  {
+    "id": "water",
+    "dv": 0,
+    "val": 9,
+    "name": "WATER",
+    "dn": "Water"
+  },
+  {
+    "id": "lava",
+    "dv": 0,
+    "val": 11,
+    "name": "LAVA",
+    "dn": "Lava"
+  },
+  {
+    "id": "sand",
+    "dv": 0,
+    "val": 12,
+    "name": "SAND",
+    "dn": "Sand"
+  },
+  {
+    "id": "sand",
+    "dv": 1,
+    "val": 12,
+    "name": "RED_SAND",
+    "dn": "Red Sand"
+  },
+  {
+    "id": "gravel",
+    "dv": 0,
+    "val": 13,
+    "name": "GRAVEL",
+    "dn": "Gravel"
+  },
+  {
+    "id": "gold_ore",
+    "dv": 0,
+    "val": 14,
+    "name": "GOLD_ORE",
+    "dn": "Gold Ore"
+  },
+  {
+    "id": "iron_ore",
+    "dv": 0,
+    "val": 15,
+    "name": "IRON_ORE",
+    "dn": "Iron Ore"
+  },
+  {
+    "id": "coal_ore",
+    "dv": 0,
+    "val": 16,
+    "name": "COAL_ORE",
+    "dn": "Coal Ore"
+  },
+  {
+    "id": "log",
+    "dv": 0,
+    "val": 17,
+    "name": "OAK_LOG",
+    "dn": "Oak Log"
+  },
+  {
+    "id": "log",
+    "dv": 1,
+    "val": 17,
+    "name": "SPRUCE_LOG",
+    "dn": "Spruce Log"
+  },
+  {
+    "id": "log",
+    "dv": 2,
+    "val": 17,
+    "name": "BIRCH_LOG",
+    "dn": "Birch Log"
+  },
+  {
+    "id": "log",
+    "dv": 3,
+    "val": 17,
+    "name": "JUNGLE_LOG",
+    "dn": "Jungle Log"
+  },
+  {
+    "id": "leaves",
+    "dv": 0,
+    "val": 18,
+    "name": "OAK_LEAVES",
+    "dn": "Oak Leaves"
+  },
+  {
+    "id": "leaves",
+    "dv": 1,
+    "val": 18,
+    "name": "SPRUCE_LEAVES",
+    "dn": "Spruce Leaves"
+  },
+  {
+    "id": "leaves",
+    "dv": 2,
+    "val": 18,
+    "name": "BIRCH_LEAVES",
+    "dn": "Birch Leaves"
+  },
+  {
+    "id": "leaves",
+    "dv": 3,
+    "val": 18,
+    "name": "JUNGLE_LEAVES",
+    "dn": "Jungle Leaves"
+  },
+  {
+    "id": "sponge",
+    "dv": 0,
+    "val": 19,
+    "name": "SPONGE",
+    "dn": "Sponge"
+  },
+  {
+    "id": "sponge",
+    "dv": 1,
+    "val": 19,
+    "name": "WET_SPONGE",
+    "dn": "Wet Sponge"
+  },
+  {
+    "id": "glass",
+    "dv": 0,
+    "val": 20,
+    "name": "GLASS",
+    "dn": "Glass"
+  },
+  {
+    "id": "lapis_ore",
+    "dv": 0,
+    "val": 21,
+    "name": "LAPIS_ORE",
+    "dn": "Lapis Lazuli Ore"
+  },
+  {
+    "id": "lapis_block",
+    "dv": 0,
+    "val": 22,
+    "name": "LAPIS_BLOCK",
+    "dn": "Lapis Lazuli Block"
+  },
+  {
+    "id": "dispenser",
+    "dv": 0,
+    "val": 23,
+    "name": "DISPENSER",
+    "dn": "Dispenser"
+  },
+  {
+    "id": "sandstone",
+    "dv": 0,
+    "val": 24,
+    "name": "SANDSTONE",
+    "dn": "Sandstone"
+  },
+  {
+    "id": "sandstone",
+    "dv": 1,
+    "val": 24,
+    "name": "CHISELED_SANDSTONE",
+    "dn": "Chiseled Sandstone"
+  },
+  {
+    "id": "sandstone",
+    "dv": 2,
+    "val": 24,
+    "name": "CUT_SANDSTONE",
+    "dn": "Cut Sandstone"
+  },
+  {
+    "id": "sandstone",
+    "dv": 3,
+    "val": 24,
+    "name": "SMOOTH_SANDSTONE",
+    "dn": "Smooth Sandstone"
+  },
+  {
+    "id": "noteblock",
+    "dv": 0,
+    "val": 25,
+    "name": "NOTE_BLOCK",
+    "dn": "Note Block"
+  },
+  {
+    "id": "bed",
+    "dv": 0,
+    "val": 26,
+    "name": "WHITE_BED",
+    "dn": "White Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 1,
+    "val": 26,
+    "name": "ORANGE_BED",
+    "dn": "Orange Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 2,
+    "val": 26,
+    "name": "MAGENTA_BED",
+    "dn": "Magenta Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 3,
+    "val": 26,
+    "name": "LIGHT_BLUE_BED",
+    "dn": "Light Blue Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 4,
+    "val": 26,
+    "name": "YELLOW_BED",
+    "dn": "Yellow Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 5,
+    "val": 26,
+    "name": "LIME_BED",
+    "dn": "Lime Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 6,
+    "val": 26,
+    "name": "PINK_BED",
+    "dn": "Pink Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 7,
+    "val": 26,
+    "name": "GRAY_BED",
+    "dn": "Gray Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 8,
+    "val": 26,
+    "name": "LIGHT_GRAY_BED",
+    "dn": "Light Gray Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 9,
+    "val": 26,
+    "name": "CYAN_BED",
+    "dn": "Cyan Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 10,
+    "val": 26,
+    "name": "PURPLE_BED",
+    "dn": "Purple Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 11,
+    "val": 26,
+    "name": "BLUE_BED",
+    "dn": "Blue Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 12,
+    "val": 26,
+    "name": "BROWN_BED",
+    "dn": "Brown Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 13,
+    "val": 26,
+    "name": "GREEN_BED",
+    "dn": "Green Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 14,
+    "val": 26,
+    "name": "RED_BED",
+    "dn": "Red Bed"
+  },
+  {
+    "id": "bed",
+    "dv": 15,
+    "val": 26,
+    "name": "BLACK_BED",
+    "dn": "Black Bed"
+  },
+  {
+    "id": "golden_rail",
+    "dv": 0,
+    "val": 27,
+    "name": "POWERED_RAIL",
+    "dn": "Powered Rail"
+  },
+  {
+    "id": "detector_rail",
+    "dv": 0,
+    "val": 28,
+    "name": "DETECTOR_RAIL",
+    "dn": "Detector Rail"
+  },
+  {
+    "id": "sticky_piston",
+    "dv": 0,
+    "val": 29,
+    "name": "STICKY_PISTON",
+    "dn": "Sticky Piston"
+  },
+  {
+    "id": "web",
+    "dv": 0,
+    "val": 30,
+    "name": "COBWEB",
+    "dn": "Cobweb"
+  },
+  {
+    "id": "tallgrass",
+    "dv": 1,
+    "val": 31,
+    "name": "GRASS",
+    "dn": "Grass"
+  },
+  {
+    "id": "tallgrass",
+    "dv": 2,
+    "val": 31,
+    "name": "FERN",
+    "dn": "Fern"
+  },
+  {
+    "id": "deadbush",
+    "dv": 0,
+    "val": 32,
+    "name": "DEAD_BUSH",
+    "dn": "Dead Bush"
+  },
+  {
+    "id": "piston",
+    "dv": 0,
+    "val": 33,
+    "name": "PISTON",
+    "dn": "Piston"
+  },
+  {
+    "id": "piston_head",
+    "dv": 0,
+    "val": 34,
+    "name": "PISTON_HEAD",
+    "dn": "Piston Head"
+  },
+  {
+    "id": "pistonArmCollision",
+    "dv": 0,
+    "val": 34,
+    "name": "MOVING_PISTON",
+    "dn": "Moving Piston"
+  },
+  {
+    "id": "wool",
+    "dv": 0,
+    "val": 35,
+    "name": "WHITE_WOOL",
+    "dn": "White Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 1,
+    "val": 35,
+    "name": "ORANGE_WOOL",
+    "dn": "Orange Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 2,
+    "val": 35,
+    "name": "MAGENTA_WOOL",
+    "dn": "Magenta Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 3,
+    "val": 35,
+    "name": "LIGHT_BLUE_WOOL",
+    "dn": "Light Blue Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 4,
+    "val": 35,
+    "name": "YELLOW_WOOL",
+    "dn": "Yellow Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 5,
+    "val": 35,
+    "name": "LIME_WOOL",
+    "dn": "Lime Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 6,
+    "val": 35,
+    "name": "PINK_WOOL",
+    "dn": "Pink Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 7,
+    "val": 35,
+    "name": "GRAY_WOOL",
+    "dn": "Gray Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 8,
+    "val": 35,
+    "name": "LIGHT_GRAY_WOOL",
+    "dn": "Light Gray Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 9,
+    "val": 35,
+    "name": "CYAN_WOOL",
+    "dn": "Cyan Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 10,
+    "val": 35,
+    "name": "PURPLE_WOOL",
+    "dn": "Purple Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 11,
+    "val": 35,
+    "name": "BLUE_WOOL",
+    "dn": "Blue Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 12,
+    "val": 35,
+    "name": "BROWN_WOOL",
+    "dn": "Brown Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 13,
+    "val": 35,
+    "name": "GREEN_WOOL",
+    "dn": "Green Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 14,
+    "val": 35,
+    "name": "RED_WOOL",
+    "dn": "Red Wool"
+  },
+  {
+    "id": "wool",
+    "dv": 15,
+    "val": 35,
+    "name": "BLACK_WOOL",
+    "dn": "Black Wool"
+  },
+  {
+    "id": "yellow_flower",
+    "dv": 0,
+    "val": 37,
+    "name": "DANDELION",
+    "dn": "Dandelion"
+  },
+  {
+    "id": "red_flower",
+    "dv": 0,
+    "val": 38,
+    "name": "POPPY",
+    "dn": "Poppy"
+  },
+  {
+    "id": "red_flower",
+    "dv": 1,
+    "val": 38,
+    "name": "BLUE_ORCHID",
+    "dn": "Blue Orchid"
+  },
+  {
+    "id": "red_flower",
+    "dv": 2,
+    "val": 38,
+    "name": "ALLIUM",
+    "dn": "Allium"
+  },
+  {
+    "id": "red_flower",
+    "dv": 3,
+    "val": 38,
+    "name": "AZURE_BLUET",
+    "dn": "Azure Bluet"
+  },
+  {
+    "id": "red_flower",
+    "dv": 4,
+    "val": 38,
+    "name": "RED_TULIP",
+    "dn": "Red Tulip"
+  },
+  {
+    "id": "red_flower",
+    "dv": 5,
+    "val": 38,
+    "name": "ORANGE_TULIP",
+    "dn": "Orange Tulip"
+  },
+  {
+    "id": "red_flower",
+    "dv": 6,
+    "val": 38,
+    "name": "WHITE_TULIP",
+    "dn": "White Tulip"
+  },
+  {
+    "id": "red_flower",
+    "dv": 7,
+    "val": 38,
+    "name": "PINK_TULIP",
+    "dn": "Pink Tulip"
+  },
+  {
+    "id": "red_flower",
+    "dv": 8,
+    "val": 38,
+    "name": "OXEYE_DAISY",
+    "dn": "Oxeye Daisy"
+  },
+  {
+    "id": "red_flower",
+    "dv": 9,
+    "val": 38,
+    "name": "CORNFLOWER",
+    "dn": "Cornflower"
+  },
+  {
+    "id": "red_flower",
+    "dv": 10,
+    "val": 38,
+    "name": "LILY_OF_THE_VALLEY",
+    "dn": "Lily of the Valley"
+  },
+  {
+    "id": "brown_mushroom",
+    "dv": 0,
+    "val": 39,
+    "name": "BROWN_MUSHROOM",
+    "dn": "Brown Mushroom"
+  },
+  {
+    "id": "red_mushroom",
+    "dv": 0,
+    "val": 40,
+    "name": "RED_MUSHROOM",
+    "dn": "Red Mushroom"
+  },
+  {
+    "id": "gold_block",
+    "dv": 0,
+    "val": 41,
+    "name": "GOLD_BLOCK",
+    "dn": "Block of Gold"
+  },
+  {
+    "id": "iron_block",
+    "dv": 0,
+    "val": 42,
+    "name": "IRON_BLOCK",
+    "dn": "Block of Iron"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 0,
+    "val": 44,
+    "name": "SMOOTH_STONE_SLAB",
+    "dn": "Smooth Stone Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 1,
+    "val": 44,
+    "name": "SANDSTONE_SLAB",
+    "dn": "Sandstone Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 2,
+    "val": 44,
+    "name": "PETRIFIED_OAK_SLAB",
+    "dn": "Petrified Oak Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 3,
+    "val": 44,
+    "name": "COBBLESTONE_SLAB",
+    "dn": "Cobblestone Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 4,
+    "val": 44,
+    "name": "BRICK_SLAB",
+    "dn": "Brick Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 5,
+    "val": 44,
+    "name": "STONE_BRICK_SLAB",
+    "dn": "Stone Brick Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 7,
+    "val": 44,
+    "name": "NETHER_BRICK_SLAB",
+    "dn": "Nether Brick Slab"
+  },
+  {
+    "id": "stone_slab",
+    "dv": 6,
+    "val": 44,
+    "name": "QUARTZ_SLAB",
+    "dn": "Quartz Slab"
+  },
+  {
+    "id": "brick_block",
+    "dv": 0,
+    "val": 45,
+    "name": "BRICKS",
+    "dn": "Bricks"
+  },
+  {
+    "id": "tnt",
+    "dv": 0,
+    "val": 46,
+    "name": "TNT",
+    "dn": "TNT"
+  },
+  {
+    "id": "bookshelf",
+    "dv": 0,
+    "val": 47,
+    "name": "BOOKSHELF",
+    "dn": "Bookshelf"
+  },
+  {
+    "id": "mossy_cobblestone",
+    "dv": 0,
+    "val": 48,
+    "name": "MOSSY_COBBLESTONE",
+    "dn": "Mossy Cobblestone"
+  },
+  {
+    "id": "obsidian",
+    "dv": 0,
+    "val": 49,
+    "name": "OBSIDIAN",
+    "dn": "Obsidian"
+  },
+  {
+    "id": "torch",
+    "dv": 0,
+    "val": 50,
+    "name": "TORCH",
+    "dn": "Torch"
+  },
+  {
+    "id": "fire",
+    "dv": 0,
+    "val": 51,
+    "name": "FIRE",
+    "dn": "Fire"
+  },
+  {
+    "id": "mob_spawner",
+    "dv": 0,
+    "val": 52,
+    "name": "SPAWNER",
+    "dn": "Spawner"
+  },
+  {
+    "id": "oak_stairs",
+    "dv": 0,
+    "val": 53,
+    "name": "OAK_STAIRS",
+    "dn": "Oak Stairs"
+  },
+  {
+    "id": "chest",
+    "dv": 0,
+    "val": 54,
+    "name": "CHEST",
+    "dn": "Chest"
+  },
+  {
+    "id": "redstone_wire",
+    "dv": 0,
+    "val": 55,
+    "name": "REDSTONE_WIRE",
+    "dn": "Redstone Wire"
+  },
+  {
+    "id": "diamond_ore",
+    "dv": 0,
+    "val": 56,
+    "name": "DIAMOND_ORE",
+    "dn": "Diamond Ore"
+  },
+  {
+    "id": "diamond_block",
+    "dv": 0,
+    "val": 57,
+    "name": "DIAMOND_BLOCK",
+    "dn": "Block of Diamond"
+  },
+  {
+    "id": "crafting_table",
+    "dv": 0,
+    "val": 58,
+    "name": "CRAFTING_TABLE",
+    "dn": "Crafting Table"
+  },
+  {
+    "id": "wheat",
+    "dv": 0,
+    "val": 59,
+    "name": "WHEAT",
+    "dn": "Wheat Crops"
+  },
+  {
+    "id": "farmland",
+    "dv": 0,
+    "val": 60,
+    "name": "FARMLAND",
+    "dn": "Farmland"
+  },
+  {
+    "id": "furnace",
+    "dv": 0,
+    "val": 61,
+    "name": "FURNACE",
+    "dn": "Furnace"
+  },
+  {
+    "id": "standing_sign",
+    "dv": 0,
+    "val": 63,
+    "name": "OAK_SIGN",
+    "dn": "Oak Sign"
+  },
+  {
+    "id": "wooden_door",
+    "dv": 0,
+    "val": 64,
+    "name": "OAK_DOOR",
+    "dn": "Oak Door"
+  },
+  {
+    "id": "ladder",
+    "dv": 0,
+    "val": 65,
+    "name": "LADDER",
+    "dn": "Ladder"
+  },
+  {
+    "id": "rail",
+    "dv": 0,
+    "val": 66,
+    "name": "RAIL",
+    "dn": "Rail"
+  },
+  {
+    "id": "stone_stairs",
+    "dv": 0,
+    "val": 67,
+    "name": "COBBLESTONE_STAIRS",
+    "dn": "Cobblestone Stairs"
+  },
+  {
+    "id": "wall_sign",
+    "dv": 0,
+    "val": 68,
+    "name": "OAK_WALL_SIGN",
+    "dn": "Oak Wall Sign"
+  },
+  {
+    "id": "lever",
+    "dv": 0,
+    "val": 69,
+    "name": "LEVER",
+    "dn": "Lever"
+  },
+  {
+    "id": "stone_pressure_plate",
+    "dv": 0,
+    "val": 70,
+    "name": "STONE_PRESSURE_PLATE",
+    "dn": "Stone Pressure Plate"
+  },
+  {
+    "id": "iron_door",
+    "dv": 0,
+    "val": 71,
+    "name": "IRON_DOOR",
+    "dn": "Iron Door"
+  },
+  {
+    "id": "wooden_pressure_plate",
+    "dv": 0,
+    "val": 72,
+    "name": "OAK_PRESSURE_PLATE",
+    "dn": "Oak Pressure Plate"
+  },
+  {
+    "id": "redstone_ore",
+    "dv": 0,
+    "val": 73,
+    "name": "REDSTONE_ORE",
+    "dn": "Redstone Ore"
+  },
+  {
+    "id": "redstone_torch",
+    "dv": 0,
+    "val": 76,
+    "name": "REDSTONE_TORCH",
+    "dn": "Redstone Torch"
+  },
+  {
+    "id": "stone_button",
+    "dv": 0,
+    "val": 77,
+    "name": "STONE_BUTTON",
+    "dn": "Stone Button"
+  },
+  {
+    "id": "snow_layer",
+    "dv": 0,
+    "val": 78,
+    "name": "SNOW",
+    "dn": "Snow"
+  },
+  {
+    "id": "ice",
+    "dv": 0,
+    "val": 79,
+    "name": "ICE",
+    "dn": "Ice"
+  },
+  {
+    "id": "snow",
+    "dv": 0,
+    "val": 80,
+    "name": "SNOW_BLOCK",
+    "dn": "Snow Block"
+  },
+  {
+    "id": "cactus",
+    "dv": 0,
+    "val": 81,
+    "name": "CACTUS",
+    "dn": "Cactus"
+  },
+  {
+    "id": "clay",
+    "dv": 0,
+    "val": 82,
+    "name": "CLAY",
+    "dn": "Clay"
+  },
+  {
+    "id": "reeds",
+    "dv": 0,
+    "val": 83,
+    "name": "SUGAR_CANE",
+    "dn": "Sugar Cane"
+  },
+  {
+    "id": "jukebox",
+    "dv": 0,
+    "val": 84,
+    "name": "JUKEBOX",
+    "dn": "Jukebox"
+  },
+  {
+    "id": "fence",
+    "dv": 0,
+    "val": 85,
+    "name": "OAK_FENCE",
+    "dn": "Oak Fence"
+  },
+  {
+    "id": "fence",
+    "dv": 1,
+    "val": 85,
+    "name": "SPRUCE_FENCE",
+    "dn": "Spruce Fence"
+  },
+  {
+    "id": "fence",
+    "dv": 2,
+    "val": 85,
+    "name": "BIRCH_FENCE",
+    "dn": "Birch Fence"
+  },
+  {
+    "id": "fence",
+    "dv": 3,
+    "val": 85,
+    "name": "JUNGLE_FENCE",
+    "dn": "Jungle Fence"
+  },
+  {
+    "id": "fence",
+    "dv": 4,
+    "val": 85,
+    "name": "ACACIA_FENCE",
+    "dn": "Acacia Fence"
+  },
+  {
+    "id": "fence",
+    "dv": 5,
+    "val": 85,
+    "name": "DARK_OAK_FENCE",
+    "dn": "Dark Oak Fence"
+  },
+  {
+    "id": "pumpkin",
+    "dv": 0,
+    "val": 86,
+    "name": "PUMPKIN",
+    "dn": "Pumpkin"
+  },
+  {
+    "id": "netherrack",
+    "dv": 0,
+    "val": 87,
+    "name": "NETHERRACK",
+    "dn": "Netherrack"
+  },
+  {
+    "id": "soul_sand",
+    "dv": 0,
+    "val": 88,
+    "name": "SOUL_SAND",
+    "dn": "Soul Sand"
+  },
+  {
+    "id": "glowstone",
+    "dv": 0,
+    "val": 89,
+    "name": "GLOWSTONE",
+    "dn": "Glowstone"
+  },
+  {
+    "id": "portal",
+    "dv": 0,
+    "val": 90,
+    "name": "NETHER_PORTAL",
+    "dn": "Nether Portal"
+  },
+  {
+    "id": "lit_pumpkin",
+    "dv": 0,
+    "val": 91,
+    "name": "JACK_O_LANTERN",
+    "dn": "Jack o'Lantern"
+  },
+  {
+    "id": "cake",
+    "dv": 0,
+    "val": 92,
+    "name": "CAKE",
+    "dn": "Cake"
+  },
+  {
+    "id": "unpowered_repeater",
+    "dv": 0,
+    "val": 93,
+    "name": "REPEATER",
+    "dn": "Redstone Repeater"
+  },
+  {
+    "id": "wooden_trapdoor",
+    "dv": 0,
+    "val": 96,
+    "name": "OAK_TRAPDOOR",
+    "dn": "Oak Trapdoor"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 0,
+    "val": 97,
+    "name": "INFESTED_STONE",
+    "dn": "Infested Stone"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 1,
+    "val": 97,
+    "name": "INFESTED_COBBLESTONE",
+    "dn": "Infested Cobblestone"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 2,
+    "val": 97,
+    "name": "INFESTED_STONE_BRICKS",
+    "dn": "Infested Stone Bricks"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 3,
+    "val": 97,
+    "name": "INFESTED_MOSSY_STONE_BRICKS",
+    "dn": "Infested Mossy Stone Bricks"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 4,
+    "val": 97,
+    "name": "INFESTED_CRACKED_STONE_BRICKS",
+    "dn": "Infested Cracked Stone Bricks"
+  },
+  {
+    "id": "monster_egg",
+    "dv": 5,
+    "val": 97,
+    "name": "INFESTED_CHISELED_STONE_BRICKS",
+    "dn": "Infested Chiseled Stone Bricks"
+  },
+  {
+    "id": "stonebrick",
+    "dv": 0,
+    "val": 98,
+    "name": "STONE_BRICKS",
+    "dn": "Stone Bricks"
+  },
+  {
+    "id": "stonebrick",
+    "dv": 1,
+    "val": 98,
+    "name": "MOSSY_STONE_BRICKS",
+    "dn": "Mossy Stone Bricks"
+  },
+  {
+    "id": "stonebrick",
+    "dv": 2,
+    "val": 98,
+    "name": "CRACKED_STONE_BRICKS",
+    "dn": "Cracked Stone Bricks"
+  },
+  {
+    "id": "stonebrick",
+    "dv": 3,
+    "val": 98,
+    "name": "CHISELED_STONE_BRICKS",
+    "dn": "Chiseled Stone Bricks"
+  },
+  {
+    "id": "brown_mushroom_block",
+    "dv": 0,
+    "val": 99,
+    "name": "BROWN_MUSHROOM_BLOCK",
+    "dn": "Brown Mushroom Block"
+  },
+  {
+    "id": "red_mushroom_block",
+    "dv": 0,
+    "val": 100,
+    "name": "RED_MUSHROOM_BLOCK",
+    "dn": "Red Mushroom Block"
+  },
+  {
+    "id": "iron_bars",
+    "dv": 0,
+    "val": 101,
+    "name": "IRON_BARS",
+    "dn": "Iron Bars"
+  },
+  {
+    "id": "glass_pane",
+    "dv": 0,
+    "val": 102,
+    "name": "GLASS_PANE",
+    "dn": "Glass Pane"
+  },
+  {
+    "id": "melon",
+    "dv": 0,
+    "val": 103,
+    "name": "MELON",
+    "dn": "Melon"
+  },
+  {
+    "id": "pumpkin_stem",
+    "dv": 0,
+    "val": 104,
+    "name": "PUMPKIN_STEM",
+    "dn": "Pumpkin Stem"
+  },
+  {
+    "id": "melon_stem",
+    "dv": 0,
+    "val": 105,
+    "name": "MELON_STEM",
+    "dn": "Melon Stem"
+  },
+  {
+    "id": "vine",
+    "dv": 0,
+    "val": 106,
+    "name": "VINE",
+    "dn": "Vines"
+  },
+  {
+    "id": "fence_gate",
+    "dv": 0,
+    "val": 107,
+    "name": "OAK_FENCE_GATE",
+    "dn": "Oak Fence Gate"
+  },
+  {
+    "id": "brick_stairs",
+    "dv": 0,
+    "val": 108,
+    "name": "BRICK_STAIRS",
+    "dn": "Brick Stairs"
+  },
+  {
+    "id": "stone_brick_stairs",
+    "dv": 0,
+    "val": 109,
+    "name": "STONE_BRICK_STAIRS",
+    "dn": "Stone Brick Stairs"
+  },
+  {
+    "id": "mycelium",
+    "dv": 0,
+    "val": 110,
+    "name": "MYCELIUM",
+    "dn": "Mycelium"
+  },
+  {
+    "id": "waterlily",
+    "dv": 0,
+    "val": 111,
+    "name": "LILY_PAD",
+    "dn": "Lily Pad"
+  },
+  {
+    "id": "nether_brick",
+    "dv": 0,
+    "val": 112,
+    "name": "NETHER_BRICKS",
+    "dn": "Nether Bricks"
+  },
+  {
+    "id": "nether_brick_fence",
+    "dv": 0,
+    "val": 113,
+    "name": "NETHER_BRICK_FENCE",
+    "dn": "Nether Brick Fence"
+  },
+  {
+    "id": "nether_brick_stairs",
+    "dv": 0,
+    "val": 114,
+    "name": "NETHER_BRICK_STAIRS",
+    "dn": "Nether Brick Stairs"
+  },
+  {
+    "id": "nether_wart",
+    "dv": 0,
+    "val": 115,
+    "name": "NETHER_WART",
+    "dn": "Nether Wart"
+  },
+  {
+    "id": "enchanting_table",
+    "dv": 0,
+    "val": 116,
+    "name": "ENCHANTING_TABLE",
+    "dn": "Enchanting Table"
+  },
+  {
+    "id": "brewing_stand",
+    "dv": 0,
+    "val": 117,
+    "name": "BREWING_STAND",
+    "dn": "Brewing Stand"
+  },
+  {
+    "id": "cauldron",
+    "dv": 0,
+    "val": 118,
+    "name": "CAULDRON",
+    "dn": "Cauldron"
+  },
+  {
+    "id": "end_portal_frame",
+    "dv": 0,
+    "val": 120,
+    "name": "END_PORTAL_FRAME",
+    "dn": "End Portal Frame"
+  },
+  {
+    "id": "end_stone",
+    "dv": 0,
+    "val": 121,
+    "name": "END_STONE",
+    "dn": "End Stone"
+  },
+  {
+    "id": "dragon_egg",
+    "dv": 0,
+    "val": 122,
+    "name": "DRAGON_EGG",
+    "dn": "Dragon Egg"
+  },
+  {
+    "id": "redstone_lamp",
+    "dv": 0,
+    "val": 123,
+    "name": "REDSTONE_LAMP",
+    "dn": "Redstone Lamp"
+  },
+  {
+    "id": "dropper",
+    "dv": 0,
+    "val": 125,
+    "name": "DROPPER",
+    "dn": "Dropper"
+  },
+  {
+    "id": "activator_rail",
+    "dv": 0,
+    "val": 126,
+    "name": "ACTIVATOR_RAIL",
+    "dn": "Activator Rail"
+  },
+  {
+    "id": "cocoa",
+    "dv": 0,
+    "val": 127,
+    "name": "COCOA",
+    "dn": "Cocoa"
+  },
+  {
+    "id": "sandstone_stairs",
+    "dv": 0,
+    "val": 128,
+    "name": "SANDSTONE_STAIRS",
+    "dn": "Sandstone Stairs"
+  },
+  {
+    "id": "emerald_ore",
+    "dv": 0,
+    "val": 129,
+    "name": "EMERALD_ORE",
+    "dn": "Emerald Ore"
+  },
+  {
+    "id": "ender_chest",
+    "dv": 0,
+    "val": 130,
+    "name": "ENDER_CHEST",
+    "dn": "Ender Chest"
+  },
+  {
+    "id": "tripwire_hook",
+    "dv": 0,
+    "val": 131,
+    "name": "TRIPWIRE_HOOK",
+    "dn": "Tripwire Hook"
+  },
+  {
+    "id": "emerald_block",
+    "dv": 0,
+    "val": 133,
+    "name": "EMERALD_BLOCK",
+    "dn": "Block of Emerald"
+  },
+  {
+    "id": "spruce_stairs",
+    "dv": 0,
+    "val": 134,
+    "name": "SPRUCE_STAIRS",
+    "dn": "Spruce Stairs"
+  },
+  {
+    "id": "birch_stairs",
+    "dv": 0,
+    "val": 135,
+    "name": "BIRCH_STAIRS",
+    "dn": "Birch Stairs"
+  },
+  {
+    "id": "jungle_stairs",
+    "dv": 0,
+    "val": 136,
+    "name": "JUNGLE_STAIRS",
+    "dn": "Jungle Stairs"
+  },
+  {
+    "id": "command_block",
+    "dv": 0,
+    "val": 137,
+    "name": "COMMAND_BLOCK",
+    "dn": "Command Block"
+  },
+  {
+    "id": "beacon",
+    "dv": 0,
+    "val": 138,
+    "name": "BEACON",
+    "dn": "Beacon"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 0,
+    "val": 139,
+    "name": "COBBLESTONE_WALL",
+    "dn": "Cobblestone Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 1,
+    "val": 139,
+    "name": "MOSSY_COBBLESTONE_WALL",
+    "dn": "Mossy Cobblestone Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 6,
+    "val": 139,
+    "name": "BRICK_WALL",
+    "dn": "Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 11,
+    "val": 139,
+    "name": "PRISMARINE_WALL",
+    "dn": "Prismarine Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 12,
+    "val": 139,
+    "name": "RED_SANDSTONE_WALL",
+    "dn": "Red Sandstone Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 8,
+    "val": 139,
+    "name": "MOSSY_STONE_BRICK_WALL",
+    "dn": "Mossy Stone Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 2,
+    "val": 139,
+    "name": "GRANITE_WALL",
+    "dn": "Granite Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 7,
+    "val": 139,
+    "name": "STONE_BRICK_WALL",
+    "dn": "Stone Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 10,
+    "val": 139,
+    "name": "NETHER_BRICK_WALL",
+    "dn": "Nether Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 4,
+    "val": 139,
+    "name": "ANDESITE_WALL",
+    "dn": "Andesite Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 13,
+    "val": 139,
+    "name": "RED_NETHER_BRICK_WALL",
+    "dn": "Red Nether Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 5,
+    "val": 139,
+    "name": "SANDSTONE_WALL",
+    "dn": "Sandstone Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 9,
+    "val": 139,
+    "name": "END_STONE_BRICK_WALL",
+    "dn": "End Stone Brick Wall"
+  },
+  {
+    "id": "cobblestone_wall",
+    "dv": 3,
+    "val": 139,
+    "name": "DIORITE_WALL",
+    "dn": "Diorite Wall"
+  },
+  {
+    "id": "flower_pot",
+    "dv": 0,
+    "val": 140,
+    "name": "FLOWER_POT",
+    "dn": "Flower Pot"
+  },
+  {
+    "id": "carrots",
+    "dv": 0,
+    "val": 141,
+    "name": "CARROTS",
+    "dn": "Carrots"
+  },
+  {
+    "id": "potatoes",
+    "dv": 0,
+    "val": 142,
+    "name": "POTATOES",
+    "dn": "Potatoes"
+  },
+  {
+    "id": "wooden_button",
+    "dv": 0,
+    "val": 143,
+    "name": "OAK_BUTTON",
+    "dn": "Oak Button"
+  },
+  {
+    "id": "skull",
+    "dv": 0,
+    "val": 144,
+    "name": "SKELETON_SKULL",
+    "dn": "Skeleton Skull"
+  },
+  {
+    "id": "skull",
+    "dv": 1,
+    "val": 144,
+    "name": "WITHER_SKELETON_SKULL",
+    "dn": "Wither Skeleton Skull"
+  },
+  {
+    "id": "skull",
+    "dv": 2,
+    "val": 144,
+    "name": "ZOMBIE_HEAD",
+    "dn": "Zombie Head"
+  },
+  {
+    "id": "skull",
+    "dv": 3,
+    "val": 144,
+    "name": "PLAYER_HEAD",
+    "dn": "Player Head"
+  },
+  {
+    "id": "skull",
+    "dv": 4,
+    "val": 144,
+    "name": "CREEPER_HEAD",
+    "dn": "Creeper Head"
+  },
+  {
+    "id": "skull",
+    "dv": 5,
+    "val": 144,
+    "name": "DRAGON_HEAD",
+    "dn": "Dragon Head"
+  },
+  {
+    "id": "anvil",
+    "dv": 0,
+    "val": 145,
+    "name": "ANVIL",
+    "dn": "Anvil"
+  },
+  {
+    "id": "anvil",
+    "dv": 4,
+    "val": 145,
+    "name": "CHIPPED_ANVIL",
+    "dn": "Chipped Anvil"
+  },
+  {
+    "id": "anvil",
+    "dv": 8,
+    "val": 145,
+    "name": "DAMAGED_ANVIL",
+    "dn": "Damaged Anvil"
+  },
+  {
+    "id": "trapped_chest",
+    "dv": 0,
+    "val": 146,
+    "name": "TRAPPED_CHEST",
+    "dn": "Trapped Chest"
+  },
+  {
+    "id": "light_weighted_pressure_plate",
+    "dv": 0,
+    "val": 147,
+    "name": "LIGHT_WEIGHTED_PRESSURE_PLATE",
+    "dn": "Light Weighted Pressure Plate"
+  },
+  {
+    "id": "heavy_weighted_pressure_plate",
+    "dv": 0,
+    "val": 148,
+    "name": "HEAVY_WEIGHTED_PRESSURE_PLATE",
+    "dn": "Heavy Weighted Pressure Plate"
+  },
+  {
+    "id": "unpowered_comparator",
+    "dv": 0,
+    "val": 149,
+    "name": "COMPARATOR",
+    "dn": "Redstone Comparator"
+  },
+  {
+    "id": "daylight_detector",
+    "dv": 0,
+    "val": 151,
+    "name": "DAYLIGHT_DETECTOR",
+    "dn": "Daylight Detector"
+  },
+  {
+    "id": "redstone_block",
+    "dv": 0,
+    "val": 152,
+    "name": "REDSTONE_BLOCK",
+    "dn": "Block of Redstone"
+  },
+  {
+    "id": "quartz_ore",
+    "dv": 0,
+    "val": 153,
+    "name": "NETHER_QUARTZ_ORE",
+    "dn": "Nether Quartz Ore"
+  },
+  {
+    "id": "hopper",
+    "dv": 0,
+    "val": 154,
+    "name": "HOPPER",
+    "dn": "Hopper"
+  },
+  {
+    "id": "quartz_block",
+    "dv": 0,
+    "val": 155,
+    "name": "QUARTZ_BLOCK",
+    "dn": "Block of Quartz"
+  },
+  {
+    "id": "quartz_block",
+    "dv": 1,
+    "val": 155,
+    "name": "CHISELED_QUARTZ_BLOCK",
+    "dn": "Chiseled Quartz Block"
+  },
+  {
+    "id": "quartz_block",
+    "dv": 2,
+    "val": 155,
+    "name": "QUARTZ_PILLAR",
+    "dn": "Quartz Pillar"
+  },
+  {
+    "id": "quartz_block",
+    "dv": 3,
+    "val": 155,
+    "name": "SMOOTH_QUARTZ",
+    "dn": "Smooth Quartz Block"
+  },
+  {
+    "id": "quartz_stairs",
+    "dv": 0,
+    "val": 156,
+    "name": "QUARTZ_STAIRS",
+    "dn": "Quartz Stairs"
+  },
+  {
+    "id": "prismarine_stairs",
+    "dv": 0,
+    "val": 157,
+    "name": "PRISMARINE_STAIRS",
+    "dn": "Prismarine Stairs"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 0,
+    "val": 158,
+    "name": "OAK_SLAB",
+    "dn": "Oak Slab"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 1,
+    "val": 158,
+    "name": "SPRUCE_SLAB",
+    "dn": "Spruce Slab"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 2,
+    "val": 158,
+    "name": "BIRCH_SLAB",
+    "dn": "Birch Slab"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 3,
+    "val": 158,
+    "name": "JUNGLE_SLAB",
+    "dn": "Jungle Slab"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 4,
+    "val": 158,
+    "name": "ACACIA_SLAB",
+    "dn": "Acacia Slab"
+  },
+  {
+    "id": "wooden_slab",
+    "dv": 5,
+    "val": 158,
+    "name": "DARK_OAK_SLAB",
+    "dn": "Dark Oak Slab"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 0,
+    "val": 159,
+    "name": "WHITE_TERRACOTTA",
+    "dn": "White Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 1,
+    "val": 159,
+    "name": "ORANGE_TERRACOTTA",
+    "dn": "Orange Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 2,
+    "val": 159,
+    "name": "MAGENTA_TERRACOTTA",
+    "dn": "Magenta Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 3,
+    "val": 159,
+    "name": "LIGHT_BLUE_TERRACOTTA",
+    "dn": "Light Blue Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 4,
+    "val": 159,
+    "name": "YELLOW_TERRACOTTA",
+    "dn": "Yellow Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 5,
+    "val": 159,
+    "name": "LIME_TERRACOTTA",
+    "dn": "Lime Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 6,
+    "val": 159,
+    "name": "PINK_TERRACOTTA",
+    "dn": "Pink Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 7,
+    "val": 159,
+    "name": "GRAY_TERRACOTTA",
+    "dn": "Gray Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 8,
+    "val": 159,
+    "name": "LIGHT_GRAY_TERRACOTTA",
+    "dn": "Light Gray Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 9,
+    "val": 159,
+    "name": "CYAN_TERRACOTTA",
+    "dn": "Cyan Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 10,
+    "val": 159,
+    "name": "PURPLE_TERRACOTTA",
+    "dn": "Purple Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 11,
+    "val": 159,
+    "name": "BLUE_TERRACOTTA",
+    "dn": "Blue Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 12,
+    "val": 159,
+    "name": "BROWN_TERRACOTTA",
+    "dn": "Brown Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 13,
+    "val": 159,
+    "name": "GREEN_TERRACOTTA",
+    "dn": "Green Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 14,
+    "val": 159,
+    "name": "RED_TERRACOTTA",
+    "dn": "Red Terracotta"
+  },
+  {
+    "id": "stained_hardened_clay",
+    "dv": 15,
+    "val": 159,
+    "name": "BLACK_TERRACOTTA",
+    "dn": "Black Terracotta"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 0,
+    "val": 160,
+    "name": "WHITE_STAINED_GLASS_PANE",
+    "dn": "White Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 1,
+    "val": 160,
+    "name": "ORANGE_STAINED_GLASS_PANE",
+    "dn": "Orange Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 2,
+    "val": 160,
+    "name": "MAGENTA_STAINED_GLASS_PANE",
+    "dn": "Magenta Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 3,
+    "val": 160,
+    "name": "LIGHT_BLUE_STAINED_GLASS_PANE",
+    "dn": "Light Blue Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 4,
+    "val": 160,
+    "name": "YELLOW_STAINED_GLASS_PANE",
+    "dn": "Yellow Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 5,
+    "val": 160,
+    "name": "LIME_STAINED_GLASS_PANE",
+    "dn": "Lime Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 6,
+    "val": 160,
+    "name": "PINK_STAINED_GLASS_PANE",
+    "dn": "Pink Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 7,
+    "val": 160,
+    "name": "GRAY_STAINED_GLASS_PANE",
+    "dn": "Gray Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 8,
+    "val": 160,
+    "name": "LIGHT_GRAY_STAINED_GLASS_PANE",
+    "dn": "Light Gray Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 9,
+    "val": 160,
+    "name": "CYAN_STAINED_GLASS_PANE",
+    "dn": "Cyan Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 10,
+    "val": 160,
+    "name": "PURPLE_STAINED_GLASS_PANE",
+    "dn": "Purple Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 11,
+    "val": 160,
+    "name": "BLUE_STAINED_GLASS_PANE",
+    "dn": "Blue Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 12,
+    "val": 160,
+    "name": "BROWN_STAINED_GLASS_PANE",
+    "dn": "Brown Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 13,
+    "val": 160,
+    "name": "GREEN_STAINED_GLASS_PANE",
+    "dn": "Green Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 14,
+    "val": 160,
+    "name": "RED_STAINED_GLASS_PANE",
+    "dn": "Red Stained Glass Pane"
+  },
+  {
+    "id": "stained_glass_pane",
+    "dv": 15,
+    "val": 160,
+    "name": "BLACK_STAINED_GLASS_PANE",
+    "dn": "Black Stained Glass Pane"
+  },
+  {
+    "id": "log2",
+    "dv": 0,
+    "val": 162,
+    "name": "ACACIA_LOG",
+    "dn": "Acacia Log"
+  },
+  {
+    "id": "log2",
+    "dv": 1,
+    "val": 162,
+    "name": "DARK_OAK_LOG",
+    "dn": "Dark Oak Log"
+  },
+  {
+    "id": "acacia_stairs",
+    "dv": 0,
+    "val": 163,
+    "name": "ACACIA_STAIRS",
+    "dn": "Acacia Stairs"
+  },
+  {
+    "id": "dark_oak_stairs",
+    "dv": 0,
+    "val": 164,
+    "name": "DARK_OAK_STAIRS",
+    "dn": "Dark Oak Stairs"
+  },
+  {
+    "id": "slime",
+    "dv": 0,
+    "val": 165,
+    "name": "SLIME_BLOCK",
+    "dn": "Slime Block"
+  },
+  {
+    "id": "barrier",
+    "dv": 0,
+    "val": 166,
+    "name": "BARRIER",
+    "dn": "Barrier"
+  },
+  {
+    "id": "iron_trapdoor",
+    "dv": 0,
+    "val": 167,
+    "name": "IRON_TRAPDOOR",
+    "dn": "Iron Trapdoor"
+  },
+  {
+    "id": "prismarine",
+    "dv": 0,
+    "val": 168,
+    "name": "PRISMARINE",
+    "dn": "Prismarine"
+  },
+  {
+    "id": "prismarine",
+    "dv": 2,
+    "val": 168,
+    "name": "PRISMARINE_BRICKS",
+    "dn": "Prismarine Bricks"
+  },
+  {
+    "id": "prismarine",
+    "dv": 1,
+    "val": 168,
+    "name": "DARK_PRISMARINE",
+    "dn": "Dark Prismarine"
+  },
+  {
+    "id": "seaLantern",
+    "dv": 0,
+    "val": 169,
+    "name": "SEA_LANTERN",
+    "dn": "Sea Lantern"
+  },
+  {
+    "id": "hay_block",
+    "dv": 0,
+    "val": 170,
+    "name": "HAY_BLOCK",
+    "dn": "Hay Bale"
+  },
+  {
+    "id": "carpet",
+    "dv": 0,
+    "val": 171,
+    "name": "WHITE_CARPET",
+    "dn": "White Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 1,
+    "val": 171,
+    "name": "ORANGE_CARPET",
+    "dn": "Orange Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 2,
+    "val": 171,
+    "name": "MAGENTA_CARPET",
+    "dn": "Magenta Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 3,
+    "val": 171,
+    "name": "LIGHT_BLUE_CARPET",
+    "dn": "Light Blue Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 4,
+    "val": 171,
+    "name": "YELLOW_CARPET",
+    "dn": "Yellow Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 5,
+    "val": 171,
+    "name": "LIME_CARPET",
+    "dn": "Lime Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 6,
+    "val": 171,
+    "name": "PINK_CARPET",
+    "dn": "Pink Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 7,
+    "val": 171,
+    "name": "GRAY_CARPET",
+    "dn": "Gray Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 8,
+    "val": 171,
+    "name": "LIGHT_GRAY_CARPET",
+    "dn": "Light Gray Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 9,
+    "val": 171,
+    "name": "CYAN_CARPET",
+    "dn": "Cyan Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 10,
+    "val": 171,
+    "name": "PURPLE_CARPET",
+    "dn": "Purple Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 11,
+    "val": 171,
+    "name": "BLUE_CARPET",
+    "dn": "Blue Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 12,
+    "val": 171,
+    "name": "BROWN_CARPET",
+    "dn": "Brown Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 13,
+    "val": 171,
+    "name": "GREEN_CARPET",
+    "dn": "Green Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 14,
+    "val": 171,
+    "name": "RED_CARPET",
+    "dn": "Red Carpet"
+  },
+  {
+    "id": "carpet",
+    "dv": 15,
+    "val": 171,
+    "name": "BLACK_CARPET",
+    "dn": "Black Carpet"
+  },
+  {
+    "id": "hardened_clay",
+    "dv": 0,
+    "val": 172,
+    "name": "TERRACOTTA",
+    "dn": "Terracotta"
+  },
+  {
+    "id": "coal_block",
+    "dv": 0,
+    "val": 173,
+    "name": "COAL_BLOCK",
+    "dn": "Block of Coal"
+  },
+  {
+    "id": "packed_ice",
+    "dv": 0,
+    "val": 174,
+    "name": "PACKED_ICE",
+    "dn": "Packed Ice"
+  },
+  {
+    "id": "double_plant",
+    "dv": 0,
+    "val": 175,
+    "name": "SUNFLOWER",
+    "dn": "Sunflower"
+  },
+  {
+    "id": "double_plant",
+    "dv": 1,
+    "val": 175,
+    "name": "LILAC",
+    "dn": "Lilac"
+  },
+  {
+    "id": "double_plant",
+    "dv": 4,
+    "val": 175,
+    "name": "ROSE_BUSH",
+    "dn": "Rose Bush"
+  },
+  {
+    "id": "double_plant",
+    "dv": 5,
+    "val": 175,
+    "name": "PEONY",
+    "dn": "Peony"
+  },
+  {
+    "id": "double_plant",
+    "dv": 2,
+    "val": 175,
+    "name": "TALL_GRASS",
+    "dn": "Tall Grass"
+  },
+  {
+    "id": "double_plant",
+    "dv": 3,
+    "val": 175,
+    "name": "LARGE_FERN",
+    "dn": "Large Fern"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 0,
+    "val": 176,
+    "name": "WHITE_BANNER",
+    "dn": "White Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 1,
+    "val": 176,
+    "name": "ORANGE_BANNER",
+    "dn": "Orange Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 2,
+    "val": 176,
+    "name": "MAGENTA_BANNER",
+    "dn": "Magenta Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 3,
+    "val": 176,
+    "name": "LIGHT_BLUE_BANNER",
+    "dn": "Light Blue Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 4,
+    "val": 176,
+    "name": "YELLOW_BANNER",
+    "dn": "Yellow Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 5,
+    "val": 176,
+    "name": "LIME_BANNER",
+    "dn": "Lime Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 6,
+    "val": 176,
+    "name": "PINK_BANNER",
+    "dn": "Pink Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 7,
+    "val": 176,
+    "name": "GRAY_BANNER",
+    "dn": "Gray Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 8,
+    "val": 176,
+    "name": "LIGHT_GRAY_BANNER",
+    "dn": "Light Gray Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 9,
+    "val": 176,
+    "name": "CYAN_BANNER",
+    "dn": "Cyan Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 10,
+    "val": 176,
+    "name": "PURPLE_BANNER",
+    "dn": "Purple Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 11,
+    "val": 176,
+    "name": "BLUE_BANNER",
+    "dn": "Blue Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 12,
+    "val": 176,
+    "name": "BROWN_BANNER",
+    "dn": "Brown Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 13,
+    "val": 176,
+    "name": "GREEN_BANNER",
+    "dn": "Green Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 14,
+    "val": 176,
+    "name": "RED_BANNER",
+    "dn": "Red Banner"
+  },
+  {
+    "id": "standing_banner",
+    "dv": 15,
+    "val": 176,
+    "name": "BLACK_BANNER",
+    "dn": "Black Banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 0,
+    "val": 177,
+    "name": "WHITE_WALL_BANNER",
+    "dn": "White wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 1,
+    "val": 177,
+    "name": "ORANGE_WALL_BANNER",
+    "dn": "Orange wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 2,
+    "val": 177,
+    "name": "MAGENTA_WALL_BANNER",
+    "dn": "Magenta wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 3,
+    "val": 177,
+    "name": "LIGHT_BLUE_WALL_BANNER",
+    "dn": "Light blue wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 4,
+    "val": 177,
+    "name": "YELLOW_WALL_BANNER",
+    "dn": "Yellow wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 5,
+    "val": 177,
+    "name": "LIME_WALL_BANNER",
+    "dn": "Lime wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 6,
+    "val": 177,
+    "name": "PINK_WALL_BANNER",
+    "dn": "Pink wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 7,
+    "val": 177,
+    "name": "GRAY_WALL_BANNER",
+    "dn": "Gray wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 8,
+    "val": 177,
+    "name": "LIGHT_GRAY_WALL_BANNER",
+    "dn": "Light gray wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 9,
+    "val": 177,
+    "name": "CYAN_WALL_BANNER",
+    "dn": "Cyan wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 10,
+    "val": 177,
+    "name": "PURPLE_WALL_BANNER",
+    "dn": "Purple wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 11,
+    "val": 177,
+    "name": "BLUE_WALL_BANNER",
+    "dn": "Blue wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 12,
+    "val": 177,
+    "name": "BROWN_WALL_BANNER",
+    "dn": "Brown wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 13,
+    "val": 177,
+    "name": "GREEN_WALL_BANNER",
+    "dn": "Green wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 14,
+    "val": 177,
+    "name": "RED_WALL_BANNER",
+    "dn": "Red wall banner"
+  },
+  {
+    "id": "wall_banner",
+    "dv": 15,
+    "val": 177,
+    "name": "BLACK_WALL_BANNER",
+    "dn": "Black wall banner"
+  },
+  {
+    "id": "red_sandstone",
+    "dv": 0,
+    "val": 179,
+    "name": "RED_SANDSTONE",
+    "dn": "Red Sandstone"
+  },
+  {
+    "id": "red_sandstone",
+    "dv": 1,
+    "val": 179,
+    "name": "CHISELED_RED_SANDSTONE",
+    "dn": "Chiseled Red Sandstone"
+  },
+  {
+    "id": "red_sandstone",
+    "dv": 2,
+    "val": 179,
+    "name": "CUT_RED_SANDSTONE",
+    "dn": "Cut Red Sandstone"
+  },
+  {
+    "id": "red_sandstone",
+    "dv": 3,
+    "val": 179,
+    "name": "SMOOTH_RED_SANDSTONE",
+    "dn": "Smooth Red Sandstone"
+  },
+  {
+    "id": "red_sandstone_stairs",
+    "dv": 0,
+    "val": 180,
+    "name": "RED_SANDSTONE_STAIRS",
+    "dn": "Red Sandstone Stairs"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 0,
+    "val": 182,
+    "name": "RED_SANDSTONE_SLAB",
+    "dn": "Red Sandstone Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 2,
+    "val": 182,
+    "name": "PRISMARINE_SLAB",
+    "dn": "Prismarine Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 4,
+    "val": 182,
+    "name": "PRISMARINE_BRICK_SLAB",
+    "dn": "Prismarine Brick Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 3,
+    "val": 182,
+    "name": "DARK_PRISMARINE_SLAB",
+    "dn": "Dark Prismarine Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 1,
+    "val": 182,
+    "name": "PURPUR_SLAB",
+    "dn": "Purpur Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 5,
+    "val": 182,
+    "name": "MOSSY_COBBLESTONE_SLAB",
+    "dn": "Mossy Cobblestone Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 6,
+    "val": 182,
+    "name": "SMOOTH_SANDSTONE_SLAB",
+    "dn": "Smooth Sandstone Slab"
+  },
+  {
+    "id": "stone_slab2",
+    "dv": 7,
+    "val": 182,
+    "name": "RED_NETHER_BRICK_SLAB",
+    "dn": "Red Nether Brick Slab"
+  },
+  {
+    "id": "spruce_fence_gate",
+    "dv": 0,
+    "val": 183,
+    "name": "SPRUCE_FENCE_GATE",
+    "dn": "Spruce Fence Gate"
+  },
+  {
+    "id": "birch_fence_gate",
+    "dv": 0,
+    "val": 184,
+    "name": "BIRCH_FENCE_GATE",
+    "dn": "Birch Fence Gate"
+  },
+  {
+    "id": "jungle_fence_gate",
+    "dv": 0,
+    "val": 185,
+    "name": "JUNGLE_FENCE_GATE",
+    "dn": "Jungle Fence Gate"
+  },
+  {
+    "id": "dark_oak_fence_gate",
+    "dv": 0,
+    "val": 186,
+    "name": "DARK_OAK_FENCE_GATE",
+    "dn": "Dark Oak Fence Gate"
+  },
+  {
+    "id": "acacia_fence_gate",
+    "dv": 0,
+    "val": 187,
+    "name": "ACACIA_FENCE_GATE",
+    "dn": "Acacia Fence Gate"
+  },
+  {
+    "id": "repeating_command_block",
+    "dv": 0,
+    "val": 188,
+    "name": "REPEATING_COMMAND_BLOCK",
+    "dn": "Repeating Command Block"
+  },
+  {
+    "id": "chain_command_block",
+    "dv": 0,
+    "val": 189,
+    "name": "CHAIN_COMMAND_BLOCK",
+    "dn": "Chain Command Block"
+  },
+  {
+    "id": "spruce_door",
+    "dv": 0,
+    "val": 193,
+    "name": "SPRUCE_DOOR",
+    "dn": "Spruce Door"
+  },
+  {
+    "id": "birch_door",
+    "dv": 0,
+    "val": 194,
+    "name": "BIRCH_DOOR",
+    "dn": "Birch Door"
+  },
+  {
+    "id": "jungle_door",
+    "dv": 0,
+    "val": 195,
+    "name": "JUNGLE_DOOR",
+    "dn": "Jungle Door"
+  },
+  {
+    "id": "acacia_door",
+    "dv": 0,
+    "val": 196,
+    "name": "ACACIA_DOOR",
+    "dn": "Acacia Door"
+  },
+  {
+    "id": "dark_oak_door",
+    "dv": 0,
+    "val": 197,
+    "name": "DARK_OAK_DOOR",
+    "dn": "Dark Oak Door"
+  },
+  {
+    "id": "grass_path",
+    "dv": 0,
+    "val": 198,
+    "name": "GRASS_PATH",
+    "dn": "Dirt Path"
+  },
+  {
+    "id": "chorus_plant",
+    "dv": 0,
+    "val": 199,
+    "name": "CHORUS_PLANT",
+    "dn": "Chorus Plant"
+  },
+  {
+    "id": "chorus_flower",
+    "dv": 0,
+    "val": 200,
+    "name": "CHORUS_FLOWER",
+    "dn": "Chorus Flower"
+  },
+  {
+    "id": "purpur_pillar",
+    "dv": 0,
+    "val": 200,
+    "name": "PURPUR_PILLAR",
+    "dn": "Purpur Pillar"
+  },
+  {
+    "id": "purpur_block",
+    "dv": 0,
+    "val": 201,
+    "name": "PURPUR_BLOCK",
+    "dn": "Purpur Block"
+  },
+  {
+    "id": "purpur_stairs",
+    "dv": 0,
+    "val": 203,
+    "name": "PURPUR_STAIRS",
+    "dn": "Purpur Stairs"
+  },
+  {
+    "id": "end_bricks",
+    "dv": 0,
+    "val": 206,
+    "name": "END_STONE_BRICKS",
+    "dn": "End Stone Bricks"
+  },
+  {
+    "id": "frosted_ice",
+    "dv": 0,
+    "val": 207,
+    "name": "FROSTED_ICE",
+    "dn": "Frosted Ice"
+  },
+  {
+    "id": "end_rod",
+    "dv": 0,
+    "val": 208,
+    "name": "END_ROD",
+    "dn": "End Rod"
+  },
+  {
+    "id": "magma",
+    "dv": 0,
+    "val": 213,
+    "name": "MAGMA_BLOCK",
+    "dn": "Magma Block"
+  },
+  {
+    "id": "nether_wart_block",
+    "dv": 0,
+    "val": 214,
+    "name": "NETHER_WART_BLOCK",
+    "dn": "Nether Wart Block"
+  },
+  {
+    "id": "red_nether_brick",
+    "dv": 0,
+    "val": 215,
+    "name": "RED_NETHER_BRICKS",
+    "dn": "Red Nether Bricks"
+  },
+  {
+    "id": "bone_block",
+    "dv": 0,
+    "val": 216,
+    "name": "BONE_BLOCK",
+    "dn": "Bone Block"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 0,
+    "val": 218,
+    "name": "WHITE_SHULKER_BOX",
+    "dn": "White Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 1,
+    "val": 218,
+    "name": "ORANGE_SHULKER_BOX",
+    "dn": "Orange Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 2,
+    "val": 218,
+    "name": "MAGENTA_SHULKER_BOX",
+    "dn": "Magenta Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 3,
+    "val": 218,
+    "name": "LIGHT_BLUE_SHULKER_BOX",
+    "dn": "Light Blue Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 4,
+    "val": 218,
+    "name": "YELLOW_SHULKER_BOX",
+    "dn": "Yellow Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 5,
+    "val": 218,
+    "name": "LIME_SHULKER_BOX",
+    "dn": "Lime Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 6,
+    "val": 218,
+    "name": "PINK_SHULKER_BOX",
+    "dn": "Pink Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 7,
+    "val": 218,
+    "name": "GRAY_SHULKER_BOX",
+    "dn": "Gray Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 8,
+    "val": 218,
+    "name": "LIGHT_GRAY_SHULKER_BOX",
+    "dn": "Light Gray Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 9,
+    "val": 218,
+    "name": "CYAN_SHULKER_BOX",
+    "dn": "Cyan Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 10,
+    "val": 218,
+    "name": "PURPLE_SHULKER_BOX",
+    "dn": "Purple Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 11,
+    "val": 218,
+    "name": "BLUE_SHULKER_BOX",
+    "dn": "Blue Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 12,
+    "val": 218,
+    "name": "BROWN_SHULKER_BOX",
+    "dn": "Brown Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 13,
+    "val": 218,
+    "name": "GREEN_SHULKER_BOX",
+    "dn": "Green Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 14,
+    "val": 218,
+    "name": "RED_SHULKER_BOX",
+    "dn": "Red Shulker Box"
+  },
+  {
+    "id": "shulker_box",
+    "dv": 15,
+    "val": 218,
+    "name": "BLACK_SHULKER_BOX",
+    "dn": "Black Shulker Box"
+  },
+  {
+    "id": "white_glazed_terracotta",
+    "dv": 0,
+    "val": 220,
+    "name": "WHITE_GLAZED_TERRACOTTA",
+    "dn": "White Glazed Terracotta"
+  },
+  {
+    "id": "orange_glazed_terracotta",
+    "dv": 0,
+    "val": 221,
+    "name": "ORANGE_GLAZED_TERRACOTTA",
+    "dn": "Orange Glazed Terracotta"
+  },
+  {
+    "id": "magenta_glazed_terracotta",
+    "dv": 0,
+    "val": 222,
+    "name": "MAGENTA_GLAZED_TERRACOTTA",
+    "dn": "Magenta Glazed Terracotta"
+  },
+  {
+    "id": "light_blue_glazed_terracotta",
+    "dv": 0,
+    "val": 223,
+    "name": "LIGHT_BLUE_GLAZED_TERRACOTTA",
+    "dn": "Light Blue Glazed Terracotta"
+  },
+  {
+    "id": "yellow_glazed_terracotta",
+    "dv": 0,
+    "val": 224,
+    "name": "YELLOW_GLAZED_TERRACOTTA",
+    "dn": "Yellow Glazed Terracotta"
+  },
+  {
+    "id": "lime_glazed_terracotta",
+    "dv": 0,
+    "val": 225,
+    "name": "LIME_GLAZED_TERRACOTTA",
+    "dn": "Lime Glazed Terracotta"
+  },
+  {
+    "id": "pink_glazed_terracotta",
+    "dv": 0,
+    "val": 226,
+    "name": "PINK_GLAZED_TERRACOTTA",
+    "dn": "Pink Glazed Terracotta"
+  },
+  {
+    "id": "gray_glazed_terracotta",
+    "dv": 0,
+    "val": 227,
+    "name": "GRAY_GLAZED_TERRACOTTA",
+    "dn": "Gray Glazed Terracotta"
+  },
+  {
+    "id": "silver_glazed_terracotta",
+    "dv": 0,
+    "val": 228,
+    "name": "LIGHT_GRAY_GLAZED_TERRACOTTA",
+    "dn": "Light Gray Glazed Terracotta"
+  },
+  {
+    "id": "cyan_glazed_terracotta",
+    "dv": 0,
+    "val": 229,
+    "name": "CYAN_GLAZED_TERRACOTTA",
+    "dn": "Cyan Glazed Terracotta"
+  },
+  {
+    "id": "purple_glazed_terracotta",
+    "dv": 0,
+    "val": 230,
+    "name": "PURPLE_GLAZED_TERRACOTTA",
+    "dn": "Purple Glazed Terracotta"
+  },
+  {
+    "id": "blue_glazed_terracotta",
+    "dv": 0,
+    "val": 231,
+    "name": "BLUE_GLAZED_TERRACOTTA",
+    "dn": "Blue Glazed Terracotta"
+  },
+  {
+    "id": "brown_glazed_terracotta",
+    "dv": 0,
+    "val": 232,
+    "name": "BROWN_GLAZED_TERRACOTTA",
+    "dn": "Brown Glazed Terracotta"
+  },
+  {
+    "id": "green_glazed_terracotta",
+    "dv": 0,
+    "val": 233,
+    "name": "GREEN_GLAZED_TERRACOTTA",
+    "dn": "Green Glazed Terracotta"
+  },
+  {
+    "id": "red_glazed_terracotta",
+    "dv": 0,
+    "val": 234,
+    "name": "RED_GLAZED_TERRACOTTA",
+    "dn": "Red Glazed Terracotta"
+  },
+  {
+    "id": "black_glazed_terracotta",
+    "dv": 0,
+    "val": 235,
+    "name": "BLACK_GLAZED_TERRACOTTA",
+    "dn": "Black Glazed Terracotta"
+  },
+  {
+    "id": "concrete",
+    "dv": 0,
+    "val": 236,
+    "name": "WHITE_CONCRETE",
+    "dn": "White Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 1,
+    "val": 236,
+    "name": "ORANGE_CONCRETE",
+    "dn": "Orange Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 2,
+    "val": 236,
+    "name": "MAGENTA_CONCRETE",
+    "dn": "Magenta Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 3,
+    "val": 236,
+    "name": "LIGHT_BLUE_CONCRETE",
+    "dn": "Light Blue Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 4,
+    "val": 236,
+    "name": "YELLOW_CONCRETE",
+    "dn": "Yellow Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 5,
+    "val": 236,
+    "name": "LIME_CONCRETE",
+    "dn": "Lime Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 6,
+    "val": 236,
+    "name": "PINK_CONCRETE",
+    "dn": "Pink Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 7,
+    "val": 236,
+    "name": "GRAY_CONCRETE",
+    "dn": "Gray Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 8,
+    "val": 236,
+    "name": "LIGHT_GRAY_CONCRETE",
+    "dn": "Light Gray Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 9,
+    "val": 236,
+    "name": "CYAN_CONCRETE",
+    "dn": "Cyan Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 10,
+    "val": 236,
+    "name": "PURPLE_CONCRETE",
+    "dn": "Purple Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 11,
+    "val": 236,
+    "name": "BLUE_CONCRETE",
+    "dn": "Blue Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 12,
+    "val": 236,
+    "name": "BROWN_CONCRETE",
+    "dn": "Brown Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 13,
+    "val": 236,
+    "name": "GREEN_CONCRETE",
+    "dn": "Green Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 14,
+    "val": 236,
+    "name": "RED_CONCRETE",
+    "dn": "Red Concrete"
+  },
+  {
+    "id": "concrete",
+    "dv": 15,
+    "val": 236,
+    "name": "BLACK_CONCRETE",
+    "dn": "Black Concrete"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 0,
+    "val": 237,
+    "name": "WHITE_CONCRETE_POWDER",
+    "dn": "White Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 1,
+    "val": 237,
+    "name": "ORANGE_CONCRETE_POWDER",
+    "dn": "Orange Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 2,
+    "val": 237,
+    "name": "MAGENTA_CONCRETE_POWDER",
+    "dn": "Magenta Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 3,
+    "val": 237,
+    "name": "LIGHT_BLUE_CONCRETE_POWDER",
+    "dn": "Light Blue Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 4,
+    "val": 237,
+    "name": "YELLOW_CONCRETE_POWDER",
+    "dn": "Yellow Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 5,
+    "val": 237,
+    "name": "LIME_CONCRETE_POWDER",
+    "dn": "Lime Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 6,
+    "val": 237,
+    "name": "PINK_CONCRETE_POWDER",
+    "dn": "Pink Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 7,
+    "val": 237,
+    "name": "GRAY_CONCRETE_POWDER",
+    "dn": "Gray Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 8,
+    "val": 237,
+    "name": "LIGHT_GRAY_CONCRETE_POWDER",
+    "dn": "Light Gray Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 9,
+    "val": 237,
+    "name": "CYAN_CONCRETE_POWDER",
+    "dn": "Cyan Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 10,
+    "val": 237,
+    "name": "PURPLE_CONCRETE_POWDER",
+    "dn": "Purple Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 11,
+    "val": 237,
+    "name": "BLUE_CONCRETE_POWDER",
+    "dn": "Blue Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 12,
+    "val": 237,
+    "name": "BROWN_CONCRETE_POWDER",
+    "dn": "Brown Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 13,
+    "val": 237,
+    "name": "GREEN_CONCRETE_POWDER",
+    "dn": "Green Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 14,
+    "val": 237,
+    "name": "RED_CONCRETE_POWDER",
+    "dn": "Red Concrete Powder"
+  },
+  {
+    "id": "concretePowder",
+    "dv": 15,
+    "val": 237,
+    "name": "BLACK_CONCRETE_POWDER",
+    "dn": "Black Concrete Powder"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 0,
+    "val": 241,
+    "name": "WHITE_STAINED_GLASS",
+    "dn": "White Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 1,
+    "val": 241,
+    "name": "ORANGE_STAINED_GLASS",
+    "dn": "Orange Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 2,
+    "val": 241,
+    "name": "MAGENTA_STAINED_GLASS",
+    "dn": "Magenta Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 3,
+    "val": 241,
+    "name": "LIGHT_BLUE_STAINED_GLASS",
+    "dn": "Light Blue Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 4,
+    "val": 241,
+    "name": "YELLOW_STAINED_GLASS",
+    "dn": "Yellow Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 5,
+    "val": 241,
+    "name": "LIME_STAINED_GLASS",
+    "dn": "Lime Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 6,
+    "val": 241,
+    "name": "PINK_STAINED_GLASS",
+    "dn": "Pink Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 7,
+    "val": 241,
+    "name": "GRAY_STAINED_GLASS",
+    "dn": "Gray Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 8,
+    "val": 241,
+    "name": "LIGHT_GRAY_STAINED_GLASS",
+    "dn": "Light Gray Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 9,
+    "val": 241,
+    "name": "CYAN_STAINED_GLASS",
+    "dn": "Cyan Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 10,
+    "val": 241,
+    "name": "PURPLE_STAINED_GLASS",
+    "dn": "Purple Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 11,
+    "val": 241,
+    "name": "BLUE_STAINED_GLASS",
+    "dn": "Blue Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 12,
+    "val": 241,
+    "name": "BROWN_STAINED_GLASS",
+    "dn": "Brown Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 13,
+    "val": 241,
+    "name": "GREEN_STAINED_GLASS",
+    "dn": "Green Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 14,
+    "val": 241,
+    "name": "RED_STAINED_GLASS",
+    "dn": "Red Stained Glass"
+  },
+  {
+    "id": "stained_glass",
+    "dv": 15,
+    "val": 241,
+    "name": "BLACK_STAINED_GLASS",
+    "dn": "Black Stained Glass"
+  },
+  {
+    "id": "beetroot",
+    "dv": 0,
+    "val": 244,
+    "name": "BEETROOTS",
+    "dn": "Beetroots"
+  },
+  {
+    "id": "observer",
+    "dv": 0,
+    "val": 251,
+    "name": "OBSERVER",
+    "dn": "Observer"
+  },
+  {
+    "id": "structure_block",
+    "dv": 0,
+    "val": 252,
+    "name": "STRUCTURE_BLOCK",
+    "dn": "Structure Block"
+  },
+  {
+    "id": "dark_prismarine_stairs",
+    "dv": 0,
+    "val": 258,
+    "name": "DARK_PRISMARINE_STAIRS",
+    "dn": "Dark Prismarine Stairs"
+  },
+  {
+    "id": "prismarine_bricks_stairs",
+    "dv": 0,
+    "val": 259,
+    "name": "PRISMARINE_BRICK_STAIRS",
+    "dn": "Prismarine Brick Stairs"
+  },
+  {
+    "id": "blue_ice",
+    "dv": 0,
+    "val": 260,
+    "name": "BLUE_ICE",
+    "dn": "Blue Ice"
+  },
+  {
+    "id": "stripped_spruce_log",
+    "dv": 0,
+    "val": 260,
+    "name": "STRIPPED_SPRUCE_LOG",
+    "dn": "Stripped Spruce Log"
+  },
+  {
+    "id": "stripped_birch_log",
+    "dv": 0,
+    "val": 261,
+    "name": "STRIPPED_BIRCH_LOG",
+    "dn": "Stripped Birch Log"
+  },
+  {
+    "id": "leaves2",
+    "dv": 0,
+    "val": 261,
+    "name": "ACACIA_LEAVES",
+    "dn": "Acacia Leaves"
+  },
+  {
+    "id": "leaves2",
+    "dv": 1,
+    "val": 261,
+    "name": "DARK_OAK_LEAVES",
+    "dn": "Dark Oak Leaves"
+  },
+  {
+    "id": "stripped_jungle_log",
+    "dv": 0,
+    "val": 262,
+    "name": "STRIPPED_JUNGLE_LOG",
+    "dn": "Stripped Jungle Log"
+  },
+  {
+    "id": "stripped_acacia_log",
+    "dv": 0,
+    "val": 263,
+    "name": "STRIPPED_ACACIA_LOG",
+    "dn": "Stripped Acacia Log"
+  },
+  {
+    "id": "stripped_dark_oak_log",
+    "dv": 0,
+    "val": 264,
+    "name": "STRIPPED_DARK_OAK_LOG",
+    "dn": "Stripped Dark Oak Log"
+  },
+  {
+    "id": "stripped_oak_log",
+    "dv": 0,
+    "val": 265,
+    "name": "STRIPPED_OAK_LOG",
+    "dn": "Stripped Oak Log"
+  },
+  {
+    "id": "kelp",
+    "dv": 0,
+    "val": 293,
+    "name": "KELP_PLANT",
+    "dn": "Kelp Plant"
+  },
+  {
+    "id": "seagrass",
+    "dv": 0,
+    "val": 385,
+    "name": "SEAGRASS",
+    "dn": "Seagrass"
+  },
+  {
+    "id": "seagrass",
+    "dv": 2,
+    "val": 385,
+    "name": "TALL_SEAGRASS",
+    "dn": "Tall Seagrass"
+  },
+  {
+    "id": "coral",
+    "dv": 8,
+    "val": 386,
+    "name": "DEAD_TUBE_CORAL",
+    "dn": "Dead Tube Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 9,
+    "val": 386,
+    "name": "DEAD_BRAIN_CORAL",
+    "dn": "Dead Brain Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 10,
+    "val": 386,
+    "name": "DEAD_BUBBLE_CORAL",
+    "dn": "Dead Bubble Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 11,
+    "val": 386,
+    "name": "DEAD_FIRE_CORAL",
+    "dn": "Dead Fire Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 12,
+    "val": 386,
+    "name": "DEAD_HORN_CORAL",
+    "dn": "Dead Horn Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 0,
+    "val": 386,
+    "name": "TUBE_CORAL",
+    "dn": "Tube Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 1,
+    "val": 386,
+    "name": "BRAIN_CORAL",
+    "dn": "Brain Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 2,
+    "val": 386,
+    "name": "BUBBLE_CORAL",
+    "dn": "Bubble Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 3,
+    "val": 386,
+    "name": "FIRE_CORAL",
+    "dn": "Fire Coral"
+  },
+  {
+    "id": "coral",
+    "dv": 4,
+    "val": 386,
+    "name": "HORN_CORAL",
+    "dn": "Horn Coral"
+  },
+  {
+    "id": "coral_block",
+    "dv": 8,
+    "val": 387,
+    "name": "DEAD_TUBE_CORAL_BLOCK",
+    "dn": "Dead Tube Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 9,
+    "val": 387,
+    "name": "DEAD_BRAIN_CORAL_BLOCK",
+    "dn": "Dead Brain Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 10,
+    "val": 387,
+    "name": "DEAD_BUBBLE_CORAL_BLOCK",
+    "dn": "Dead Bubble Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 11,
+    "val": 387,
+    "name": "DEAD_FIRE_CORAL_BLOCK",
+    "dn": "Dead Fire Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 12,
+    "val": 387,
+    "name": "DEAD_HORN_CORAL_BLOCK",
+    "dn": "Dead Horn Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 0,
+    "val": 387,
+    "name": "TUBE_CORAL_BLOCK",
+    "dn": "Tube Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 1,
+    "val": 387,
+    "name": "BRAIN_CORAL_BLOCK",
+    "dn": "Brain Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 2,
+    "val": 387,
+    "name": "BUBBLE_CORAL_BLOCK",
+    "dn": "Bubble Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 3,
+    "val": 387,
+    "name": "FIRE_CORAL_BLOCK",
+    "dn": "Fire Coral Block"
+  },
+  {
+    "id": "coral_block",
+    "dv": 4,
+    "val": 387,
+    "name": "HORN_CORAL_BLOCK",
+    "dn": "Horn Coral Block"
+  },
+  {
+    "id": "coral_fan_dead",
+    "dv": 4,
+    "val": 388,
+    "name": "DEAD_HORN_CORAL_FAN",
+    "dn": "Dead Horn Coral Fan"
+  },
+  {
+    "id": "coral_fan",
+    "dv": 0,
+    "val": 388,
+    "name": "TUBE_CORAL_FAN",
+    "dn": "Tube Coral Fan"
+  },
+  {
+    "id": "coral_fan",
+    "dv": 1,
+    "val": 388,
+    "name": "BRAIN_CORAL_FAN",
+    "dn": "Brain Coral Fan"
+  },
+  {
+    "id": "coral_fan",
+    "dv": 2,
+    "val": 388,
+    "name": "BUBBLE_CORAL_FAN",
+    "dn": "Bubble Coral Fan"
+  },
+  {
+    "id": "coral_fan",
+    "dv": 3,
+    "val": 388,
+    "name": "FIRE_CORAL_FAN",
+    "dn": "Fire Coral Fan"
+  },
+  {
+    "id": "coral_fan",
+    "dv": 4,
+    "val": 388,
+    "name": "HORN_CORAL_FAN",
+    "dn": "Horn Coral Fan"
+  },
+  {
+    "id": "coral_fan_dead",
+    "dv": 0,
+    "val": 389,
+    "name": "DEAD_TUBE_CORAL_FAN",
+    "dn": "Dead Tube Coral Fan"
+  },
+  {
+    "id": "coral_fan_dead",
+    "dv": 1,
+    "val": 389,
+    "name": "DEAD_BRAIN_CORAL_FAN",
+    "dn": "Dead Brain Coral Fan"
+  },
+  {
+    "id": "coral_fan_dead",
+    "dv": 2,
+    "val": 389,
+    "name": "DEAD_BUBBLE_CORAL_FAN",
+    "dn": "Dead Bubble Coral Fan"
+  },
+  {
+    "id": "coral_fan_dead",
+    "dv": 3,
+    "val": 389,
+    "name": "DEAD_FIRE_CORAL_FAN",
+    "dn": "Dead Fire Coral Fan"
+  },
+  {
+    "id": "coral_fan_hang",
+    "dv": 2,
+    "val": 390,
+    "name": "DEAD_TUBE_CORAL_WALL_FAN",
+    "dn": "Dead Tube Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang",
+    "dv": 3,
+    "val": 390,
+    "name": "DEAD_BRAIN_CORAL_WALL_FAN",
+    "dn": "Dead Brain Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang",
+    "dv": 0,
+    "val": 390,
+    "name": "TUBE_CORAL_WALL_FAN",
+    "dn": "Tube Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang",
+    "dv": 1,
+    "val": 390,
+    "name": "BRAIN_CORAL_WALL_FAN",
+    "dn": "Brain Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang2",
+    "dv": 0,
+    "val": 391,
+    "name": "BUBBLE_CORAL_WALL_FAN",
+    "dn": "Bubble Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang2",
+    "dv": 1,
+    "val": 391,
+    "name": "FIRE_CORAL_WALL_FAN",
+    "dn": "Fire Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang2",
+    "dv": 2,
+    "val": 391,
+    "name": "DEAD_BUBBLE_CORAL_WALL_FAN",
+    "dn": "Dead Bubble Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang2",
+    "dv": 3,
+    "val": 391,
+    "name": "DEAD_FIRE_CORAL_WALL_FAN",
+    "dn": "Dead Fire Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang3",
+    "dv": 2,
+    "val": 392,
+    "name": "DEAD_HORN_CORAL_WALL_FAN",
+    "dn": "Dead Horn Coral Wall Fan"
+  },
+  {
+    "id": "coral_fan_hang3",
+    "dv": 0,
+    "val": 392,
+    "name": "HORN_CORAL_WALL_FAN",
+    "dn": "Horn Coral Wall Fan"
+  },
+  {
+    "id": "dried_kelp_block",
+    "dv": 0,
+    "val": 394,
+    "name": "DRIED_KELP_BLOCK",
+    "dn": "Dried Kelp Block"
+  },
+  {
+    "id": "acacia_button",
+    "dv": 0,
+    "val": 395,
+    "name": "ACACIA_BUTTON",
+    "dn": "Acacia Button"
+  },
+  {
+    "id": "birch_button",
+    "dv": 0,
+    "val": 396,
+    "name": "BIRCH_BUTTON",
+    "dn": "Birch Button"
+  },
+  {
+    "id": "dark_oak_button",
+    "dv": 0,
+    "val": 397,
+    "name": "DARK_OAK_BUTTON",
+    "dn": "Dark Oak Button"
+  },
+  {
+    "id": "jungle_button",
+    "dv": 0,
+    "val": 398,
+    "name": "JUNGLE_BUTTON",
+    "dn": "Jungle Button"
+  },
+  {
+    "id": "spruce_button",
+    "dv": 0,
+    "val": 399,
+    "name": "SPRUCE_BUTTON",
+    "dn": "Spruce Button"
+  },
+  {
+    "id": "acacia_trapdoor",
+    "dv": 0,
+    "val": 400,
+    "name": "ACACIA_TRAPDOOR",
+    "dn": "Acacia Trapdoor"
+  },
+  {
+    "id": "birch_trapdoor",
+    "dv": 0,
+    "val": 401,
+    "name": "BIRCH_TRAPDOOR",
+    "dn": "Birch Trapdoor"
+  },
+  {
+    "id": "dark_oak_trapdoor",
+    "dv": 0,
+    "val": 402,
+    "name": "DARK_OAK_TRAPDOOR",
+    "dn": "Dark Oak Trapdoor"
+  },
+  {
+    "id": "jungle_trapdoor",
+    "dv": 0,
+    "val": 403,
+    "name": "JUNGLE_TRAPDOOR",
+    "dn": "Jungle Trapdoor"
+  },
+  {
+    "id": "spruce_trapdoor",
+    "dv": 0,
+    "val": 404,
+    "name": "SPRUCE_TRAPDOOR",
+    "dn": "Spruce Trapdoor"
+  },
+  {
+    "id": "acacia_pressure_plate",
+    "dv": 0,
+    "val": 405,
+    "name": "ACACIA_PRESSURE_PLATE",
+    "dn": "Acacia Pressure Plate"
+  },
+  {
+    "id": "birch_pressure_plate",
+    "dv": 0,
+    "val": 406,
+    "name": "BIRCH_PRESSURE_PLATE",
+    "dn": "Birch Pressure Plate"
+  },
+  {
+    "id": "dark_oak_pressure_plate",
+    "dv": 0,
+    "val": 407,
+    "name": "DARK_OAK_PRESSURE_PLATE",
+    "dn": "Dark Oak Pressure Plate"
+  },
+  {
+    "id": "jungle_pressure_plate",
+    "dv": 0,
+    "val": 408,
+    "name": "JUNGLE_PRESSURE_PLATE",
+    "dn": "Jungle Pressure Plate"
+  },
+  {
+    "id": "spruce_pressure_plate",
+    "dv": 0,
+    "val": 409,
+    "name": "SPRUCE_PRESSURE_PLATE",
+    "dn": "Spruce Pressure Plate"
+  },
+  {
+    "id": "carved_pumpkin",
+    "dv": 0,
+    "val": 410,
+    "name": "CARVED_PUMPKIN",
+    "dn": "Carved Pumpkin"
+  },
+  {
+    "id": "sea_pickle",
+    "dv": 0,
+    "val": 411,
+    "name": "SEA_PICKLE",
+    "dn": "Sea Pickle"
+  },
+  {
+    "id": "conduit",
+    "dv": 0,
+    "val": 412,
+    "name": "CONDUIT",
+    "dn": "Conduit"
+  },
+  {
+    "id": "turtle_egg",
+    "dv": 0,
+    "val": 414,
+    "name": "TURTLE_EGG",
+    "dn": "Turtle Egg"
+  },
+  {
+    "id": "bubble_column",
+    "dv": 0,
+    "val": 415,
+    "name": "BUBBLE_COLUMN",
+    "dn": "Bubble Column"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 7,
+    "val": 417,
+    "name": "POLISHED_GRANITE_SLAB",
+    "dn": "Polished Granite Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 1,
+    "val": 417,
+    "name": "SMOOTH_RED_SANDSTONE_SLAB",
+    "dn": "Smooth Red Sandstone Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 2,
+    "val": 417,
+    "name": "POLISHED_ANDESITE_SLAB",
+    "dn": "Polished Andesite Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 4,
+    "val": 417,
+    "name": "DIORITE_SLAB",
+    "dn": "Diorite Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 6,
+    "val": 417,
+    "name": "GRANITE_SLAB",
+    "dn": "Granite Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 3,
+    "val": 417,
+    "name": "ANDESITE_SLAB",
+    "dn": "Andesite Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 0,
+    "val": 417,
+    "name": "END_STONE_BRICK_SLAB",
+    "dn": "End Stone Brick Slab"
+  },
+  {
+    "id": "stone_slab3",
+    "dv": 5,
+    "val": 417,
+    "name": "POLISHED_DIORITE_SLAB",
+    "dn": "Polished Diorite Slab"
+  },
+  {
+    "id": "bamboo",
+    "dv": 0,
+    "val": 418,
+    "name": "BAMBOO",
+    "dn": "Bamboo"
+  },
+  {
+    "id": "scaffolding",
+    "dv": 0,
+    "val": 419,
+    "name": "SCAFFOLDING",
+    "dn": "Scaffolding"
+  },
+  {
+    "id": "bamboo_sapling",
+    "dv": 0,
+    "val": 419,
+    "name": "BAMBOO_SAPLING",
+    "dn": "Bamboo Shoot"
+  },
+  {
+    "id": "granite_stairs",
+    "dv": 0,
+    "val": 424,
+    "name": "GRANITE_STAIRS",
+    "dn": "Granite Stairs"
+  },
+  {
+    "id": "diorite_stairs",
+    "dv": 0,
+    "val": 425,
+    "name": "DIORITE_STAIRS",
+    "dn": "Diorite Stairs"
+  },
+  {
+    "id": "andesite_stairs",
+    "dv": 0,
+    "val": 426,
+    "name": "ANDESITE_STAIRS",
+    "dn": "Andesite Stairs"
+  },
+  {
+    "id": "polished_granite_stairs",
+    "dv": 0,
+    "val": 427,
+    "name": "POLISHED_GRANITE_STAIRS",
+    "dn": "Polished Granite Stairs"
+  },
+  {
+    "id": "polished_diorite_stairs",
+    "dv": 0,
+    "val": 428,
+    "name": "POLISHED_DIORITE_STAIRS",
+    "dn": "Polished Diorite Stairs"
+  },
+  {
+    "id": "polished_andesite_stairs",
+    "dv": 0,
+    "val": 429,
+    "name": "POLISHED_ANDESITE_STAIRS",
+    "dn": "Polished Andesite Stairs"
+  },
+  {
+    "id": "mossy_stone_brick_stairs",
+    "dv": 0,
+    "val": 430,
+    "name": "MOSSY_STONE_BRICK_STAIRS",
+    "dn": "Mossy Stone Brick Stairs"
+  },
+  {
+    "id": "smooth_red_sandstone_stairs",
+    "dv": 0,
+    "val": 431,
+    "name": "SMOOTH_RED_SANDSTONE_STAIRS",
+    "dn": "Smooth Red Sandstone Stairs"
+  },
+  {
+    "id": "smooth_sandstone_stairs",
+    "dv": 0,
+    "val": 432,
+    "name": "SMOOTH_SANDSTONE_STAIRS",
+    "dn": "Smooth Sandstone Stairs"
+  },
+  {
+    "id": "end_brick_stairs",
+    "dv": 0,
+    "val": 433,
+    "name": "END_STONE_BRICK_STAIRS",
+    "dn": "End Stone Brick Stairs"
+  },
+  {
+    "id": "mossy_cobblestone_stairs",
+    "dv": 0,
+    "val": 434,
+    "name": "MOSSY_COBBLESTONE_STAIRS",
+    "dn": "Mossy Cobblestone Stairs"
+  },
+  {
+    "id": "normal_stone_stairs",
+    "dv": 0,
+    "val": 435,
+    "name": "STONE_STAIRS",
+    "dn": "Stone Stairs"
+  },
+  {
+    "id": "spruce_standing_sign",
+    "dv": 0,
+    "val": 436,
+    "name": "SPRUCE_SIGN",
+    "dn": "Spruce Sign"
+  },
+  {
+    "id": "smooth_stone",
+    "dv": 0,
+    "val": 438,
+    "name": "SMOOTH_STONE",
+    "dn": "Smooth Stone"
+  },
+  {
+    "id": "red_nether_brick_stairs",
+    "dv": 0,
+    "val": 439,
+    "name": "RED_NETHER_BRICK_STAIRS",
+    "dn": "Red Nether Brick Stairs"
+  },
+  {
+    "id": "smooth_quartz_stairs",
+    "dv": 0,
+    "val": 440,
+    "name": "SMOOTH_QUARTZ_STAIRS",
+    "dn": "Smooth Quartz Stairs"
+  },
+  {
+    "id": "birch_standing_sign",
+    "dv": 0,
+    "val": 441,
+    "name": "BIRCH_SIGN",
+    "dn": "Birch Sign"
+  },
+  {
+    "id": "birch_wall_sign",
+    "dv": 0,
+    "val": 442,
+    "name": "BIRCH_WALL_SIGN",
+    "dn": "Birch Wall Sign"
+  },
+  {
+    "id": "jungle_standing_sign",
+    "dv": 0,
+    "val": 443,
+    "name": "JUNGLE_SIGN",
+    "dn": "Jungle Sign"
+  },
+  {
+    "id": "jungle_wall_sign",
+    "dv": 0,
+    "val": 444,
+    "name": "JUNGLE_WALL_SIGN",
+    "dn": "Jungle Wall Sign"
+  },
+  {
+    "id": "acacia_standing_sign",
+    "dv": 0,
+    "val": 445,
+    "name": "ACACIA_SIGN",
+    "dn": "Acacia Sign"
+  },
+  {
+    "id": "acacia_wall_sign",
+    "dv": 0,
+    "val": 446,
+    "name": "ACACIA_WALL_SIGN",
+    "dn": "Acacia Wall Sign"
+  },
+  {
+    "id": "darkoak_standing_sign",
+    "dv": 0,
+    "val": 447,
+    "name": "DARK_OAK_SIGN",
+    "dn": "Dark Oak Sign"
+  },
+  {
+    "id": "darkoak_wall_sign",
+    "dv": 0,
+    "val": 448,
+    "name": "DARK_OAK_WALL_SIGN",
+    "dn": "Dark Oak Wall Sign"
+  },
+  {
+    "id": "grindstone",
+    "dv": 0,
+    "val": 449,
+    "name": "GRINDSTONE",
+    "dn": "Grindstone"
+  },
+  {
+    "id": "blast_furnace",
+    "dv": 0,
+    "val": 451,
+    "name": "BLAST_FURNACE",
+    "dn": "Blast Furnace"
+  },
+  {
+    "id": "stonecutter_block",
+    "dv": 0,
+    "val": 452,
+    "name": "STONECUTTER",
+    "dn": "Stonecutter"
+  },
+  {
+    "id": "smoker",
+    "dv": 0,
+    "val": 453,
+    "name": "SMOKER",
+    "dn": "Smoker"
+  },
+  {
+    "id": "cartography_table",
+    "dv": 0,
+    "val": 454,
+    "name": "CARTOGRAPHY_TABLE",
+    "dn": "Cartography Table"
+  },
+  {
+    "id": "fletching_table",
+    "dv": 0,
+    "val": 455,
+    "name": "FLETCHING_TABLE",
+    "dn": "Fletching Table"
+  },
+  {
+    "id": "smithing_table",
+    "dv": 0,
+    "val": 456,
+    "name": "SMITHING_TABLE",
+    "dn": "Smithing Table"
+  },
+  {
+    "id": "barrel",
+    "dv": 0,
+    "val": 457,
+    "name": "BARREL",
+    "dn": "Barrel"
+  },
+  {
+    "id": "loom",
+    "dv": 0,
+    "val": 458,
+    "name": "LOOM",
+    "dn": "Loom"
+  },
+  {
+    "id": "bell",
+    "dv": 0,
+    "val": 459,
+    "name": "BELL",
+    "dn": "Bell"
+  },
+  {
+    "id": "lantern",
+    "dv": 0,
+    "val": 461,
+    "name": "LANTERN",
+    "dn": "Lantern"
+  },
+  {
+    "id": "sweet_berry_bush",
+    "dv": 0,
+    "val": 462,
+    "name": "SWEET_BERRY_BUSH",
+    "dn": "Sweet Berry Bush"
+  },
+  {
+    "id": "campfire",
+    "dv": 0,
+    "val": 464,
+    "name": "CAMPFIRE",
+    "dn": "Campfire"
+  },
+  {
+    "id": "wood",
+    "dv": 0,
+    "val": 465,
+    "name": "OAK_WOOD",
+    "dn": "Oak Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 1,
+    "val": 465,
+    "name": "SPRUCE_WOOD",
+    "dn": "Spruce Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 2,
+    "val": 465,
+    "name": "BIRCH_WOOD",
+    "dn": "Birch Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 3,
+    "val": 465,
+    "name": "JUNGLE_WOOD",
+    "dn": "Jungle Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 4,
+    "val": 465,
+    "name": "ACACIA_WOOD",
+    "dn": "Acacia Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 5,
+    "val": 465,
+    "name": "DARK_OAK_WOOD",
+    "dn": "Dark Oak Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 8,
+    "val": 465,
+    "name": "STRIPPED_OAK_WOOD",
+    "dn": "Stripped Oak Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 9,
+    "val": 465,
+    "name": "STRIPPED_SPRUCE_WOOD",
+    "dn": "Stripped Spruce Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 10,
+    "val": 465,
+    "name": "STRIPPED_BIRCH_WOOD",
+    "dn": "Stripped Birch Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 11,
+    "val": 465,
+    "name": "STRIPPED_JUNGLE_WOOD",
+    "dn": "Stripped Jungle Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 12,
+    "val": 465,
+    "name": "STRIPPED_ACACIA_WOOD",
+    "dn": "Stripped Acacia Wood"
+  },
+  {
+    "id": "wood",
+    "dv": 13,
+    "val": 465,
+    "name": "STRIPPED_DARK_OAK_WOOD",
+    "dn": "Stripped Dark Oak Wood"
+  },
+  {
+    "id": "jigsaw",
+    "dv": 0,
+    "val": 466,
+    "name": "JIGSAW",
+    "dn": "Jigsaw Block"
+  },
+  {
+    "id": "wither_rose",
+    "dv": 0,
+    "val": 471,
+    "name": "WITHER_ROSE",
+    "dn": "Wither Rose"
+  },
+  {
+    "id": "bee_nest",
+    "dv": 0,
+    "val": 473,
+    "name": "BEE_NEST",
+    "dn": "Bee Nest"
+  },
+  {
+    "id": "honey_block",
+    "dv": 0,
+    "val": 473,
+    "name": "HONEY_BLOCK",
+    "dn": "Honey Block"
+  },
+  {
+    "id": "honeycomb_block",
+    "dv": 0,
+    "val": 474,
+    "name": "HONEYCOMB_BLOCK",
+    "dn": "Honeycomb Block"
+  },
+  {
+    "id": "beehive",
+    "dv": 0,
+    "val": 474,
+    "name": "BEEHIVE",
+    "dn": "Beehive"
+  },
+  {
+    "id": "lodestone",
+    "dv": 0,
+    "val": 477,
+    "name": "LODESTONE",
+    "dn": "Lodestone"
+  },
+  {
+    "id": "crimson_nylium",
+    "dv": 0,
+    "val": 478,
+    "name": "CRIMSON_NYLIUM",
+    "dn": "Crimson Nylium"
+  },
+  {
+    "id": "crimson_roots",
+    "dv": 0,
+    "val": 478,
+    "name": "CRIMSON_ROOTS",
+    "dn": "Crimson Roots"
+  },
+  {
+    "id": "warped_roots",
+    "dv": 0,
+    "val": 479,
+    "name": "WARPED_ROOTS",
+    "dn": "Warped Roots"
+  },
+  {
+    "id": "crimson_stem",
+    "dv": 0,
+    "val": 480,
+    "name": "CRIMSON_STEM",
+    "dn": "Crimson Stem"
+  },
+  {
+    "id": "warped_stem",
+    "dv": 0,
+    "val": 481,
+    "name": "WARPED_STEM",
+    "dn": "Warped Stem"
+  },
+  {
+    "id": "stone_slab4",
+    "dv": 1,
+    "val": 481,
+    "name": "SMOOTH_QUARTZ_SLAB",
+    "dn": "Smooth Quartz Slab"
+  },
+  {
+    "id": "stone_slab4",
+    "dv": 0,
+    "val": 481,
+    "name": "MOSSY_STONE_BRICK_SLAB",
+    "dn": "Mossy Stone Brick Slab"
+  },
+  {
+    "id": "stone_slab4",
+    "dv": 3,
+    "val": 481,
+    "name": "CUT_SANDSTONE_SLAB",
+    "dn": "Cut Sandstone Slab"
+  },
+  {
+    "id": "stone_slab4",
+    "dv": 2,
+    "val": 481,
+    "name": "STONE_SLAB",
+    "dn": "Stone Slab"
+  },
+  {
+    "id": "stone_slab4",
+    "dv": 4,
+    "val": 481,
+    "name": "CUT_RED_SANDSTONE_SLAB",
+    "dn": "Cut Red Sandstone Slab"
+  },
+  {
+    "id": "warped_wart_block",
+    "dv": 0,
+    "val": 482,
+    "name": "WARPED_WART_BLOCK",
+    "dn": "Warped Wart Block"
+  },
+  {
+    "id": "crimson_fungus",
+    "dv": 0,
+    "val": 483,
+    "name": "CRIMSON_FUNGUS",
+    "dn": "Crimson Fungus"
+  },
+  {
+    "id": "warped_fungus",
+    "dv": 0,
+    "val": 484,
+    "name": "WARPED_FUNGUS",
+    "dn": "Warped Fungus"
+  },
+  {
+    "id": "shroomlight",
+    "dv": 0,
+    "val": 485,
+    "name": "SHROOMLIGHT",
+    "dn": "Shroomlight"
+  },
+  {
+    "id": "weeping_vines",
+    "dv": 0,
+    "val": 486,
+    "name": "WEEPING_VINES",
+    "dn": "Weeping Vines"
+  },
+  {
+    "id": "warped_nylium",
+    "dv": 0,
+    "val": 488,
+    "name": "WARPED_NYLIUM",
+    "dn": "Warped Nylium"
+  },
+  {
+    "id": "basalt",
+    "dv": 0,
+    "val": 489,
+    "name": "BASALT",
+    "dn": "Basalt"
+  },
+  {
+    "id": "polished_basalt",
+    "dv": 0,
+    "val": 490,
+    "name": "POLISHED_BASALT",
+    "dn": "Polished Basalt"
+  },
+  {
+    "id": "soul_soil",
+    "dv": 0,
+    "val": 491,
+    "name": "SOUL_SOIL",
+    "dn": "Soul Soil"
+  },
+  {
+    "id": "soul_fire",
+    "dv": 0,
+    "val": 492,
+    "name": "SOUL_FIRE",
+    "dn": "Soul Fire"
+  },
+  {
+    "id": "nether_sprouts",
+    "dv": 0,
+    "val": 493,
+    "name": "NETHER_SPROUTS",
+    "dn": "Nether Sprouts"
+  },
+  {
+    "id": "target",
+    "dv": 0,
+    "val": 494,
+    "name": "TARGET",
+    "dn": "Target"
+  },
+  {
+    "id": "stripped_crimson_stem",
+    "dv": 0,
+    "val": 495,
+    "name": "STRIPPED_CRIMSON_STEM",
+    "dn": "Stripped Crimson Stem"
+  },
+  {
+    "id": "stripped_warped_stem",
+    "dv": 0,
+    "val": 496,
+    "name": "STRIPPED_WARPED_STEM",
+    "dn": "Stripped Warped Stem"
+  },
+  {
+    "id": "crimson_planks",
+    "dv": 0,
+    "val": 497,
+    "name": "CRIMSON_PLANKS",
+    "dn": "Crimson Planks"
+  },
+  {
+    "id": "warped_planks",
+    "dv": 0,
+    "val": 498,
+    "name": "WARPED_PLANKS",
+    "dn": "Warped Planks"
+  },
+  {
+    "id": "crimson_door",
+    "dv": 0,
+    "val": 499,
+    "name": "CRIMSON_DOOR",
+    "dn": "Crimson Door"
+  },
+  {
+    "id": "warped_door",
+    "dv": 0,
+    "val": 500,
+    "name": "WARPED_DOOR",
+    "dn": "Warped Door"
+  },
+  {
+    "id": "crimson_trapdoor",
+    "dv": 0,
+    "val": 501,
+    "name": "CRIMSON_TRAPDOOR",
+    "dn": "Crimson Trapdoor"
+  },
+  {
+    "id": "warped_trapdoor",
+    "dv": 0,
+    "val": 502,
+    "name": "WARPED_TRAPDOOR",
+    "dn": "Warped Trapdoor"
+  },
+  {
+    "id": "crimson_standing_sign",
+    "dv": 0,
+    "val": 505,
+    "name": "CRIMSON_SIGN",
+    "dn": "Crimson Sign"
+  },
+  {
+    "id": "warped_standing_sign",
+    "dv": 0,
+    "val": 506,
+    "name": "WARPED_SIGN",
+    "dn": "Warped Sign"
+  },
+  {
+    "id": "crimson_wall_sign",
+    "dv": 0,
+    "val": 507,
+    "name": "CRIMSON_WALL_SIGN",
+    "dn": "Crimson Wall Sign"
+  },
+  {
+    "id": "warped_wall_sign",
+    "dv": 0,
+    "val": 508,
+    "name": "WARPED_WALL_SIGN",
+    "dn": "Warped Wall Sign"
+  },
+  {
+    "id": "crimson_stairs",
+    "dv": 0,
+    "val": 509,
+    "name": "CRIMSON_STAIRS",
+    "dn": "Crimson Stairs"
+  },
+  {
+    "id": "warped_stairs",
+    "dv": 0,
+    "val": 510,
+    "name": "WARPED_STAIRS",
+    "dn": "Warped Stairs"
+  },
+  {
+    "id": "crimson_fence",
+    "dv": 0,
+    "val": 511,
+    "name": "CRIMSON_FENCE",
+    "dn": "Crimson Fence"
+  },
+  {
+    "id": "warped_fence",
+    "dv": 0,
+    "val": 512,
+    "name": "WARPED_FENCE",
+    "dn": "Warped Fence"
+  },
+  {
+    "id": "crimson_fence_gate",
+    "dv": 0,
+    "val": 513,
+    "name": "CRIMSON_FENCE_GATE",
+    "dn": "Crimson Fence Gate"
+  },
+  {
+    "id": "warped_fence_gate",
+    "dv": 0,
+    "val": 514,
+    "name": "WARPED_FENCE_GATE",
+    "dn": "Warped Fence Gate"
+  },
+  {
+    "id": "crimson_button",
+    "dv": 0,
+    "val": 515,
+    "name": "CRIMSON_BUTTON",
+    "dn": "Crimson Button"
+  },
+  {
+    "id": "warped_button",
+    "dv": 0,
+    "val": 516,
+    "name": "WARPED_BUTTON",
+    "dn": "Warped Button"
+  },
+  {
+    "id": "crimson_pressure_plate",
+    "dv": 0,
+    "val": 517,
+    "name": "CRIMSON_PRESSURE_PLATE",
+    "dn": "Crimson Pressure Plate"
+  },
+  {
+    "id": "warped_pressure_plate",
+    "dv": 0,
+    "val": 518,
+    "name": "WARPED_PRESSURE_PLATE",
+    "dn": "Warped Pressure Plate"
+  },
+  {
+    "id": "crimson_slab",
+    "dv": 0,
+    "val": 519,
+    "name": "CRIMSON_SLAB",
+    "dn": "Crimson Slab"
+  },
+  {
+    "id": "warped_slab",
+    "dv": 0,
+    "val": 520,
+    "name": "WARPED_SLAB",
+    "dn": "Warped Slab"
+  },
+  {
+    "id": "soul_torch",
+    "dv": 0,
+    "val": 523,
+    "name": "SOUL_TORCH",
+    "dn": "Soul Torch"
+  },
+  {
+    "id": "soul_lantern",
+    "dv": 0,
+    "val": 524,
+    "name": "SOUL_LANTERN",
+    "dn": "Soul Lantern"
+  },
+  {
+    "id": "netherite_block",
+    "dv": 0,
+    "val": 525,
+    "name": "NETHERITE_BLOCK",
+    "dn": "Block of Netherite"
+  },
+  {
+    "id": "ancient_debris",
+    "dv": 0,
+    "val": 526,
+    "name": "ANCIENT_DEBRIS",
+    "dn": "Ancient Debris"
+  },
+  {
+    "id": "respawn_anchor",
+    "dv": 0,
+    "val": 527,
+    "name": "RESPAWN_ANCHOR",
+    "dn": "Respawn Anchor"
+  },
+  {
+    "id": "blackstone",
+    "dv": 0,
+    "val": 528,
+    "name": "BLACKSTONE",
+    "dn": "Blackstone"
+  },
+  {
+    "id": "polished_blackstone_brick_stairs",
+    "dv": 0,
+    "val": 530,
+    "name": "POLISHED_BLACKSTONE_STAIRS",
+    "dn": "Polished Blackstone Stairs"
+  },
+  {
+    "id": "blackstone_stairs",
+    "dv": 0,
+    "val": 531,
+    "name": "BLACKSTONE_STAIRS",
+    "dn": "Blackstone Stairs"
+  },
+  {
+    "id": "blackstone_wall",
+    "dv": 0,
+    "val": 532,
+    "name": "BLACKSTONE_WALL",
+    "dn": "Blackstone Wall"
+  },
+  {
+    "id": "polished_blackstone_brick_wall",
+    "dv": 0,
+    "val": 533,
+    "name": "POLISHED_BLACKSTONE_BRICK_WALL",
+    "dn": "Polished Blackstone Brick Wall"
+  },
+  {
+    "id": "gilded_blackstone",
+    "dv": 0,
+    "val": 536,
+    "name": "GILDED_BLACKSTONE",
+    "dn": "Gilded Blackstone"
+  },
+  {
+    "id": "blackstone_slab",
+    "dv": 0,
+    "val": 537,
+    "name": "BLACKSTONE_SLAB",
+    "dn": "Blackstone Slab"
+  },
+  {
+    "id": "spruce_wall_sign",
+    "dv": 0,
+    "val": 537,
+    "name": "SPRUCE_WALL_SIGN",
+    "dn": "Spruce Wall Sign"
+  },
+  {
+    "id": "polished_blackstone_brick_slab",
+    "dv": 0,
+    "val": 539,
+    "name": "POLISHED_BLACKSTONE_BRICK_SLAB",
+    "dn": "Polished Blackstone Brick Slab"
+  },
+  {
+    "id": "chain",
+    "dv": 0,
+    "val": 541,
+    "name": "CHAIN",
+    "dn": "Chain"
+  },
+  {
+    "id": "twisting_vines",
+    "dv": 0,
+    "val": 542,
+    "name": "TWISTING_VINES",
+    "dn": "Twisting Vines"
+  },
+  {
+    "id": "crying_obsidian",
+    "dv": 0,
+    "val": 544,
+    "name": "CRYING_OBSIDIAN",
+    "dn": "Crying Obsidian"
+  },
+  {
+    "id": "soul_campfire",
+    "dv": 0,
+    "val": 545,
+    "name": "SOUL_CAMPFIRE",
+    "dn": "Soul Campfire"
+  },
+  {
+    "id": "polished_blackstone_stairs",
+    "dv": 0,
+    "val": 547,
+    "name": "POLISHED_BLACKSTONE_BRICK_STAIRS",
+    "dn": "Polished Blackstone Brick Stairs"
+  },
+  {
+    "id": "polished_blackstone_slab",
+    "dv": 0,
+    "val": 548,
+    "name": "POLISHED_BLACKSTONE_SLAB",
+    "dn": "Polished Blackstone Slab"
+  },
+  {
+    "id": "polished_blackstone_pressure_plate",
+    "dv": 0,
+    "val": 550,
+    "name": "POLISHED_BLACKSTONE_PRESSURE_PLATE",
+    "dn": "Polished Blackstone Pressure Plate"
+  },
+  {
+    "id": "polished_blackstone_button",
+    "dv": 0,
+    "val": 551,
+    "name": "POLISHED_BLACKSTONE_BUTTON",
+    "dn": "Polished Blackstone Button"
+  },
+  {
+    "id": "polished_blackstone_wall",
+    "dv": 0,
+    "val": 552,
+    "name": "POLISHED_BLACKSTONE_WALL",
+    "dn": "Polished Blackstone Wall"
+  },
+  {
+    "id": "warped_hyphae",
+    "dv": 0,
+    "val": 553,
+    "name": "WARPED_HYPHAE",
+    "dn": "Warped Hyphae"
+  },
+  {
+    "id": "crimson_hyphae",
+    "dv": 0,
+    "val": 554,
+    "name": "CRIMSON_HYPHAE",
+    "dn": "Crimson Hyphae"
+  },
+  {
+    "id": "stripped_crimson_hyphae",
+    "dv": 0,
+    "val": 555,
+    "name": "STRIPPED_CRIMSON_HYPHAE",
+    "dn": "Stripped Crimson Hyphae"
+  },
+  {
+    "id": "stripped_warped_hyphae",
+    "dv": 0,
+    "val": 556,
+    "name": "STRIPPED_WARPED_HYPHAE",
+    "dn": "Stripped Warped Hyphae"
+  },
+  {
+    "id": "chiseled_nether_bricks",
+    "dv": 0,
+    "val": 557,
+    "name": "CHISELED_NETHER_BRICKS",
+    "dn": "Chiseled Nether Bricks"
+  },
+  {
+    "id": "cracked_nether_bricks",
+    "dv": 0,
+    "val": 558,
+    "name": "CRACKED_NETHER_BRICKS",
+    "dn": "Cracked Nether Bricks"
+  },
+  {
+    "id": "quartz_bricks",
+    "dv": 0,
+    "val": 559,
+    "name": "QUARTZ_BRICKS",
+    "dn": "Quartz Bricks"
+  }
+]

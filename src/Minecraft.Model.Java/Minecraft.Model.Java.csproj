@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Minecraft.Model.Java</AssemblyName>
+    <RootNamespace>Minecraft.Model.Java</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\blocks.json" />
+    <EmbeddedResource Include="Data\blocks.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Minecraft.Model\Minecraft.Model.csproj" />
+  </ItemGroup>
+
+</Project>
