@@ -96,10 +96,10 @@ namespace Minecraft.Construction.Java.Tests
 
 			var expected = new string[]
 			{
-				"/fill -2 1 0 2 5 0 obsidian",
-				"/fill -2 1 1 2 5 1 nether_bricks",
-				"/fill -2 1 -1 2 5 -8 nether_bricks hollow",
-				"/fill -1 2 1 1 4 -1 air"
+				"/fill 2 1 0 -2 5 0 obsidian",
+				"/fill 2 1 1 -2 5 1 nether_bricks",
+				"/fill 2 1 -1 -2 5 -8 nether_bricks hollow",
+				"/fill 1 2 1 -1 4 -1 air"
 			};
 
 			// Act

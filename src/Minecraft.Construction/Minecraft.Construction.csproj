@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Minecraft.Model\Minecraft.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utilities_\" />
+  </ItemGroup>
+
 </Project>

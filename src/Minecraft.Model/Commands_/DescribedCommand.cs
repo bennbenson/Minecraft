@@ -2,7 +2,7 @@
 
 namespace Minecraft.Model
 {
-	public class DescribedCommand : Command
+	public class DescribedCommand : Command, IWrappedCommand
 	{
 		public DescribedCommand(Command innerCommand, string description)
 			: base(innerCommand?.Name ?? "described")
@@ -14,8 +14,6 @@ namespace Minecraft.Model
 			Description = description ?? "";
 		}
 
-
-		public Command InnerCommand { get; }
 
 		public string Description { get; }
 
@@ -38,6 +36,11 @@ namespace Minecraft.Model
 
 		#region IEquatable<DescribedCommand> members
 		public bool Equals(DescribedCommand other) => other is not null && InnerCommand.Equals(other.InnerCommand);
+		#endregion
+
+
+		#region IWrappedCommand members
+		public Command InnerCommand { get; }
 		#endregion
 	}
 }
