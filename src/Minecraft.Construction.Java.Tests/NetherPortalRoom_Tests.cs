@@ -12,72 +12,102 @@ namespace Minecraft.Construction.Java.Tests
 		public void Defaults()
 		{
 			// Arrange
-			NetherPortalRoomParameters parameters = new()
+			var parameters = new NetherPortalRoomParameters();
+			var block = Block.Get(BlockID.NetherBricks);
+
+			var expected = new string[]
 			{
-				Center = new Coord2(0, 0),
-				YBase = 3
+				"/fill -2 1 0 2 5 0 obsidian",
+				"/fill -2 1 -1 2 5 -1 nether_bricks",
+				"/fill -2 1 1 2 5 8 nether_bricks hollow",
+				"/fill -1 2 -1 1 4 1 air"
 			};
-			Block netherBrick = Block.Get(BlockID.NetherBricks);
 
 			// Act
-			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText()).ToArray();
+			var commands = NetherPortalRoom.Generate(parameters, block);
+			var result = commands.ProjectCommandText().ToArray();
 
 			// Assert
-			Assert.That(commandTexts.Length, Is.EqualTo(4));
-			Assert.That(commandTexts[0], Is.EqualTo("/fill -2 3 0 2 7 0 obsidian"));
-			Assert.That(commandTexts[1], Is.EqualTo("/fill -2 3 -1 2 7 -1 nether_bricks"));
-			Assert.That(commandTexts[2], Is.EqualTo("/fill -2 3 1 2 7 8 nether_bricks hollow"));
-			Assert.That(commandTexts[3], Is.EqualTo("/fill -1 4 -1 1 6 1 air"));
+			Assert.That(result, Is.EqualTo(expected));
 		}
 
 		[TestCase]
-		public void Defaults_ExtraHigh_ExtraWide()
+		public void Defaults_with_3_YBase()
 		{
 			// Arrange
-			NetherPortalRoomParameters parameters = new()
+			var parameters = new NetherPortalRoomParameters()
 			{
-				Center = new Coord2(0, 0),
-				YBase = 3,
+				YBase = 3
+			};
+			var block = Block.Get(BlockID.NetherBricks);
+
+			var expected = new string[]
+			{
+				"/fill -2 3 0 2 7 0 obsidian",
+				"/fill -2 3 -1 2 7 -1 nether_bricks",
+				"/fill -2 3 1 2 7 8 nether_bricks hollow",
+				"/fill -1 4 -1 1 6 1 air"
+			};
+
+			// Act
+			var commands = NetherPortalRoom.Generate(parameters, block);
+			var result = commands.ProjectCommandText().ToArray();
+
+			// Assert
+			Assert.That(result, Is.EqualTo(expected));
+		}
+
+		[TestCase]
+		public void Defaults_with_ExtraHigh_ExtraWide()
+		{
+			// Arrange
+			var parameters = new NetherPortalRoomParameters()
+			{
 				ExtraHigh = true,
 				ExtraWide = true
 			};
-			Block netherBrick = Block.Get(BlockID.NetherBricks);
+			var block = Block.Get(BlockID.NetherBricks);
+
+			var expected = new string[]
+			{
+				"/fill -2 1 0 2 6 0 obsidian",
+				"/fill -2 1 -1 2 6 -1 nether_bricks",
+				"/fill -3 1 1 3 6 9 nether_bricks hollow",
+				"/fill -1 2 -1 1 5 1 air"
+			};
 
 			// Act
-			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText()).ToArray();
+			var commands = NetherPortalRoom.Generate(parameters, block);
+			var result = commands.ProjectCommandText().ToArray();
 
 			// Assert
-			Assert.That(commandTexts.Length, Is.EqualTo(4));
-			Assert.That(commandTexts[0], Is.EqualTo("/fill -2 3 0 2 8 0 obsidian"));
-			Assert.That(commandTexts[1], Is.EqualTo("/fill -2 3 -1 2 8 -1 nether_bricks"));
-			Assert.That(commandTexts[2], Is.EqualTo("/fill -3 3 1 3 8 9 nether_bricks hollow"));
-			Assert.That(commandTexts[3], Is.EqualTo("/fill -1 4 -1 1 7 1 air"));
+			Assert.That(result, Is.EqualTo(expected));
 		}
 
 		[TestCase]
-		public void Defaults_Nether()
+		public void Defaults_North_Direction()
 		{
 			// Arrange
-			NetherPortalRoomParameters parameters = new()
+			var parameters = new NetherPortalRoomParameters()
 			{
-				Center = new Coord2(0, 0),
-				YBase = 3,
 				Direction = Direction.North
 			};
-			Block netherBrick = Block.Get(BlockID.RedNetherBricks);
+			var block = Block.Get(BlockID.NetherBricks);
+
+			var expected = new string[]
+			{
+				"/fill -2 1 0 2 5 0 obsidian",
+				"/fill -2 1 1 2 5 1 nether_bricks",
+				"/fill -2 1 -1 2 5 -8 nether_bricks hollow",
+				"/fill -1 2 1 1 4 -1 air"
+			};
 
 			// Act
-			Command[] commands = NetherPortalRoom.Generate(parameters, netherBrick).ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText()).ToArray();
+			var commands = NetherPortalRoom.Generate(parameters, block);
+			var result = commands.ProjectCommandText().ToArray();
 
 			// Assert
-			Assert.That(commandTexts.Length, Is.EqualTo(4));
-			Assert.That(commandTexts[0], Is.EqualTo("/fill -2 3 0 2 7 0 obsidian"));
-			Assert.That(commandTexts[1], Is.EqualTo("/fill -2 3 1 2 7 1 red_nether_bricks"));
-			Assert.That(commandTexts[2], Is.EqualTo("/fill -2 3 -1 2 7 -8 red_nether_bricks hollow"));
-			Assert.That(commandTexts[3], Is.EqualTo("/fill -1 4 1 1 6 -1 air"));
+			Assert.That(result, Is.EqualTo(expected));
 		}
 	}
 }

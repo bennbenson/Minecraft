@@ -183,6 +183,7 @@
 		public const string Prismarine = "prismarine";
 		public const string PrismarineBricks = "prismarine_bricks";
 		public const string DarkPrismarine = "dark_prismarine";
+		public const string EndBricks = "end_bricks";
 
 		public const string NetherBricks = "nether_bricks";
 		public const string RedNetherBricks = "red_nether_bricks";

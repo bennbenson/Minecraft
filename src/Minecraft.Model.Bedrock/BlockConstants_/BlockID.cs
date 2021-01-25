@@ -96,6 +96,7 @@
 		public const string IronBlock = "iron_block";
 		public const string LapisLazuli = "lapis_lazuli";
 		public const string Prismarine = "prismarine";
+		public const string EndBricks = "end_bricks";
 
 		public const string NetherBrick = "nether_brick";
 		public const string RedNetherBrick = "red_nether_brick";

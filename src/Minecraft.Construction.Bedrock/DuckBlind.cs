@@ -21,14 +21,14 @@ namespace Minecraft.Construction.Bedrock
 			Block smoothQuartzStairs = Block.Get(BlockID.SmoothQuartzStairs);
 			Dictionary<int, Block> stairs = new Dictionary<int, Block>()
 			{
-				{ Orientation.East,                   smoothQuartzStairs.WithDataValue(Orientation.East                  ) },
-				{ Orientation.West,                   smoothQuartzStairs.WithDataValue(Orientation.West                  ) },
-				{ Orientation.South,                  smoothQuartzStairs.WithDataValue(Orientation.South                 ) },
-				{ Orientation.North,                  smoothQuartzStairs.WithDataValue(Orientation.North                 ) },
-				{ Orientation.East  | InvertedStairs, smoothQuartzStairs.WithDataValue(Orientation.East  | InvertedStairs) },
-				{ Orientation.West  | InvertedStairs, smoothQuartzStairs.WithDataValue(Orientation.West  | InvertedStairs) },
-				{ Orientation.South | InvertedStairs, smoothQuartzStairs.WithDataValue(Orientation.South | InvertedStairs) },
-				{ Orientation.North | InvertedStairs, smoothQuartzStairs.WithDataValue(Orientation.North | InvertedStairs) }
+				{ Cardinal.East,                   smoothQuartzStairs.WithDataValue(Cardinal.East                  ) },
+				{ Cardinal.West,                   smoothQuartzStairs.WithDataValue(Cardinal.West                  ) },
+				{ Cardinal.South,                  smoothQuartzStairs.WithDataValue(Cardinal.South                 ) },
+				{ Cardinal.North,                  smoothQuartzStairs.WithDataValue(Cardinal.North                 ) },
+				{ Cardinal.East  | InvertedStairs, smoothQuartzStairs.WithDataValue(Cardinal.East  | InvertedStairs) },
+				{ Cardinal.West  | InvertedStairs, smoothQuartzStairs.WithDataValue(Cardinal.West  | InvertedStairs) },
+				{ Cardinal.South | InvertedStairs, smoothQuartzStairs.WithDataValue(Cardinal.South | InvertedStairs) },
+				{ Cardinal.North | InvertedStairs, smoothQuartzStairs.WithDataValue(Cardinal.North | InvertedStairs) }
 			};
 
 			foreach (var platform in new[]
@@ -73,14 +73,14 @@ namespace Minecraft.Construction.Bedrock
 
 				foreach (var layer1 in new[]
 				{
-					new { From = Coord2.At( 0,  1), To = Coord2.At( 1,  1), Direction = Orientation.North },
-					new { From = Coord2.At( 1,  0), To = Coord2.At( 1, -1), Direction = Orientation.West  },
-					new { From = Coord2.At( 1, -1), To = Coord2.At(-1, -1), Direction = Orientation.South },
-					new { From = Coord2.At(-1,  0), To = Coord2.At(-1,  1), Direction = Orientation.East  },
-					new { From = Coord2.At(-1,  2), To = Coord2.At( 2,  2), Direction = Orientation.South },
-					new { From = Coord2.At( 2,  1), To = Coord2.At( 2, -2), Direction = Orientation.East  },
-					new { From = Coord2.At( 1, -2), To = Coord2.At(-2, -2), Direction = Orientation.North },
-					new { From = Coord2.At(-2, -1), To = Coord2.At(-2,  2), Direction = Orientation.West  }
+					new { From = Coord2.At( 0,  1), To = Coord2.At( 1,  1), Direction = Cardinal.North },
+					new { From = Coord2.At( 1,  0), To = Coord2.At( 1, -1), Direction = Cardinal.West  },
+					new { From = Coord2.At( 1, -1), To = Coord2.At(-1, -1), Direction = Cardinal.South },
+					new { From = Coord2.At(-1,  0), To = Coord2.At(-1,  1), Direction = Cardinal.East  },
+					new { From = Coord2.At(-1,  2), To = Coord2.At( 2,  2), Direction = Cardinal.South },
+					new { From = Coord2.At( 2,  1), To = Coord2.At( 2, -2), Direction = Cardinal.East  },
+					new { From = Coord2.At( 1, -2), To = Coord2.At(-2, -2), Direction = Cardinal.North },
+					new { From = Coord2.At(-2, -1), To = Coord2.At(-2,  2), Direction = Cardinal.West  }
 				})
 				{
 					yield return new FillCommand(layer1.From.AtY(layer1Y), layer1.To.AtY(layer1Y), stairs[layer1.Direction | upsideDownBit]);
@@ -93,10 +93,10 @@ namespace Minecraft.Construction.Bedrock
 				int awayUpsideDownBit = platform.Layer1Offset < 0 ? InvertedStairs : 0;
 				foreach (var outline in new[]
 				{
-					new { From = Coord2.At(-2,  3), To = Coord2.At( 3,  3), Direction = Orientation.North },
-					new { From = Coord2.At( 3,  2), To = Coord2.At( 3, -3), Direction = Orientation.West },
-					new { From = Coord2.At( 2, -3), To = Coord2.At(-3, -3), Direction = Orientation.South },
-					new { From = Coord2.At(-3, -2), To = Coord2.At(-3,  3), Direction = Orientation.East }
+					new { From = Coord2.At(-2,  3), To = Coord2.At( 3,  3), Direction = Cardinal.North },
+					new { From = Coord2.At( 3,  2), To = Coord2.At( 3, -3), Direction = Cardinal.West },
+					new { From = Coord2.At( 2, -3), To = Coord2.At(-3, -3), Direction = Cardinal.South },
+					new { From = Coord2.At(-3, -2), To = Coord2.At(-3,  3), Direction = Cardinal.East }
 				})
 				{
 					yield return new FillCommand(outline.From.AtY(platform.Y), outline.To.AtY(platform.Y), stairs[outline.Direction | hereUpsideDownBit]);

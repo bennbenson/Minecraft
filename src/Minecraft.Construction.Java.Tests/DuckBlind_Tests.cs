@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Minecraft.Model;
 using NUnit.Framework;
 
 namespace Minecraft.Construction.Java.Tests
@@ -8,76 +7,79 @@ namespace Minecraft.Construction.Java.Tests
 	public class DuckBlind_Tests
 	{
 		[TestCase]
-		public void Generate_1()
+		public void Defaults()
 		{
 			// Arrange
+			var expected = new string[]
+			{
+				"/setblock 0 99 0 chiseled_stone_bricks",
+				"/fill -1 99 -1 1 99 -2 red_concrete",
+				"/fill 1 99 -1 2 99 1 lime_concrete",
+				"/fill 1 99 1 -1 99 2 blue_concrete",
+				"/fill -1 99 1 -2 99 -1 orange_concrete",
+				"/setblock -2 99 -2 black_concrete",
+				"/setblock -1 99 -1 black_concrete",
+				"/setblock 1 99 -1 black_concrete",
+				"/setblock 2 99 -2 black_concrete",
+				"/setblock 2 99 2 black_concrete",
+				"/setblock 1 99 1 black_concrete",
+				"/setblock -1 99 1 black_concrete",
+				"/setblock -2 99 2 black_concrete",
+				"/setblock 0 98 0 command_block[facing=up]",
+				"/fill 0 98 1 1 98 1 smooth_quartz_stairs[facing=north,half=top]",
+				"/fill 1 98 0 1 98 -1 smooth_quartz_stairs[facing=west,half=top]",
+				"/fill 1 98 -1 -1 98 -1 smooth_quartz_stairs[facing=south,half=top]",
+				"/fill -1 98 0 -1 98 1 smooth_quartz_stairs[facing=east,half=top]",
+				"/fill -1 98 2 2 98 2 smooth_quartz_stairs[facing=south,half=top]",
+				"/fill 2 98 1 2 98 -2 smooth_quartz_stairs[facing=east,half=top]",
+				"/fill 1 98 -2 -2 98 -2 smooth_quartz_stairs[facing=north,half=top]",
+				"/fill -2 98 -1 -2 98 2 smooth_quartz_stairs[facing=west,half=top]",
+				"/fill -2 99 3 3 99 3 smooth_quartz_stairs[facing=north,half=bottom]",
+				"/fill -2 98 3 3 98 3 smooth_quartz_stairs[facing=north,half=top]",
+				"/fill 3 99 2 3 99 -3 smooth_quartz_stairs[facing=west,half=bottom]",
+				"/fill 3 98 2 3 98 -3 smooth_quartz_stairs[facing=west,half=top]",
+				"/fill 2 99 -3 -3 99 -3 smooth_quartz_stairs[facing=south,half=bottom]",
+				"/fill 2 98 -3 -3 98 -3 smooth_quartz_stairs[facing=south,half=top]",
+				"/fill -3 99 -2 -3 99 3 smooth_quartz_stairs[facing=east,half=bottom]",
+				"/fill -3 98 -2 -3 98 3 smooth_quartz_stairs[facing=east,half=top]",
+				"/setblock 0 104 0 chiseled_stone_bricks",
+				"/fill -1 104 -1 1 104 -2 red_concrete",
+				"/fill 1 104 -1 2 104 1 lime_concrete",
+				"/fill 1 104 1 -1 104 2 blue_concrete",
+				"/fill -1 104 1 -2 104 -1 orange_concrete",
+				"/setblock -2 104 -2 black_concrete",
+				"/setblock -1 104 -1 black_concrete",
+				"/setblock 1 104 -1 black_concrete",
+				"/setblock 2 104 -2 black_concrete",
+				"/setblock 2 104 2 black_concrete",
+				"/setblock 1 104 1 black_concrete",
+				"/setblock -1 104 1 black_concrete",
+				"/setblock -2 104 2 black_concrete",
+				"/setblock 0 105 0 command_block[facing=down]",
+				"/fill 0 105 1 1 105 1 smooth_quartz_stairs[facing=north,half=bottom]",
+				"/fill 1 105 0 1 105 -1 smooth_quartz_stairs[facing=west,half=bottom]",
+				"/fill 1 105 -1 -1 105 -1 smooth_quartz_stairs[facing=south,half=bottom]",
+				"/fill -1 105 0 -1 105 1 smooth_quartz_stairs[facing=east,half=bottom]",
+				"/fill -1 105 2 2 105 2 smooth_quartz_stairs[facing=south,half=bottom]",
+				"/fill 2 105 1 2 105 -2 smooth_quartz_stairs[facing=east,half=bottom]",
+				"/fill 1 105 -2 -2 105 -2 smooth_quartz_stairs[facing=north,half=bottom]",
+				"/fill -2 105 -1 -2 105 2 smooth_quartz_stairs[facing=west,half=bottom]",
+				"/fill -2 104 3 3 104 3 smooth_quartz_stairs[facing=north,half=top]",
+				"/fill -2 105 3 3 105 3 smooth_quartz_stairs[facing=north,half=bottom]",
+				"/fill 3 104 2 3 104 -3 smooth_quartz_stairs[facing=west,half=top]",
+				"/fill 3 105 2 3 105 -3 smooth_quartz_stairs[facing=west,half=bottom]",
+				"/fill 2 104 -3 -3 104 -3 smooth_quartz_stairs[facing=south,half=top]",
+				"/fill 2 105 -3 -3 105 -3 smooth_quartz_stairs[facing=south,half=bottom]",
+				"/fill -3 104 -2 -3 104 3 smooth_quartz_stairs[facing=east,half=top]",
+				"/fill -3 105 -2 -3 105 3 smooth_quartz_stairs[facing=east,half=bottom]"
+			};
 
 			// Act
-			Command[] commands = DuckBlind.Generate().ToArray();
-			string[] commandTexts = commands.Select(c => c.GetCommandText()).ToArray();
+			var commands = DuckBlind.Generate();
+			var result = commands.ProjectCommandText().ToArray();
 
 			// Assert
-			Assert.That(commandTexts.Count, Is.EqualTo(60));
-			Assert.That(commandTexts[0], Is.EqualTo("/setblock 0 99 0 chiseled_stone_bricks"));
-			Assert.That(commandTexts[1], Is.EqualTo("/fill -1 99 -1 1 99 -2 red_concrete"));
-			Assert.That(commandTexts[2], Is.EqualTo("/fill 1 99 -1 2 99 1 lime_concrete"));
-			Assert.That(commandTexts[3], Is.EqualTo("/fill 1 99 1 -1 99 2 blue_concrete"));
-			Assert.That(commandTexts[4], Is.EqualTo("/fill -1 99 1 -2 99 -1 orange_concrete"));
-			Assert.That(commandTexts[5], Is.EqualTo("/setblock -2 99 -2 black_concrete"));
-			Assert.That(commandTexts[6], Is.EqualTo("/setblock -1 99 -1 black_concrete"));
-			Assert.That(commandTexts[7], Is.EqualTo("/setblock 1 99 -1 black_concrete"));
-			Assert.That(commandTexts[8], Is.EqualTo("/setblock 2 99 -2 black_concrete"));
-			Assert.That(commandTexts[9], Is.EqualTo("/setblock 2 99 2 black_concrete"));
-			Assert.That(commandTexts[10], Is.EqualTo("/setblock 1 99 1 black_concrete"));
-			Assert.That(commandTexts[11], Is.EqualTo("/setblock -1 99 1 black_concrete"));
-			Assert.That(commandTexts[12], Is.EqualTo("/setblock -2 99 2 black_concrete"));
-			Assert.That(commandTexts[13], Is.EqualTo("/setblock 0 98 0 command_block[facing=up]"));
-			Assert.That(commandTexts[14], Is.EqualTo("/fill 0 98 1 1 98 1 smooth_quartz_stairs[facing=north,half=top]"));
-			Assert.That(commandTexts[15], Is.EqualTo("/fill 1 98 0 1 98 -1 smooth_quartz_stairs[facing=west,half=top]"));
-			Assert.That(commandTexts[16], Is.EqualTo("/fill 1 98 -1 -1 98 -1 smooth_quartz_stairs[facing=south,half=top]"));
-			Assert.That(commandTexts[17], Is.EqualTo("/fill -1 98 0 -1 98 1 smooth_quartz_stairs[facing=east,half=top]"));
-			Assert.That(commandTexts[18], Is.EqualTo("/fill -1 98 2 2 98 2 smooth_quartz_stairs[facing=south,half=top]"));
-			Assert.That(commandTexts[19], Is.EqualTo("/fill 2 98 1 2 98 -2 smooth_quartz_stairs[facing=east,half=top]"));
-			Assert.That(commandTexts[20], Is.EqualTo("/fill 1 98 -2 -2 98 -2 smooth_quartz_stairs[facing=north,half=top]"));
-			Assert.That(commandTexts[21], Is.EqualTo("/fill -2 98 -1 -2 98 2 smooth_quartz_stairs[facing=west,half=top]"));
-			Assert.That(commandTexts[22], Is.EqualTo("/fill -2 99 3 3 99 3 smooth_quartz_stairs[facing=north,half=bottom]"));
-			Assert.That(commandTexts[23], Is.EqualTo("/fill -2 98 3 3 98 3 smooth_quartz_stairs[facing=north,half=top]"));
-			Assert.That(commandTexts[24], Is.EqualTo("/fill 3 99 2 3 99 -3 smooth_quartz_stairs[facing=west,half=bottom]"));
-			Assert.That(commandTexts[25], Is.EqualTo("/fill 3 98 2 3 98 -3 smooth_quartz_stairs[facing=west,half=top]"));
-			Assert.That(commandTexts[26], Is.EqualTo("/fill 2 99 -3 -3 99 -3 smooth_quartz_stairs[facing=south,half=bottom]"));
-			Assert.That(commandTexts[27], Is.EqualTo("/fill 2 98 -3 -3 98 -3 smooth_quartz_stairs[facing=south,half=top]"));
-			Assert.That(commandTexts[28], Is.EqualTo("/fill -3 99 -2 -3 99 3 smooth_quartz_stairs[facing=east,half=bottom]"));
-			Assert.That(commandTexts[29], Is.EqualTo("/fill -3 98 -2 -3 98 3 smooth_quartz_stairs[facing=east,half=top]"));
-			Assert.That(commandTexts[30], Is.EqualTo("/setblock 0 104 0 chiseled_stone_bricks"));
-			Assert.That(commandTexts[31], Is.EqualTo("/fill -1 104 -1 1 104 -2 red_concrete"));
-			Assert.That(commandTexts[32], Is.EqualTo("/fill 1 104 -1 2 104 1 lime_concrete"));
-			Assert.That(commandTexts[33], Is.EqualTo("/fill 1 104 1 -1 104 2 blue_concrete"));
-			Assert.That(commandTexts[34], Is.EqualTo("/fill -1 104 1 -2 104 -1 orange_concrete"));
-			Assert.That(commandTexts[35], Is.EqualTo("/setblock -2 104 -2 black_concrete"));
-			Assert.That(commandTexts[36], Is.EqualTo("/setblock -1 104 -1 black_concrete"));
-			Assert.That(commandTexts[37], Is.EqualTo("/setblock 1 104 -1 black_concrete"));
-			Assert.That(commandTexts[38], Is.EqualTo("/setblock 2 104 -2 black_concrete"));
-			Assert.That(commandTexts[39], Is.EqualTo("/setblock 2 104 2 black_concrete"));
-			Assert.That(commandTexts[40], Is.EqualTo("/setblock 1 104 1 black_concrete"));
-			Assert.That(commandTexts[41], Is.EqualTo("/setblock -1 104 1 black_concrete"));
-			Assert.That(commandTexts[42], Is.EqualTo("/setblock -2 104 2 black_concrete"));
-			Assert.That(commandTexts[43], Is.EqualTo("/setblock 0 105 0 command_block[facing=down]"));
-			Assert.That(commandTexts[44], Is.EqualTo("/fill 0 105 1 1 105 1 smooth_quartz_stairs[facing=north,half=bottom]"));
-			Assert.That(commandTexts[45], Is.EqualTo("/fill 1 105 0 1 105 -1 smooth_quartz_stairs[facing=west,half=bottom]"));
-			Assert.That(commandTexts[46], Is.EqualTo("/fill 1 105 -1 -1 105 -1 smooth_quartz_stairs[facing=south,half=bottom]"));
-			Assert.That(commandTexts[47], Is.EqualTo("/fill -1 105 0 -1 105 1 smooth_quartz_stairs[facing=east,half=bottom]"));
-			Assert.That(commandTexts[48], Is.EqualTo("/fill -1 105 2 2 105 2 smooth_quartz_stairs[facing=south,half=bottom]"));
-			Assert.That(commandTexts[49], Is.EqualTo("/fill 2 105 1 2 105 -2 smooth_quartz_stairs[facing=east,half=bottom]"));
-			Assert.That(commandTexts[50], Is.EqualTo("/fill 1 105 -2 -2 105 -2 smooth_quartz_stairs[facing=north,half=bottom]"));
-			Assert.That(commandTexts[51], Is.EqualTo("/fill -2 105 -1 -2 105 2 smooth_quartz_stairs[facing=west,half=bottom]"));
-			Assert.That(commandTexts[52], Is.EqualTo("/fill -2 104 3 3 104 3 smooth_quartz_stairs[facing=north,half=top]"));
-			Assert.That(commandTexts[53], Is.EqualTo("/fill -2 105 3 3 105 3 smooth_quartz_stairs[facing=north,half=bottom]"));
-			Assert.That(commandTexts[54], Is.EqualTo("/fill 3 104 2 3 104 -3 smooth_quartz_stairs[facing=west,half=top]"));
-			Assert.That(commandTexts[55], Is.EqualTo("/fill 3 105 2 3 105 -3 smooth_quartz_stairs[facing=west,half=bottom]"));
-			Assert.That(commandTexts[56], Is.EqualTo("/fill 2 104 -3 -3 104 -3 smooth_quartz_stairs[facing=south,half=top]"));
-			Assert.That(commandTexts[57], Is.EqualTo("/fill 2 105 -3 -3 105 -3 smooth_quartz_stairs[facing=south,half=bottom]"));
-			Assert.That(commandTexts[58], Is.EqualTo("/fill -3 104 -2 -3 104 3 smooth_quartz_stairs[facing=east,half=top]"));
-			Assert.That(commandTexts[59], Is.EqualTo("/fill -3 105 -2 -3 105 3 smooth_quartz_stairs[facing=east,half=bottom]"));
+			Assert.That(result, Is.EqualTo(expected));
 		}
 	}
 }

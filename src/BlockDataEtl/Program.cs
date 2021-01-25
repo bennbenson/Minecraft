@@ -39,7 +39,7 @@ namespace BlockDataEtl
 				command.CommandText = "TRUNCATE TABLE [dbo].[MinecraftBlock];";
 				await command.ExecuteNonQueryAsync();
 
-				command.CommandText = @"INSERT INTO [dbo].[MinecraftBlock] ([je_id], [je_nsid], [be_id], [be_nsid], [be_dv], [display_name]) VALUES (@je_id, @je_nsid, @be_id, @be_nsid, @be_dv, @display_name);";
+				command.CommandText = @"INSERT INTO [Minecraft].[Block] ([je_id], [je_nsid], [be_id], [be_nsid], [be_dv], [display_name]) VALUES (@je_id, @je_nsid, @be_id, @be_nsid, @be_dv, @display_name);";
 
 				int? nullInt = null;
 				string nullString = null;

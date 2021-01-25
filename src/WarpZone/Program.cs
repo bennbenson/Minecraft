@@ -31,8 +31,7 @@ namespace WarpZoneGenerator
 						warpZoneParameters.InteriorHeight = interiorHeight;
 					if (o.InterstitialHeight is int interstitialHeight and >= 0)
 						warpZoneParameters.InterstitialHeight = interstitialHeight;
-					if (o.CutSides is bool cutSides)
-						warpZoneParameters.CutSides = cutSides;
+
 					if (o.TeleportIn is bool teleportIn)
 						warpZoneParameters.TeleportIn = teleportIn;
 				});

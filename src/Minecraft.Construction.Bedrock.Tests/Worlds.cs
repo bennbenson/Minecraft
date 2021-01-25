@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Minecraft.Model;
 using Minecraft.Model.Bedrock;
@@ -20,10 +19,9 @@ namespace Minecraft.Construction.Bedrock.Tests
 				Levels = 4,
 				Radius = 9,
 				InteriorHeight = 4,
-				InterstitialHeight = 1,
-				CutSides = false
+				InterstitialHeight = 1
 			};
-			Block stoneBrick = Block.Get("stonebrick");
+			Block stoneBrick = Block.Get(BlockID.StoneBrick);
 			Block blackStoneBrick = Block.Get("polished_blackstone_bricks");
 
 			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
@@ -42,9 +40,9 @@ namespace Minecraft.Construction.Bedrock.Tests
 				Levels = 2,
 				Radius = 13,
 			};
-			Block stoneBrick = Block.Get("stonebrick");
-			Block blackStoneBrick = Block.Get("polished_blackstone_bricks");
-			Block endStoneBrick = Block.Get("end_bricks");
+			Block stoneBrick = Block.Get(BlockID.StoneBrick);
+			Block blackStoneBrick = Block.Get(BlockID.PolishedBlackstoneBricks);
+			Block endStoneBrick = Block.Get(BlockID.EndBricks);
 
 			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
 			Command[] netherCommands = WarpZone.Generate(parameters, blackStoneBrick).ToArray();
@@ -63,8 +61,8 @@ namespace Minecraft.Construction.Bedrock.Tests
 				Levels = 2,
 				Radius = 13,
 			};
-			Block stoneBrick = Block.Get("stonebrick");
-			Block blackStoneBrick = Block.Get("polished_blackstone_bricks");
+			Block stoneBrick = Block.Get(BlockID.StoneBrick);
+			Block blackStoneBrick = Block.Get(BlockID.PolishedBlackstoneBricks);
 
 			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
 			Command[] netherCommands = WarpZone.Generate(parameters, blackStoneBrick).ToArray();
@@ -91,7 +89,7 @@ namespace Minecraft.Construction.Bedrock.Tests
 				Levels = 11,
 				Radius = 15
 			};
-			Block stoneBrick = Block.Get("stained_glass", BlockColor.Gray);
+			Block stoneBrick = Block.Get(BlockID.StainedGlass, BlockColor.Gray);
 
 
 			Command[] netherPortalCommands = NetherPortalRoom.Generate(netherPortalParameters, netherBrick).ToArray();
