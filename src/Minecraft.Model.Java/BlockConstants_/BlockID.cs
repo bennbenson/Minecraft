@@ -2,6 +2,34 @@
 {
 	public static class BlockID
 	{
+		public static class Stones
+		{
+			public const string Stone = "stone";
+			public const string SmoothStone = "smooth_stone";
+			public const string Granite = "granite";
+			public const string PolishedGranite = "pollished_granite";
+			public const string Diorite = "diorite";
+			public const string PolishedDiorite = "polished_diorite";
+			public const string Andesite = "andesite";
+			public const string PolishedAndesite = "polished_andesite";
+		}
+
+		public static class Ore
+		{
+			public const string Coal = "coal_ore";
+			public const string Iron = "iron_ore";
+			public const string LapisLazuli = "lapis_lazuli";
+			public const string Gold = "gold_ore";
+			public const string Redstone = "redstone_ore";
+			public const string Diamond = "diamond_ore";
+			public const string Emerald = "emerald_ore";
+			public const string NetherQuartz = "nether_quartz_ore";
+			public const string NetherGold = "nether_gold_ore";
+			public const string AncientDebris = "ancient_debris";
+		}
+
+		public const string RedstoneBlock = "redstone_block";
+
 		public static class StoneBricks
 		{
 			public const string Normal = "stone_bricks";
@@ -183,8 +211,9 @@
 		public const string Prismarine = "prismarine";
 		public const string PrismarineBricks = "prismarine_bricks";
 		public const string DarkPrismarine = "dark_prismarine";
-		public const string EndBricks = "end_bricks";
+		public const string EndStoneBricks = "end_stone_bricks";
 
+		public const string Bricks = "bricks";
 		public const string NetherBricks = "nether_bricks";
 		public const string RedNetherBricks = "red_nether_bricks";
 		public const string CrackedNetherBricks = "cracked_nether_bricks";
@@ -195,6 +224,12 @@
 		public const string ChiseledPolishedBlackstone = "chiseled_polished_blackstone";
 		public const string PolishedBlackstoneBricks = "polished_blackstone_bricks";
 		public const string CrackedPolishedBlackstoneBricks = "cracked_polished_blackstone_bricks";
+
+		public const string QuartzBlock = "quartz_block";
+		public const string ChiseledQuartzBlock = "chiseled_quartz_block";
+		public const string QuartzPillar = "quartz_pillar";
+		public const string QuartzBricks = "quartz_bricks";
+		public const string SmoothQuartzBlock = "smooth_quartz";
 
 
 		public const string CommandBlock = "command_block";

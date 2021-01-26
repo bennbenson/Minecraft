@@ -2,6 +2,36 @@
 {
 	public static class BlockID
 	{
+		public const string Stone = "stone";
+		public const string SmoothStone = "smooth_stone";
+
+		public static class Stones
+		{
+			public const int Stone = 0;
+			public const int Granite = 1;
+			public const int PolishedGranite = 2;
+			public const int Diorite = 3;
+			public const int PolishedDiorite = 4;
+			public const int Andesite = 5;
+			public const int PolishedAndesite = 6;
+		}
+
+		public static class Ore
+		{
+			public const string Coal = "coal_ore";
+			public const string Iron = "iron_ore";
+			public const string LapisLazuli = "lapis_lazuli";
+			public const string Gold = "gold_ore";
+			public const string Redstone = "redstone_ore";
+			public const string Diamond = "diamond_ore";
+			public const string Emerald = "emerald_ore";
+			public const string NetherQuartz = "quartz_ore";
+			public const string NetherGold = "nether_gold_ore";
+			public const string AncientDebris = "ancient_debris";
+		}
+
+		public const string RedstoneBlock = "redstone_block";
+
 		public const string StoneBrick = "stonebrick";
 
 		public static class Tree
@@ -98,6 +128,7 @@
 		public const string Prismarine = "prismarine";
 		public const string EndBricks = "end_bricks";
 
+		public const string Bricks = "brick_block";
 		public const string NetherBrick = "nether_brick";
 		public const string RedNetherBrick = "red_nether_brick";
 		public const string CrackedNetherBricks = "cracked_nether_bricks";
@@ -108,6 +139,20 @@
 		public const string ChiseledPolishedBlackstone = "chiseled_polished_blackstone";
 		public const string PolishedBlackstoneBricks = "polished_blackstone_bricks";
 		public const string CrackedPolishedBlackstoneBricks = "cracked_polished_blackstone_bricks";
+
+		public const string QuartzBlock = "quartz_block";
+		public static class Quartz
+		{
+			public const int Block = 0;
+			public const int ChiseledVertical = 1;
+			public const int PillarVertical = 2;
+			public const int Smooth = 3;
+
+			public const int Vertical = 0;
+			public const int EastWest = 4;
+			public const int NorthSouth = 8;
+		}
+		public const string QuartzBricks = "quartz_bricks";
 
 
 		public const string CommandBlock = "command_block";
