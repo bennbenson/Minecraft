@@ -1,2 +1,2 @@
-# MadReflection.MinecraftTools
+# Minecraft
 
