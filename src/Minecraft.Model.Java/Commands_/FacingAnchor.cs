@@ -2,7 +2,10 @@
 {
 	public enum FacingAnchor
 	{
+		[ArgumentText("eyes")]
 		Eyes,
+
+		[ArgumentText("feet")]
 		Feet
 	}
 }

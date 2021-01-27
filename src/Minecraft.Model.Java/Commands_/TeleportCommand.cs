@@ -40,6 +40,9 @@ namespace Minecraft.Model.Java
 		private TeleportCommand(TargetPlayer? targets, Target destination, Rotation? rotation, Target? facing, FacingAnchor? anchor)
 			: base("tp")
 		{
+			if (anchor < FacingAnchor.Eyes || anchor > FacingAnchor.Feet)
+				throw new ArgumentOutOfRangeException(nameof(anchor), "Invalid FacingAnchor value.");
+
 			Targets = targets;
 			Destination = destination;
 			Rotation = rotation;
@@ -84,12 +87,7 @@ namespace Minecraft.Model.Java
 				result.Append($" {facing.GetArgumentText()}");
 
 				if (Anchor is FacingAnchor facingAnchor)
-				{
-					if (facingAnchor == FacingAnchor.Feet)
-						result.Append(" feet");
-					else
-						result.Append(" eyes");
-				}
+					result.Append($" {facingAnchor.GetArgumentText()}");
 			}
 
 			return result.ToString();
