@@ -1,7 +1,6 @@
-﻿using Minecraft.Data;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace MadReflection.Minecraft.Data.Tests
+namespace Minecraft.Model.Tests
 {
 	// https://minecraft.gamepedia.com/Seed_(level_generation)
 

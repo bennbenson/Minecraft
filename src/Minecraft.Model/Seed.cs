@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Minecraft.Data
+namespace Minecraft.Model
 {
 	public static class Seed
 	{
