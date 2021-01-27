@@ -1,17 +1,15 @@
 ﻿using NUnit.Framework;
 
-namespace Minecraft.Model.Bedrock.Tests
+namespace Minecraft.Model.Tests
 {
 	[TestFixture]
 	public class SayCommand_Tests
 	{
-		[TestCase]
-		public void GetCommandText_Constructs_Correct_Command()
+		[TestCase("Hello, World!", "/say Hello, World!")]
+		public void GetCommandText_Returns_Correct_Command(string message, string expected)
 		{
 			// Arrange
-			SayCommand command = new SayCommand("Hello World!");
-
-			string expected = "/say Hello World!";
+			SayCommand command = new SayCommand(message);
 
 			// Act
 			string result = command.GetCommandText();

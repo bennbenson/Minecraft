@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Minecraft.Model.Java
+namespace Minecraft.Model
 {
 	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class SayCommand : Command
