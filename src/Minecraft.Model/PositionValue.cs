@@ -15,7 +15,7 @@ namespace Minecraft.Model
 		public PositionValue(PositionType type, int value)
 		{
 			if (type < PositionType.Absolute || type > PositionType.Local)
-				throw new ArgumentOutOfRangeException(nameof(type), "Invalid PositionType value.");
+				throw new ArgumentOutOfRangeException(nameof(type), $"Invalid {nameof(PositionType)} value.");
 
 			Type = type;
 			Value = value;
@@ -56,8 +56,8 @@ namespace Minecraft.Model
 					_ => PositionType.Absolute
 				};
 
-				exception = null;
 				result = new PositionValue(type, value);
+				exception = null;
 				return true;
 			}
 

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace Minecraft.Model.Tests
 {
 	[TestFixture]
-	public class Position_Tests
+	public class PositionF_Tests
 	{
 		[TestCase]
 		public void Default_Is_Absolute_Origin()
@@ -12,7 +12,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			Position result = default;
+			PositionF result = default;
 
 			// Assert
 			Assert.That(result.X.Value, Is.EqualTo(0));
@@ -25,12 +25,12 @@ namespace Minecraft.Model.Tests
 
 		[TestCase(0, -1, 0)]
 		[TestCase(0, 256, 0)]
-		public void Constructor_Int32_Validates_Argument_Ranges(int x, int y, int z)
+		public void Constructor_Single_Validates_Argument_Ranges(float x, float y, float z)
 		{
 			// Arrange
 
 			// Act
-			TestDelegate test = () => new Position(x, y, z);
+			TestDelegate test = () => new PositionF(x, y, z);
 
 			// Assert
 			Assert.That(test, Throws.TypeOf<ArgumentOutOfRangeException>());
@@ -38,12 +38,12 @@ namespace Minecraft.Model.Tests
 
 		[TestCase(0, -1, 0)]
 		[TestCase(0, 256, 0)]
-		public void Constructor_Absolete_Y_Validates_Argument_Ranges(int x, int y, int z)
+		public void Constructor_Absolete_Y_Validates_Argument_Ranges(float x, float y, float z)
 		{
 			// Arrange
 
 			// Act
-			TestDelegate test = () => new Position(PositionValue.Absolute(x), PositionValue.Absolute(y), PositionValue.Absolute(z));
+			TestDelegate test = () => new PositionF(PositionFValue.Absolute(x), PositionFValue.Absolute(y), PositionFValue.Absolute(z));
 
 			// Assert
 			Assert.That(test, Throws.TypeOf<ArgumentOutOfRangeException>());
@@ -53,12 +53,12 @@ namespace Minecraft.Model.Tests
 		[TestCase(0, PositionType.Absolute, 256, PositionType.Relative, 0, PositionType.Absolute, null)]
 		[TestCase(0, PositionType.Absolute, -1, PositionType.Absolute, 0, PositionType.Absolute, typeof(ArgumentOutOfRangeException))]
 		[TestCase(0, PositionType.Absolute, 256, PositionType.Absolute, 0, PositionType.Absolute, typeof(ArgumentOutOfRangeException))]
-		public void Constructor_PositionValue_Validates_ArgumentRanges(int x, PositionType xType, int y, PositionType yType, int z, PositionType zType, Type? expectedExceptionType)
+		public void Constructor_PositionValue_Validates_ArgumentRanges(float x, PositionType xType, float y, PositionType yType, float z, PositionType zType, Type? expectedExceptionType)
 		{
 			// Arrange
 
 			// Act
-			TestDelegate test = () => new Position(new PositionValue(xType, x), new PositionValue(yType, y), new PositionValue(zType, z));
+			TestDelegate test = () => new PositionF(new PositionFValue(xType, x), new PositionFValue(yType, y), new PositionFValue(zType, z));
 
 			// Assert
 			if (expectedExceptionType is not null)
@@ -88,19 +88,19 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			TestDelegate test = () => new Position(new PositionValue(xType, 0), new PositionValue(yType, 0), new PositionValue(zType, 0));
+			TestDelegate test = () => new PositionF(new PositionFValue(xType, 0), new PositionFValue(yType, 0), new PositionFValue(zType, 0));
 
 			// Assert
 			Assert.That(test, Throws.TypeOf<ArgumentException>());
 		}
 
 		[TestCase]
-		public void Constructor_Int32_Is_Absoluete()
+		public void Constructor_Single_Is_Absoluete()
 		{
 			// Arrange
 
 			// Act
-			Position result = new Position(0, 100, 0);
+			PositionF result = new PositionF(0, 100, 0);
 
 			// Assert
 			Assert.That(result.X.Type, Is.EqualTo(PositionType.Absolute));
@@ -116,12 +116,12 @@ namespace Minecraft.Model.Tests
 		//[TestCase(PositionType.Absolute, 0, PositionType.Relative, 0, PositionType.Absolute, 0)]
 		//[TestCase(PositionType.Absolute, 0, PositionType.Absolute, 0, PositionType.Absolute, 0)]
 		//[TestCase(PositionType.Absolute, 0, PositionType.Absolute, 0, PositionType.Absolute, 0)]
-		public void Get_Returns_Position(PositionType xType, int xValue, PositionType yType, int yValue, PositionType zType, int zValue)
+		public void Get_Returns_Position(PositionType xType, float xValue, PositionType yType, float yValue, PositionType zType, float zValue)
 		{
 			// Arrange
 
 			// Act
-			Position result = Position.Get(new PositionValue(xType, xValue), new PositionValue(yType, yValue), new PositionValue(zType, zValue));
+			PositionF result = PositionF.Get(new PositionFValue(xType, xValue), new PositionFValue(yType, yValue), new PositionFValue(zType, zValue));
 
 			// Assert
 			Assert.That(result.X.Type, Is.EqualTo(xType));
@@ -138,7 +138,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			Position result = Position.Absolute(0, 0, 0);
+			PositionF result = PositionF.Absolute(0, 0, 0);
 
 			// Assert
 			Assert.That(result.X.Type, Is.EqualTo(PositionType.Absolute));
@@ -152,7 +152,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			Position result = Position.Relative(0, 0, 0);
+			PositionF result = PositionF.Relative(0, 0, 0);
 
 			// Assert
 			Assert.That(result.X.Type, Is.EqualTo(PositionType.Relative));
@@ -166,7 +166,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			Position result = Position.Local(0, 0, 0);
+			PositionF result = PositionF.Local(0, 0, 0);
 
 			// Assert
 			Assert.That(result.X.Type, Is.EqualTo(PositionType.Local));
@@ -177,12 +177,12 @@ namespace Minecraft.Model.Tests
 		[TestCase("1, 2, 4", PositionType.Absolute, 1, PositionType.Absolute, 2, PositionType.Absolute, 4)]
 		[TestCase("~, ~, ~", PositionType.Relative, 0, PositionType.Relative, 0, PositionType.Relative, 0)]
 		[TestCase("^, ^, ^", PositionType.Local, 0, PositionType.Local, 0, PositionType.Local, 0)]
-		public void Parse_Succeeds_On_Valid_Input(string input, PositionType expectedXType, int expectedXValue, PositionType expectedYType, int expectedYValue, PositionType expectedZType, int expectedZValue)
+		public void Parse_Succeeds_On_Valid_Input(string input, PositionType expectedXType, float expectedXValue, PositionType expectedYType, float expectedYValue, PositionType expectedZType, float expectedZValue)
 		{
 			// Arrange
 
 			// Act
-			Position result = Position.Parse(input);
+			PositionF result = PositionF.Parse(input);
 
 			// Assert
 			Assert.That(result.X.Value, Is.EqualTo(expectedXValue));
@@ -202,19 +202,19 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			TestDelegate test = () => Position.Parse(input);
+			TestDelegate test = () => PositionF.Parse(input);
 
 			// Assert
 			Assert.That(test, Throws.TypeOf(expectedExceptionType));
 		}
 
 		[TestCase("1, 2, 4", PositionType.Absolute, 1, PositionType.Absolute, 2, PositionType.Absolute, 4)]
-		public void TryParse_Succeeds_On_Valid_Input(string input, PositionType outputXType, int outputXValue, PositionType outputYType, int outputYValue, PositionType outputZType, int outputZValue)
+		public void TryParse_Succeeds_On_Valid_Input(string input, PositionType outputXType, float outputXValue, PositionType outputYType, float outputYValue, PositionType outputZType, float outputZValue)
 		{
 			// Arrange
 
 			// Act
-			bool result = Position.TryParse(input, out Position output);
+			bool result = PositionF.TryParse(input, out PositionF output);
 
 			// Assert
 			Assert.That(result, Is.True);
@@ -234,7 +234,7 @@ namespace Minecraft.Model.Tests
 			// Arrange
 
 			// Act
-			bool result = Position.TryParse(input, out _);
+			bool result = PositionF.TryParse(input, out _);
 
 			// Assert
 			Assert.That(result, Is.False);
@@ -247,8 +247,8 @@ namespace Minecraft.Model.Tests
 		public void OpEquality_Compares_Equal(string position1, string position2, bool expected)
 		{
 			// Arrange
-			Position input1 = Position.Parse(position1);
-			Position input2 = Position.Parse(position2);
+			PositionF input1 = PositionF.Parse(position1);
+			PositionF input2 = PositionF.Parse(position2);
 
 			// Act
 			bool result = input1 == input2;
@@ -264,8 +264,8 @@ namespace Minecraft.Model.Tests
 		public void OpInequality_Compares_Not_Equal(string position1, string position2, bool expected)
 		{
 			// Arrange
-			Position input1 = Position.Parse(position1);
-			Position input2 = Position.Parse(position2);
+			PositionF input1 = PositionF.Parse(position1);
+			PositionF input2 = PositionF.Parse(position2);
 
 			// Act
 			bool result = input1 != input2;
@@ -282,7 +282,7 @@ namespace Minecraft.Model.Tests
 			Coord3 input = new Coord3(x, y, z);
 
 			// Act
-			Position result = input;
+			PositionF result = input;
 
 			// Assert
 			Assert.That(result.X.Value, Is.EqualTo(x));
@@ -295,10 +295,10 @@ namespace Minecraft.Model.Tests
 
 		[TestCase(0, 10, 0)]
 		[TestCase(2938, 64, -7387)]
-		public void Cast_To_Coord3_Preserves_Values(int x, int y, int z)
+		public void Cast_To_Coord3_Preserves_Values(float x, float y, float z)
 		{
 			// Arrange
-			Position input = new Position(x, y, z);
+			PositionF input = new PositionF(x, y, z);
 
 			// Act
 			Coord3 result = (Coord3)input;
@@ -312,10 +312,10 @@ namespace Minecraft.Model.Tests
 		[TestCase(PositionType.Relative, 0, PositionType.Absolute, 0, PositionType.Absolute, 0)]
 		[TestCase(PositionType.Absolute, 0, PositionType.Relative, 0, PositionType.Absolute, 0)]
 		[TestCase(PositionType.Absolute, 0, PositionType.Absolute, 0, PositionType.Relative, 0)]
-		public void Cast_To_Coord3_Throws_On_NonAbsolute(PositionType xType, int xValue, PositionType yType, int yValue, PositionType zType, int zValue)
+		public void Cast_To_Coord3_Throws_On_NonAbsolute(PositionType xType, float xValue, PositionType yType, float yValue, PositionType zType, float zValue)
 		{
 			// Arrange
-			Position input = new Position(new PositionValue(xType, xValue), new PositionValue(yType, yValue), new PositionValue(zType, zValue));
+			PositionF input = new PositionF(new PositionFValue(xType, xValue), new PositionFValue(yType, yValue), new PositionFValue(zType, zValue));
 
 			// Act
 			Func<Coord3> test = () => (Coord3)input;
@@ -328,10 +328,10 @@ namespace Minecraft.Model.Tests
 		[TestCase(PositionType.Relative, 0, PositionType.Relative, 0, PositionType.Relative, 0, "~, ~, ~")]
 		[TestCase(PositionType.Local, 0, PositionType.Local, 0, PositionType.Local, 0, "^, ^, ^")]
 		[TestCase(PositionType.Absolute, 10, PositionType.Absolute, 39, PositionType.Absolute, -100, "10, 39, -100")]
-		public void ToString_Constructs_Correct_String(PositionType xType, int xValue, PositionType yType, int yValue, PositionType zType, int zValue, string expected)
+		public void ToString_Constructs_Correct_String(PositionType xType, float xValue, PositionType yType, float yValue, PositionType zType, float zValue, string expected)
 		{
 			// Arrange
-			Position temp = new Position(new PositionValue(xType, xValue), new PositionValue(yType, yValue), new PositionValue(zType, zValue));
+			PositionF temp = new PositionF(new PositionFValue(xType, xValue), new PositionFValue(yType, yValue), new PositionFValue(zType, zValue));
 
 			// Act
 			string result = temp.ToString();

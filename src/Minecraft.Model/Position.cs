@@ -47,13 +47,6 @@ namespace Minecraft.Model
 			Z = z;
 		}
 
-		private Position(bool _, PositionValue x, PositionValue y, PositionValue z)
-		{
-			X = x;
-			Y = y;
-			Z = z;
-		}
-
 
 		public PositionValue X { get; }
 
@@ -61,7 +54,7 @@ namespace Minecraft.Model
 
 		public PositionValue Z { get; }
 
-		public string DebuggerDisplay => ToString();
+		private string DebuggerDisplay => ToString();
 
 
 		public Position WithX(PositionValue x) => new Position(x, Y, Z);
@@ -74,11 +67,11 @@ namespace Minecraft.Model
 
 		public static Position Get(PositionValue x, PositionValue y, PositionValue z) => new Position(x, y, z);
 
-		public static Position Absolute(int x, int y, int z) => new Position(false, PositionValue.Absolute(x), PositionValue.Absolute(y), PositionValue.Absolute(z));
+		public static Position Absolute(int x, int y, int z) => new Position(PositionValue.Absolute(x), PositionValue.Absolute(y), PositionValue.Absolute(z));
 
-		public static Position Relative(int x, int y, int z) => new Position(false, PositionValue.Relative(x), PositionValue.Relative(y), PositionValue.Relative(z));
+		public static Position Relative(int x, int y, int z) => new Position(PositionValue.Relative(x), PositionValue.Relative(y), PositionValue.Relative(z));
 
-		public static Position Local(int x, int y, int z) => new Position(false, PositionValue.Local(x), PositionValue.Local(y), PositionValue.Local(z));
+		public static Position Local(int x, int y, int z) => new Position(PositionValue.Local(x), PositionValue.Local(y), PositionValue.Local(z));
 
 		public static Position Parse(string s) => InternalTryParse(s, out Position result, out Exception? exception, true) ? result : throw exception!;
 
@@ -105,33 +98,9 @@ namespace Minecraft.Model
 				return true;
 			}
 
-			//Match match = Regex.Match(s, @"^((?<xp>\^|\~)|(?<xv>0)|(?<xp>[~^])?(?<xv>[-+]?[1-9][0-9]*)), ?((?<yp>\^|\~)|(?<yv>0)|(?<yp>[~^])?(?<yv>[-+]?[1-9][0-9]*)), ?((?<zp>\^|\~)|(?<zv>0)|(?<zp>[~^])?(?<zv>[-+]?[1-9][0-9]*))$");
-			//if (match.Success)
-			//{
-			//	PositionValue xValue = GetPositionValue(match.Groups["xp"], match.Groups["xv"]);
-			//	PositionValue yValue = GetPositionValue(match.Groups["yp"], match.Groups["yv"]);
-			//	PositionValue zValue = GetPositionValue(match.Groups["zp"], match.Groups["zv"]);
-			//	result = new Position(xValue, yValue, zValue);
-			//	exception = null;
-			//	return true;
-			//}
-
 			result = default;
 			exception = needException ? new FormatException() : null;
 			return false;
-
-			//static PositionValue GetPositionValue(Group prefixGroup, Group valueGroup)
-			//{
-			//	int value = valueGroup.Success ? int.Parse(valueGroup.Value) : 0;
-			//	char prefix = prefixGroup.Success ? prefixGroup.Value[0] : default;
-
-			//	return prefix switch
-			//	{
-			//		'~' => PositionValue.Relative(value),
-			//		'^' => PositionValue.Local(value),
-			//		_ => PositionValue.Absolute(value)
-			//	};
-			//}
 		}
 
 		public static bool operator ==(Position left, Position right) => left.Equals(right);
