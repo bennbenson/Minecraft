@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Minecraft.Model
 {
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class DescribedCommand : Command, IWrappedCommand
 	{
 		public DescribedCommand(Command innerCommand, string description)
@@ -19,7 +21,7 @@ namespace Minecraft.Model
 
 		protected override Type EqualityContract => InnerCommand.GetType();
 
-		public string DebuggerDisplay => InnerCommand.ToString();
+		private string DebuggerDisplay => InnerCommand.ToString();
 
 
 		public override string GetCommandText() => InnerCommand.GetCommandText();

@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Minecraft.Model.Java
 {
+	[DebuggerDisplay("{" + nameof(DebuggerDisplay) + ",nq}")]
 	public class PredicateBlock : Block
 	{
 		public PredicateBlock(Block block)
@@ -23,7 +25,7 @@ namespace Minecraft.Model.Java
 
 		protected override Type EqualityContract => typeof(PredicateBlock);
 
-		public string DebuggerDisplay => ToString();
+		private string DebuggerDisplay => ToString();
 
 
 		#region Object members

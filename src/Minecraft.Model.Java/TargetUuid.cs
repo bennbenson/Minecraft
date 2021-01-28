@@ -18,7 +18,7 @@ namespace Minecraft.Model.Java
 
 		protected override Type EqualityContract => typeof(TargetUuid);
 
-		public string DebuggerDisplay => ToString();
+		private string DebuggerDisplay => ToString();
 
 
 		public static new TargetUuid Parse(string s) => InternalTryParse(s, out TargetUuid? result, out Exception? exception, true) ? result : throw exception!;
