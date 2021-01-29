@@ -75,6 +75,10 @@ namespace Minecraft.Model
 
 		public static Coord3 At(int x, int y, int z) => new Coord3(x, y, z);
 
+		public static Coord3 Min(Coord3 a, Coord3 b) => new Coord3(Math.Min(a.X, b.X), Math.Min(a.Y, b.Y), Math.Min(a.Z, b.Z));
+
+		public static Coord3 Max(Coord3 a, Coord3 b) => new Coord3(Math.Max(a.X, b.X), Math.Max(a.Y, b.Y), Math.Max(a.Z, b.Z));
+
 		private static int CheckYOverflow(int y) => y is >= 0 and <= 255 ? y : throw new OverflowException("Y coordinate range overflow.");
 
 

@@ -210,6 +210,38 @@ namespace Minecraft.Model.Tests
 			Assert.That(result.Z, Is.EqualTo(z));
 		}
 
+		[TestCase(3, 100, -3, -3, 105, 3, -3, 100, -3)]
+		public void Min_Returns_Minimum_Corner(int ax, int ay, int az, int bx, int by, int bz, int ex, int ey, int ez)
+		{
+			// Arrange
+			Coord3 a = new Coord3(ax, ay, az);
+			Coord3 b = new Coord3(bx, by, bz);
+
+			Coord3 expected = new Coord3(ex, ey, ez);
+
+			// Act
+			Coord3 result = Coord3.Min(a, b);
+
+			// Assert
+			Assert.That(result, Is.EqualTo(expected));
+		}
+
+		[TestCase(3, 100, -3, -3, 105, 3, 3, 105, 3)]
+		public void Max_Returns_Miximum_Corner(int ax, int ay, int az, int bx, int by, int bz, int ex, int ey, int ez)
+		{
+			// Arrange
+			Coord3 a = new Coord3(ax, ay, az);
+			Coord3 b = new Coord3(bx, by, bz);
+
+			Coord3 expected = new Coord3(ex, ey, ez);
+
+			// Act
+			Coord3 result = Coord3.Max(a, b);
+
+			// Assert
+			Assert.That(result, Is.EqualTo(expected));
+		}
+
 		[TestCase(10, 64, 14, 10, 64, 14, true)]
 		[TestCase(10, 64, 14, 10, 64, 13, false)]
 		[TestCase(10, 64, 14, 9, 64, 14, false)]

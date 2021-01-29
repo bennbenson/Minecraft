@@ -66,6 +66,10 @@ namespace Minecraft.Model
 
 		public static Coord2 At(int x, int z) => new Coord2(x, z);
 
+		public static Coord2 Min(Coord2 a, Coord2 b) => new Coord2(Math.Min(a.X, b.X), Math.Min(a.Z, b.Z));
+
+		public static Coord2 Max(Coord2 a, Coord2 b) => new Coord2(Math.Max(a.X, b.X), Math.Max(a.Z, b.Z));
+
 
 		public static bool operator ==(Coord2 a, Coord2 b) => a.Equals(b);
 
