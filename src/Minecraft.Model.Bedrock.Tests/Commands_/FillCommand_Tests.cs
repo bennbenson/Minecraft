@@ -5,8 +5,8 @@ namespace Minecraft.Model.Bedrock.Tests
 	[TestFixture]
 	public class FillCommand_Tests
 	{
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick")]
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Mossy, "/fill 0 65 10 10 65 0 stonebrick 1")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Mossy, "/fill 0 65 10 10 65 0 stonebrick 1")]
 		public void GetCommandText_Replace(int axis1, int ground, int axis2, string id, int dataValue, string expected)
 		{
 			// Arrange
@@ -22,8 +22,8 @@ namespace Minecraft.Model.Bedrock.Tests
 			Assert.That(result, Is.EqualTo(expected));
 		}
 
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Mossy, StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick")]
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Mossy, StoneBrick.Chiseled, "/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick 3")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Mossy, DataValue.StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Mossy, DataValue.StoneBrick.Chiseled, "/fill 0 65 10 10 65 0 stonebrick 1 replace stonebrick 3")]
 		public void GetCommandText_Replace_Filtered(int axis1, int ground, int axis2, string id, int dataValueFrom, int dataValueTo, string expected)
 		{
 			// Arrange
@@ -40,8 +40,8 @@ namespace Minecraft.Model.Bedrock.Tests
 			Assert.That(result, Is.EqualTo(expected));
 		}
 
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick 0 hollow")]
-		[TestCase(0, 65, 10, BlockID.StoneBrick, StoneBrick.Mossy, "/fill 0 65 10 10 65 0 stonebrick 1 hollow")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Normal, "/fill 0 65 10 10 65 0 stonebrick 0 hollow")]
+		[TestCase(0, 65, 10, BlockID.StoneBrick, DataValue.StoneBrick.Mossy, "/fill 0 65 10 10 65 0 stonebrick 1 hollow")]
 		public void GetCommandText_Hollow(int axis1, int ground, int axis2, string id, int dataValue, string expected)
 		{
 			// Arrange

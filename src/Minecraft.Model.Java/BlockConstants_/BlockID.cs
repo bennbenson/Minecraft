@@ -58,42 +58,122 @@
 			public const string Black = "black_wool";
 		}
 
-		public const string OakStairs = "oak_stairs";
-		public const string SpruceStairs = "spruce_stairs";
-		public const string BirchStairs = "birch_stairs";
-		public const string JungleStairs = "jungle_stairs";
-		public const string AcaciaStairs = "acacia_stairs";
-		public const string DarkOakStairs = "dark_oak_stairs";
-		public const string CrimsonStairs = "crimson_stairs";
-		public const string WarpedStairs = "warped_stairs";
-		public const string NormalStoneStairs = "normal_stone_stairs";
-		public const string GraniteStairs = "granite_stairs";
-		public const string PolishedGraniteStairs = "polished_granite_stairs";
-		public const string DioriteStairs = "diorite_stairs";
-		public const string PolishedDioriteStairs = "polished_diorite_stairs";
-		public const string AndesiteStairs = "andesite_stairs";
-		public const string PolishedAndesiteStairs = "polished_andesite_stairs";
-		public const string StoneStairs = "stone_stairs";
-		public const string MossyCobblestoneStairs = "mossy_cobblestone_stairs";
-		public const string StoneBrickStairs = "stone_brick_stairs";
-		public const string MossyStoneBrickStairs = "mossy_stone_brick_stairs";
-		public const string BrickStairs = "brick_stairs";
-		public const string EndBrickStairs = "end_brick_stairs";
-		public const string NetherBrickStairs = "nether_brick_stairs";
-		public const string RedNetherBrickStairs = "red_nether_brick_stairs";
-		public const string SandstoneStairs = "sandstone_stairs";
-		public const string SmoothSandstoneStairs = "smooth_sandstone_stairs";
-		public const string RedSandstoneStairs = "red_sandstone_stairs";
-		public const string SmoothRedSandstoneStairs = "smooth_red_sandstone_stairs";
-		public const string QuartzStairs = "quartz_stairs";
-		public const string SmoothQuartzStairs = "smooth_quartz_stairs";
-		public const string PurpurStairs = "purpur_stairs";
-		public const string PrismarineStairs = "prismarine_stairs";
-		public const string PrismarineBricksStairs = "prismarine_bricks_stairs";
-		public const string DarkPrismarineStairs = "dark_prismarine_stairs";
-		public const string BlackstoneStairs = "blackstone_stairs";
-		public const string PolishedBlackstoneStairs = "polished_blackstone_stairs";
-		public const string PolishedBlackstoneBrickStairs = "polished_blackstone_brick_stairs";
+		public static class Stairs
+		{
+			public const string Oak = "oak_stairs";
+			public const string Spruce = "spruce_stairs";
+			public const string Birch = "birch_stairs";
+			public const string Jungle = "jungle_stairs";
+			public const string Acacia = "acacia_stairs";
+			public const string DarkOak = "dark_oak_stairs";
+			public const string Crimson = "crimson_stairs";
+			public const string Warped = "warped_stairs";
+			public const string NormalStone = "normal_stone_stairs";
+			public const string Granite = "granite_stairs";
+			public const string PolishedGranite = "polished_granite_stairs";
+			public const string Diorite = "diorite_stairs";
+			public const string PolishedDiorite = "polished_diorite_stairs";
+			public const string Andesite = "andesite_stairs";
+			public const string PolishedAndesite = "polished_andesite_stairs";
+			public const string Stone = "stone_stairs";
+			public const string MossyCobblestone = "mossy_cobblestone_stairs";
+			public const string StoneBrick = "stone_brick_stairs";
+			public const string MossyStoneBrick = "mossy_stone_brick_stairs";
+			public const string Brick = "brick_stairs";
+			public const string EndBrick = "end_brick_stairs";
+			public const string NetherBrick = "nether_brick_stairs";
+			public const string RedNetherBrick = "red_nether_brick_stairs";
+			public const string Sandstone = "sandstone_stairs";
+			public const string SmoothSandstone = "smooth_sandstone_stairs";
+			public const string RedSandstone = "red_sandstone_stairs";
+			public const string SmoothRedSandstone = "smooth_red_sandstone_stairs";
+			public const string Quartz = "quartz_stairs";
+			public const string SmoothQuartz = "smooth_quartz_stairs";
+			public const string Purpur = "purpur_stairs";
+			public const string Prismarine = "prismarine_stairs";
+			public const string PrismarineBricks = "prismarine_bricks_stairs";
+			public const string DarkPrismarine = "dark_prismarine_stairs";
+			public const string Blackstone = "blackstone_stairs";
+			public const string PolishedBlackstone = "polished_blackstone_stairs";
+			public const string PolishedBlackstoneBrick = "polished_blackstone_brick_stairs";
+		}
+
+		public static class Trapdoor
+		{
+			public const string Iron = "iron_trapdoor";
+			public const string Oak = "oak_trapdoor";
+			public const string Spruce = "spruce_trapdoor";
+			public const string Birch = "birch_trapdoor";
+			public const string Jungle = "jungle_trapdoor";
+			public const string Acacia = "acacia_trapdoor";
+			public const string DarkOak = "dark_oak_trapdoor";
+			public const string Crimson = "crimson_trapdoor";
+			public const string Warped = "warped_trapdoor";
+		}
+
+		public static class Fence
+		{
+			public const string Oak = "oak_fence";
+			public const string Spruce = "spruce_fence";
+			public const string Birch = "birch_fence";
+			public const string Jungle = "jungle_fence";
+			public const string Acacia = "acacia_fence";
+			public const string DarkOak = "dark_oak_fence";
+			public const string Crimson = "crimson_fence";
+			public const string Warped = "warped_fence";
+		}
+
+		public static class FenceGate
+		{
+			public const string Oak = "fence_gate";
+			public const string Spruce = "spruce_fence_gate";
+			public const string Birch = "birch_fence_gate";
+			public const string Jungle = "jungle_fence_gate";
+			public const string Acacia = "acacia_fence_gate";
+			public const string DarkOak = "dark_oak_fence_gate";
+			public const string Crimson = "crimson_fence_gate";
+			public const string Warped = "warped_fence_gate";
+		}
+
+		public static class Log
+		{
+			public const string Oak = "oak_log";
+			public const string Spruce = "spruce_log";
+			public const string Birch = "birch_log";
+			public const string Jungle = "jungle_log";
+			public const string Acacia = "acacia_log";
+			public const string DarkOak = "dark_oak_log";
+			public const string CrimsonStem = "crimson_stem";
+			public const string WarpedStem = "warped_stem";
+			public const string StrippedOak = "stripped_oak_log";
+			public const string StrippedSpruce = "stripped_spruce_log";
+			public const string StrippedBirch = "stripped_birch_log";
+			public const string StrippedJungle = "stripped_jungle_log";
+			public const string StrippedAcacia = "stripped_acacia_log";
+			public const string StrippedDarkOak = "stripped_dark_oak_log";
+			public const string StrippedCrimsonStem = "stripped_crimson_stem";
+			public const string StrippedWarpedStem = "stripped_warped_stem";
+		}
+
+		public static class Wood
+		{
+			public const string Oak = "oak_wood";
+			public const string Spruce = "spruce_wood";
+			public const string Birch = "birch_wood";
+			public const string Jungle = "jungle_wood";
+			public const string Acacia = "acacia_wood";
+			public const string DarkOak = "dark_oak_wood";
+			public const string CrimsonHyphae = "crimson_hyphae";
+			public const string WarpedHyphae = "warped_hyphae";
+			public const string StrippedOak = "stripped_oak_wood";
+			public const string StrippedSpruce = "stripped_spruce_wood";
+			public const string StrippedBirch = "stripped_birch_wood";
+			public const string StrippedJungle = "stripped_jungle_wood";
+			public const string StrippedAcacia = "stripped_acacia_wood";
+			public const string StrippedDarkOak = "stripped_dark_oak_wood";
+			public const string StrippedCrimsonHyphae = "stripped_crimson_hyphae";
+			public const string StrippedWarpedHyphae = "stripped_warped_hyphae";
+		}
 
 		public static class Leaves
 		{
@@ -230,6 +310,9 @@
 		public const string QuartzPillar = "quartz_pillar";
 		public const string QuartzBricks = "quartz_bricks";
 		public const string SmoothQuartzBlock = "smooth_quartz";
+
+		public const string Obsidian = "obsidian";
+		public const string CryingObsidian = "crying_obsidian";
 
 
 		public const string CommandBlock = "command_block";

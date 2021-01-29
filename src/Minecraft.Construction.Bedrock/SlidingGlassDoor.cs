@@ -7,8 +7,8 @@ namespace Minecraft.Construction.Bedrock
 {
 	public static class SlidingGlassDoor
 	{
-		public static readonly Block OuterGlass = Block.Get(BlockID.StainedGlassPane, BlockColor.Gray);
-		public static readonly Block InnerGlass = Block.Get(BlockID.StainedGlassPane, BlockColor.White);
+		public static readonly Block OuterGlass = Block.Get(BlockID.StainedGlassPane, DataValue.BlockColor.Gray);
+		public static readonly Block InnerGlass = Block.Get(BlockID.StainedGlassPane, DataValue.BlockColor.White);
 		public static readonly Block Air = Block.Air;
 
 

@@ -50,10 +50,10 @@ namespace Minecraft.Construction.Bedrock
 			CommandBlock? eastFacingCommandBlock = null;
 			if (placeCommandBlocks is not null)
 			{
-				southFacingCommandBlock = new CommandBlock(Orientation.South, Command.Empty);
-				northFacingCommandBlock = new CommandBlock(Orientation.North, Command.Empty);
-				westFacingCommandBlock = new CommandBlock(Orientation.West, Command.Empty);
-				eastFacingCommandBlock = new CommandBlock(Orientation.East, Command.Empty);
+				southFacingCommandBlock = new CommandBlock(DataValue.CommandBlock.South, Command.Empty);
+				northFacingCommandBlock = new CommandBlock(DataValue.CommandBlock.North, Command.Empty);
+				westFacingCommandBlock = new CommandBlock(DataValue.CommandBlock.West, Command.Empty);
+				eastFacingCommandBlock = new CommandBlock(DataValue.CommandBlock.East, Command.Empty);
 			}
 
 			return Generate();

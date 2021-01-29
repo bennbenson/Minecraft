@@ -5,7 +5,7 @@ namespace Minecraft.Model.Bedrock.Tests
 	[TestFixture]
 	public class SetBlockCommand_Tests
 	{
-		[TestCase(0, 100, 0, BlockID.StoneBrick, StoneBrick.Chiseled)]
+		[TestCase(0, 100, 0, BlockID.StoneBrick, DataValue.StoneBrick.Chiseled)]
 		public void GetCommandText_Constructs_Correct_Command(int x, int y, int z, string id, int dataValue)
 		{
 			// Arrange

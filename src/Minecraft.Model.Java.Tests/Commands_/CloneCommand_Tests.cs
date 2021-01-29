@@ -156,8 +156,8 @@ namespace Minecraft.Model.Java.Tests
 		//public void GetCommandText_Filtered_With_Tag()
 		//{
 		//	// Arrange
-		//	//Block block = Block.Get("oak_stairs").WithPredicate(new Dictionary() { });
-		//	PredicateBlock block = new PredicateBlock(Block.Get("oak_stairs") /* with [] and {} tacked on.  How? */);
+		//	//Block block = Block.Get(BlockID.Stairs.Oak).WithPredicate(new Dictionary() { });
+		//	PredicateBlock block = new PredicateBlock(Block.Get(BlockID.Stairs.Oak).With(...) /* with [] and {} tacked on.  How? */);
 		//	Position begin = Position.Absolute(x1, y1, z1);
 		//	Position end = Position.Absolute(x2, y2, z2);
 		//	Position destination = Position.Absolute(x3, y3, z3);

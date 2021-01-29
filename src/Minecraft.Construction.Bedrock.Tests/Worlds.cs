@@ -22,7 +22,7 @@ namespace Minecraft.Construction.Bedrock.Tests
 				InterstitialHeight = 1
 			};
 			Block stoneBrick = Block.Get(BlockID.StoneBrick);
-			Block blackStoneBrick = Block.Get("polished_blackstone_bricks");
+			Block blackStoneBrick = Block.Get(BlockID.PolishedBlackstoneBricks);
 
 			Command[] normalCommands = WarpZone.Generate(parameters, stoneBrick).ToArray();
 			Command[] netherCommands = WarpZone.Generate(parameters, blackStoneBrick).ToArray();
@@ -81,7 +81,7 @@ namespace Minecraft.Construction.Bedrock.Tests
 				ExtraHigh = true,
 				ExtraWide = true
 			};
-			Block netherBrick = Block.Get(BlockID.StainedGlass, BlockColor.Red);
+			Block netherBrick = Block.Get(BlockID.StainedGlass, DataValue.BlockColor.Red);
 			WarpZoneParameters warpZoneParameters = new WarpZoneParameters()
 			{
 				Center = new Coord2(0, 0),
@@ -89,7 +89,7 @@ namespace Minecraft.Construction.Bedrock.Tests
 				Levels = 11,
 				Radius = 15
 			};
-			Block stoneBrick = Block.Get(BlockID.StainedGlass, BlockColor.Gray);
+			Block stoneBrick = Block.Get(BlockID.StainedGlass, DataValue.BlockColor.Gray);
 
 
 			Command[] netherPortalCommands = NetherPortalRoom.Generate(netherPortalParameters, netherBrick).ToArray();

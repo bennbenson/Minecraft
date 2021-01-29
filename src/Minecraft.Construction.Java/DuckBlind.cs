@@ -16,7 +16,7 @@ namespace Minecraft.Construction.Java
 			Block blackConcrete = Block.Get(BlockID.Concrete.Black);
 			Block bottomCommandBlock = Block.Get(BlockID.CommandBlock).With("facing", "up");
 			Block topCommandBlock = Block.Get(BlockID.CommandBlock).With("facing", "down");
-			Block smoothQuartzStairs = Block.Get(BlockID.SmoothQuartzStairs);
+			Block smoothQuartzStairs = Block.Get(BlockID.Stairs.SmoothQuartz);
 			Dictionary<string, Block> stairs = new Dictionary<string, Block>()
 			{
 				{ "east-bottom",  smoothQuartzStairs.With(("facing", "east" ), ("half", "bottom")) },

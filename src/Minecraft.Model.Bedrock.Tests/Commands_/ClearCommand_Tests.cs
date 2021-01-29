@@ -9,7 +9,7 @@ namespace Minecraft.Model.Bedrock.Tests
 		public void GetCommandText_Constructs_Correct_Command()
 		{
 			// Arrange
-			Block block = Block.Get("gold_block");
+			Block block = Block.Get(BlockID.GoldBlock);
 			ClearCommand command = new ClearCommand("@a", block);
 
 			string expected = "/clear @a gold_block";
