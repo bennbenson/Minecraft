@@ -42,7 +42,7 @@ namespace Minecraft.Model
 				return false;
 			}
 
-			Match match = Regex.Match(s, @"^((?<p>\^|\~)|(?<v>0)|(?<p>[~^])?(?<v>[-+]?[1-9][0-9]*))$");
+			Match match = Regex.Match(s, @"^((?<p>[~^])|(?<p>[~^])?(?<v>[+-]?[0-9]+))$");
 			if (match.Success)
 			{
 				Group valueGroup = match.Groups["v"];

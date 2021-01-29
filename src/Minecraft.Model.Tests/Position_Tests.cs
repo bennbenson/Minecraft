@@ -177,6 +177,8 @@ namespace Minecraft.Model.Tests
 		[TestCase("1, 2, 4", PositionType.Absolute, 1, PositionType.Absolute, 2, PositionType.Absolute, 4)]
 		[TestCase("~, ~, ~", PositionType.Relative, 0, PositionType.Relative, 0, PositionType.Relative, 0)]
 		[TestCase("^, ^, ^", PositionType.Local, 0, PositionType.Local, 0, PositionType.Local, 0)]
+		[TestCase("~0,~0,~0", PositionType.Relative, 0, PositionType.Relative, 0, PositionType.Relative, 0)]
+		[TestCase("^0,^0,^0", PositionType.Local, 0, PositionType.Local, 0, PositionType.Local, 0)]
 		public void Parse_Succeeds_On_Valid_Input(string input, PositionType expectedXType, int expectedXValue, PositionType expectedYType, int expectedYValue, PositionType expectedZType, int expectedZValue)
 		{
 			// Arrange
@@ -196,7 +198,6 @@ namespace Minecraft.Model.Tests
 		[TestCase(null, typeof(ArgumentNullException))]
 		[TestCase("", typeof(FormatException))]
 		[TestCase("1, y?, 4", typeof(FormatException))]
-		[TestCase("~0,0,0", typeof(FormatException))]
 		public void Parse_Fails_On_Invalid_Input(string input, Type expectedExceptionType)
 		{
 			// Arrange

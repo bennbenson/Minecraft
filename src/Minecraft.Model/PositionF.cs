@@ -86,7 +86,7 @@ namespace Minecraft.Model
 				return false;
 			}
 
-			Match match = Regex.Match(s, @"^(?<x>(?<xp>\^|\~)|(?<xv>0)|(?<xp>[~^])?(?<xv>[-+]?[0-9]+(\.[0-9]+)?)), ?(?<y>(?<yp>\^|\~)|(?<yv>0)|(?<yp>[~^])?(?<yv>[-+]?[0-9]+(\.[0-9]+)?)), ?(?<z>(?<zp>\^|\~)|(?<zv>0)|(?<zp>[~^])?(?<zv>[-+]?[0-9]+(\.[0-9]+)?))$");
+			Match match = Regex.Match(s, @"^(?<x>[~^]|[~^]?[+-]?[0-9]+(\.[0-9]+)?), ?(?<y>[~^]|[~^]?[+-]?[0-9]+(\.[0-9]+)?), ?(?<z>[~^]|[~^]?[+-]?[0-9]+(\.[0-9]+)?)$");
 			if (match.Success)
 			{
 				PositionFValue x = PositionFValue.Parse(match.Groups["x"].Value);
